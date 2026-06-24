@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Upcoming Events & Services - CSI St. John's Church</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="events-page">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-icon"><i class="fa-solid fa-church"></i></div>
+      <div><h1>CSI St. John's Church</h1><p>Church Management System</p></div>
+    </div>
+    <nav class="nav" id="navMenu"></nav>
+    <div class="pastor-card" id="pastorCard">
+      <div class="avatar"><img src="images/avatar.svg" alt="Rev. Michael"></div>
+      <div><strong>Rev. Michael</strong><span>Parish Priest</span></div>
+      <button class="small-arrow"><i class="fa-solid fa-chevron-down"></i></button>
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+    <header class="topbar">
+      <div class="top-left">
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <div class="search-box"><input type="text" placeholder="Search families, members, records..."><span class="search-ico"><i class="fa-solid fa-magnifying-glass"></i></span></div>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn" id="calendarBtn" title="Calendar" aria-label="Calendar"></button>
+        <button class="icon-btn badge" id="notifyBtn" title="Notifications" aria-label="Notifications"><small>12</small></button>
+        <button class="profile-pill" id="profileBtn" aria-label="Profile menu"><span class="profile-dot">PO</span><span class="profile-copy"><b>Parish Office</b><small>St. John's Church</small></span><span class="profile-caret" data-svg="down"></span></button>
+      </div>
+    </header>
+    <section class="content events-content">
+      <div class="events-titlebar">
+        <div><h2>Upcoming Events &amp; Services</h2><p><a href="ParishAdministration.html">Parish Administration</a><i class="fa-solid fa-chevron-right"></i><span>Upcoming Events &amp; Services</span></p></div>
+        <div class="event-actions"><button class="outline-action" id="eventCalendarBtn"><i class="fa-regular fa-calendar-days"></i> Calendar View</button><button class="add-action" id="addEventBtn"><i class="fa-solid fa-plus"></i> Add Event</button></div>
+      </div>
+      <section class="event-stat-grid" id="eventStats"></section>
+      <section class="event-table-card card">
+        <div class="event-filter-row">
+          <div class="tabs" id="eventTabs"><button class="active">All</button><button>Events</button><button>Services</button><button>Special Services</button><button>Programs</button><button>Retreats</button><button>Meetings</button></div>
+          <div class="filters"><button class="filter-btn"><i class="fa-regular fa-calendar-days"></i>18 May 2025 - 18 Aug 2025</button><select><option>All Categories</option><option>Service</option><option>Meeting</option></select><select><option>All Locations</option><option>Main Church</option><option>Youth Hall</option></select><button class="filter-btn"><i class="fa-solid fa-filter"></i>Filter</button></div>
+        </div>
+        <div class="table-wrap"><table class="events-table" id="eventsTable"></table></div>
+        <div class="table-footer"><span>Showing 1 to 10 of 24 events</span><div class="pager"><button disabled><i class="fa-solid fa-chevron-left"></i></button><button class="active">1</button><button>2</button><button>3</button><button><i class="fa-solid fa-chevron-right"></i></button></div><label>Rows per page: <select><option>10</option><option>25</option></select></label></div>
+      </section>
+    </section>
+  </main>
+  <div class="overlay" id="overlay"></div>
+  <div class="modal" id="modal"><div class="modal-box"><button class="modal-close" id="modalClose">×</button><div id="modalContent"></div></div></div>
+  <div class="dropdown-panel" id="dropdownPanel"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

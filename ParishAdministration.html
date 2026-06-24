@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Parish Administration - CSI St. John's Church</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="parish-page">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-icon">✝</div>
+      <div><h1>CSI St. John's Church</h1><p>Church Management System</p></div>
+    </div>
+    <nav class="nav" id="navMenu"></nav>
+    <div class="pastor-card" id="pastorCard">
+      <div class="avatar"><img src="images/avatar.svg" alt="Rev. Michael"></div>
+      <div><strong>Rev. Michael</strong><span>Parish Priest</span></div>
+      <button class="small-arrow">⌄</button>
+    </div>
+  </aside>
+
+  <main class="main" id="main">
+    <header class="topbar">
+      <div class="top-left">
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+        <div class="search-box"><input type="text" placeholder="Search families, members, records..."><span class="search-ico">⌕</span></div>
+      </div>
+      <div class="top-actions">
+        <button class="icon-btn" id="calendarBtn" title="Calendar" aria-label="Calendar"></button>
+        <button class="icon-btn badge" id="notifyBtn" title="Notifications" aria-label="Notifications"><small>12</small></button>
+        <button class="profile-pill" id="profileBtn" aria-label="Profile menu"><span class="profile-dot">PO</span><span class="profile-copy"><b>Parish Office</b><small>St. John's Church</small></span><span class="profile-caret" data-svg="down"></span></button>
+      </div>
+    </header>
+
+    <section class="content page-content">
+      <div class="title-row">
+        <div><h2>Parish Administration</h2><p>Manage parish activities, communications, committees and church overview.</p></div>
+        <div class="page-actions"><button class="date-btn" id="dateBtn">18 May 2025 <span></span></button></div>
+      </div>
+      <section class="parish-cards" id="parishStats"></section>
+      <section class="parish-grid">
+        <div class="card parish-calendar-card">
+          <div class="card-head"><h3>Upcoming Events & Services</h3></div>
+          <div class="parish-split">
+            <div id="parishEvents"></div>
+            <div>
+              <div class="card-head parish-cal-head"><button class="month-arrow" id="parishPrev" type="button" aria-label="Previous month"></button><h3 class="month-title" id="parishMonthTitle">May 2025</h3><button class="month-arrow" id="parishNext" type="button" aria-label="Next month"></button><button class="calendar-mode" id="calendarMode">Month <span class="inline-caret"></span></button></div>
+              <div class="parish-calendar" id="parishCalendar"></div>
+              <div class="cal-legend"><span><i></i>Event</span><span><i style="background:#ff8d1a"></i>Service</span><span><i style="background:#8b65d6"></i>Meeting</span><span><i style="background:#51c76a"></i>Holiday</span></div>
+            </div>
+          </div>
+          <a class="section-link">See all events →</a>
+        </div>
+        <div class="card"><div class="card-head"><h3>Recent Announcements</h3><a>View All</a></div><div id="parishAnnouncements"></div><a class="section-link">See all announcements →</a></div>
+      </section>
+      <section class="parish-bottom-grid">
+        <div class="card"><div class="card-head"><h3>Prayer Request Summary</h3><a>View All</a></div><div class="prayer-summary"><canvas id="prayerDonut" width="150" height="150"></canvas><div class="prayer-legend"><div class="legend-row"><span><i style="background:#3478f6"></i>New Requests</span><b>12 (14.1%)</b></div><div class="legend-row"><span><i style="background:#ff9f1c"></i>In Prayer</span><b>28 (32.9%)</b></div><div class="legend-row"><span><i style="background:#51c76a"></i>Answered</span><b>45 (52.9%)</b></div></div></div><a class="section-link">Manage Prayer Requests →</a></div>
+        <div class="card"><div class="card-head"><h3>Birthdays This Week</h3><a>View All</a></div><div id="birthdays"></div><a class="section-link">See all birthdays →</a></div>
+        <div class="card"><div class="card-head"><h3>Anniversaries This Week</h3><a>View All</a></div><div id="anniversaries"></div><a class="section-link">See all anniversaries →</a></div>
+        <div class="card"><div class="card-head"><h3>Committee Activity Overview</h3><a>View All</a></div><div id="committee"></div><a class="section-link">See full overview →</a></div>
+      </section>
+      <section class="card table-card table-full"><div class="card-head"><h3>Branch Church Overview</h3><a>View All</a></div><div class="table-wrap"><table id="branchTable"></table></div><a class="section-link">View all branch churches →</a></section>
+    </section>
+  </main>
+
+  <div class="overlay" id="overlay"></div>
+  <div class="modal" id="modal"><div class="modal-box"><button class="modal-close" id="modalClose">×</button><div id="modalContent"></div></div></div>
+  <div class="dropdown-panel" id="dropdownPanel"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prayer Request Summary - CSI St. John's Church</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="prayer-page">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand"><div class="brand-icon"><i class="fa-solid fa-church"></i></div><div><h1>CSI St. John's Church</h1><p>Church Management System</p></div></div>
+    <nav class="nav" id="navMenu"></nav>
+    <div class="pastor-card" id="pastorCard"><div class="avatar"><img src="images/avatar.svg" alt="Rev. Michael"></div><div><strong>Rev. Michael</strong><span>Parish Priest</span></div><button class="small-arrow"><i class="fa-solid fa-chevron-down"></i></button></div>
+  </aside>
+  <main class="main" id="main">
+    <header class="topbar">
+      <div class="top-left"><button class="menu-btn" id="menuBtn" aria-label="Toggle menu"><span></span><span></span><span></span></button><div class="search-box"><input type="text" placeholder="Search families, members, records..."><span class="search-ico"><i class="fa-solid fa-magnifying-glass"></i></span></div></div>
+      <div class="top-actions"><button class="icon-btn" id="calendarBtn" title="Calendar"></button><button class="icon-btn badge" id="notifyBtn" title="Notifications"><small>12</small></button><button class="profile-pill" id="profileBtn"><span class="profile-dot">PO</span><span class="profile-copy"><b>Parish Office</b><small>St. John's Church</small></span><span class="profile-caret" data-svg="down"></span></button></div>
+    </header>
+    <section class="content prayer-content">
+      <div class="events-titlebar">
+        <div><h2>Prayer Request Summary</h2><p><a href="ParishAdministration.html">Parish Administration</a><i class="fa-solid fa-chevron-right"></i><span>Prayer Request Summary</span></p></div>
+        <div class="event-actions"><button class="outline-action" id="prayerExport"><i class="fa-solid fa-arrow-up-from-bracket"></i> Export</button><button class="add-action" id="addPrayerBtn"><i class="fa-solid fa-plus"></i> Add Prayer Request</button></div>
+      </div>
+
+      <section class="prayer-stat-grid" id="prayerStats">
+        <div class="stat-card prayer-stat"><div class="stat-icon soft-orange"><i class="fa-solid fa-hands-praying"></i></div><div><h4>Total Requests</h4><div class="num">128</div><p>All Time</p><a href="#prayerTableCard">View all requests <i class="fa-solid fa-arrow-right"></i></a></div></div>
+        <div class="stat-card prayer-stat"><div class="stat-icon soft-green"><i class="fa-regular fa-file-lines"></i></div><div><h4>Active Requests</h4><div class="num">52</div><p>Currently Active</p><a href="#prayerTableCard">View active requests <i class="fa-solid fa-arrow-right"></i></a></div></div>
+        <div class="stat-card prayer-stat"><div class="stat-icon soft-blue"><i class="fa-regular fa-circle-check"></i></div><div><h4>Answered Requests</h4><div class="num">64</div><p>This Year</p><a href="#prayerTableCard">View answered requests <i class="fa-solid fa-arrow-right"></i></a></div></div>
+        <div class="stat-card prayer-stat"><div class="stat-icon soft-purple"><i class="fa-solid fa-briefcase"></i></div><div><h4>Closed Requests</h4><div class="num">12</div><p>This Year</p><a href="#prayerTableCard">View closed requests <i class="fa-solid fa-arrow-right"></i></a></div></div>
+        <div class="stat-card prayer-stat"><div class="stat-icon soft-orange"><i class="fa-regular fa-heart"></i></div><div><h4>Requests This Month</h4><div class="num">9</div><p>May 2025</p><a href="#prayerTableCard">View monthly requests <i class="fa-solid fa-arrow-right"></i></a></div></div>
+      </section>
+
+      <section class="prayer-analytics-grid">
+        <div class="card prayer-chart-card"><h3>Request Status Overview</h3><div class="prayer-chart-flex"><canvas id="prayerStatusChart" width="170" height="170"></canvas><div class="prayer-legend-list"><p><i style="background:#0077b6"></i>Active <b>52 (40.6%)</b></p><p><i style="background:#2f80ed"></i>Answered <b>64 (50.0%)</b></p><p><i style="background:#8b5cf6"></i>Closed <b>12 (9.4%)</b></p><p><i style="background:#ff8a00"></i>Cancelled <b>0 (0%)</b></p></div></div></div>
+        <div class="card prayer-category-card"><h3>Requests by Category <small>(Top 5)</small></h3><div id="prayerCategoryBars"></div><a class="section-link" href="#prayerTableCard">View all categories <i class="fa-solid fa-arrow-right"></i></a></div>
+        <div class="card prayer-line-card"><h3>Requests Over Time <small>(This Year)</small></h3><canvas id="prayerLineChart" width="430" height="190"></canvas></div>
+      </section>
+
+      <section class="prayer-filters card">
+        <label>Status <select id="prayerStatus"><option>All</option><option>Active</option><option>Answered</option><option>Closed</option></select></label>
+        <label>Category <select id="prayerCategory"><option>All</option><option>Health</option><option>Family</option><option>Education</option><option>Financial</option><option>Employment</option><option>Thanksgiving</option></select></label>
+        <label class="date-range-label">Date Range
+          <div class="date-range-fields prayer-date-range"><div class="date-input-wrap"><i class="fa-regular fa-calendar-days"></i><input type="date" id="prayerStart" value="2025-01-01"></div><span class="range-sep">to</span><div class="date-input-wrap"><i class="fa-regular fa-calendar-days"></i><input type="date" id="prayerEnd" value="2025-12-31"></div></div>
+        </label>
+        <label>Requested By <select id="prayerBy"><option>All</option><option>Main Church</option><option>St. Mary's Mission</option><option>St. Peter’s Chapel</option><option>Hill View Branch</option></select></label>
+        <button class="outline-action" id="prayerFilter"><i class="fa-solid fa-filter"></i> Filter</button><button class="text-action" id="prayerReset">Reset</button>
+      </section>
+
+      <section class="card prayer-table-card" id="prayerTableCard">
+        <div class="table-toolbar"><h3>Recent Prayer Requests</h3><div><span>View:</span><button class="mini-btn active" id="prayerListView"><i class="fa-solid fa-list"></i></button><button class="mini-btn" id="prayerGridView"><i class="fa-solid fa-border-all"></i></button></div></div>
+        <div class="table-wrap"><table class="prayer-table" id="prayerTable"></table></div>
+        <div class="prayer-card-grid" id="prayerGrid"></div>
+        <div class="table-footer"><span id="prayerShowing">Showing 1 to 8 of 52 requests</span><div class="pager"><button><i class="fa-solid fa-chevron-left"></i></button><button class="active">1</button><button>2</button><button>3</button><button>...</button><button>7</button><button><i class="fa-solid fa-chevron-right"></i></button></div><label>Rows per page: <select><option>10</option><option>25</option></select></label></div>
+      </section>
+    </section>
+  </main>
+  <div class="overlay" id="overlay"></div>
+  <div class="modal" id="modal"><div class="modal-box"><button class="modal-close" id="modalClose">×</button><div id="modalContent"></div></div></div>
+  <div class="dropdown-panel" id="dropdownPanel"></div>
+  <script src="js/script.js"></script>
+</body>
+</html>
