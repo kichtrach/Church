@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign Up - CSI St. John's Church</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/signup.css" />
+</head>
+<body class="signup-page">
+  <main class="signup-shell">
+    <section class="signup-visual" aria-label="Church management benefits">
+      <div class="visual-bg"></div>
+      <div class="visual-content">
+        <a class="signup-brand" href="index.html" aria-label="CSI St. John's Church dashboard">
+          <span class="signup-brand-icon"><i class="fa-solid fa-church"></i></span>
+          <span>
+            <strong>CSI St. John's Church</strong>
+            <small>Church Management System</small>
+          </span>
+        </a>
+
+        <div class="visual-hero">
+          <h1>Manage. Connect.<br>Serve Better.</h1>
+          <p>A unified platform to manage your church members, events, ministries and more — all in one place.</p>
+        </div>
+
+        <div class="feature-list">
+          <article class="feature-item">
+            <span><i class="fa-solid fa-users"></i></span>
+            <div><h3>Member Management</h3><p>Keep member records organized and up to date.</p></div>
+          </article>
+          <article class="feature-item">
+            <span><i class="fa-solid fa-calendar-check"></i></span>
+            <div><h3>Events & Schedule</h3><p>Plan and manage events, meetings and services.</p></div>
+          </article>
+          <article class="feature-item">
+            <span><i class="fa-solid fa-hand-holding-heart"></i></span>
+            <div><h3>Giving & Contributions</h3><p>Track donations and generate reports with ease.</p></div>
+          </article>
+          <article class="feature-item">
+            <span><i class="fa-solid fa-shield-halved"></i></span>
+            <div><h3>Secure & Reliable</h3><p>Your data is protected with enterprise-grade security.</p></div>
+          </article>
+        </div>
+
+        <div class="quote-card">
+          <i class="fa-solid fa-quote-left"></i>
+          <p>This system has transformed the way we serve our church community.</p>
+          <b>— Parish Council</b>
+        </div>
+      </div>
+    </section>
+
+    <section class="signup-form-panel">
+      <div class="signin-line">
+        <span>Already have an account?</span>
+        <a href="login.html">Sign in</a>
+      </div>
+
+      <div class="signup-form-card">
+        <header class="form-header">
+          <h2>Create Your Account</h2>
+          <p>Join CSI St. John's Church and get started today.</p>
+        </header>
+
+        <form id="signupForm" novalidate>
+          <div class="form-grid two-col">
+            <label class="field">
+              <span>Full Name <b>*</b></span>
+              <div class="input-wrap"><i class="fa-regular fa-user"></i><input type="text" name="fullName" placeholder="Enter your full name" required></div>
+              <small class="error-msg">Full name is required.</small>
+            </label>
+
+            <label class="field">
+              <span>Email Address <b>*</b></span>
+              <div class="input-wrap"><i class="fa-regular fa-envelope"></i><input type="email" name="email" placeholder="Enter your email address" required></div>
+              <small class="error-msg">Enter a valid email address.</small>
+            </label>
+
+            <label class="field">
+              <span>Phone Number <b>*</b></span>
+              <div class="phone-wrap">
+                <button type="button" class="country-btn"><span class="flag">🇮🇳</span> +91 <i class="fa-solid fa-angle-down"></i></button>
+                <input type="tel" name="phone" placeholder="Enter your phone number" required>
+              </div>
+              <small class="error-msg">Phone number is required.</small>
+            </label>
+
+            <label class="field">
+              <span>Password <b>*</b></span>
+              <div class="input-wrap"><i class="fa-solid fa-lock"></i><input id="password" type="password" name="password" placeholder="Create a password" minlength="8" required><button type="button" class="toggle-password" data-target="password"><i class="fa-regular fa-eye-slash"></i></button></div>
+              <em>Minimum 8 characters with letters and numbers</em>
+              <small class="error-msg">Password must be at least 8 characters.</small>
+            </label>
+
+            <label class="field">
+              <span>Confirm Password <b>*</b></span>
+              <div class="input-wrap"><i class="fa-solid fa-lock"></i><input id="confirmPassword" type="password" name="confirmPassword" placeholder="Confirm your password" required><button type="button" class="toggle-password" data-target="confirmPassword"><i class="fa-regular fa-eye-slash"></i></button></div>
+              <small class="error-msg">Passwords must match.</small>
+            </label>
+
+            <label class="field">
+              <span>Date of Birth</span>
+              <div class="input-wrap"><input type="text" name="dob" placeholder="Select your date of birth" onfocus="this.type='date'"><i class="fa-regular fa-calendar"></i></div>
+            </label>
+          </div>
+
+          <div class="field role-field">
+            <span>I am signing up as <b>*</b></span>
+            <div class="role-grid" role="radiogroup" aria-label="Signup role">
+              <button type="button" class="role-card active" data-role="Member"><i class="fa-regular fa-user"></i><strong>Member</strong><small>Join as a church member</small></button>
+              <button type="button" class="role-card" data-role="Volunteer"><i class="fa-solid fa-users-rays"></i><strong>Volunteer</strong><small>I want to volunteer my services</small></button>
+              <button type="button" class="role-card" data-role="Staff"><i class="fa-solid fa-user-group"></i><strong>Staff</strong><small>I am joining the church staff</small></button>
+              <button type="button" class="role-card" data-role="Priest / Pastor"><i class="fa-solid fa-church"></i><strong>Priest / Pastor</strong><small>I am a priest or church pastor</small></button>
+            </div>
+            <input type="hidden" name="role" id="selectedRole" value="Member">
+          </div>
+
+          <label class="field">
+            <span>Select Parish / Branch <b>*</b></span>
+            <div class="select-wrap"><i class="fa-solid fa-place-of-worship"></i><select name="parish" required><option value="">Choose your parish or branch</option><option>Main Church</option><option>St. Peter's Church</option><option>Holy Trinity Church</option><option>CSI Bethel Church</option><option>Emmanuel Church</option></select></div>
+            <small class="error-msg">Please select parish / branch.</small>
+          </label>
+
+          <label class="terms-row">
+            <input type="checkbox" name="terms" required checked>
+            <span>I agree to the <a href="#">Terms of Service</a> and <a href="#">Privacy Policy</a></span>
+          </label>
+          <small class="terms-error">Please agree to the terms.</small>
+
+          <button type="submit" class="create-account-btn">Create Account</button>
+
+          <div class="divider"><span>or sign up with</span></div>
+          <div class="social-grid">
+            <button type="button" class="social-btn google"><i class="fa-brands fa-google"></i> Continue with Google</button>
+            <button type="button" class="social-btn microsoft"><i class="fa-brands fa-microsoft"></i> Continue with Microsoft</button>
+          </div>
+
+          <p class="secure-note"><i class="fa-solid fa-shield-heart"></i> Your information is secure and will never be shared.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <div class="toast" id="signupToast"><i class="fa-solid fa-circle-check"></i> Account form validated successfully.</div>
+  <script src="js/signup.js"></script>
+</body>
+</html>
