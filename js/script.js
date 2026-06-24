@@ -1,3 +1,100 @@
+
+/* === STABLE NAV LOCK (added to stop sidebar active-state flicker without changing page content) === */
+(function(){
+  if(window.__stableNavLockInstalled) return;
+  window.__stableNavLockInstalled=true;
+  const page=(location.pathname.split('/').pop()||'index.html').toLowerCase();
+  const pageLabels={
+    'parishadministration.html':'parish administration',
+    'upcomingeventsservices.html':'upcoming events & services',
+    'sacramentreports.html':'sacrament reports',
+    'birthdaysanniversaries.html':'birthdays & anniversaries',
+    'prayerrequestsummary.html':'prayer request summary',
+    'notificationsannouncements.html':'notifications & announcements',
+    'committeeactivityoverview.html':'committee activity overview',
+    'branchchurchoverview.html':'branch church overview'
+  };
+  const label=pageLabels[page];
+  const parishPages=new Set(Object.keys(pageLabels));
+  const hrefMap={
+    'upcoming events & services':'UpcomingEventsServices.html',
+    'sacrament reports':'SacramentReports.html',
+    'birthdays & anniversaries':'BirthdaysAnniversaries.html',
+    'prayer request summary':'PrayerRequestSummary.html',
+    'notifications & announcements':'NotificationsAnnouncements.html',
+    'committee activity overview':'CommitteeActivityOverview.html',
+    'branch church overview':'BranchChurchOverview.html'
+  };
+  const clean=t=>String(t||'').replace(/^[\s\-–—•]+/,'').replace(/\s+/g,' ').trim().toLowerCase();
+  const isDashboardMain=el=>el && el.matches && el.matches('.nav-main[href="index.html"], .nav-main[href="./index.html"]');
+  const groupTitle=g=>clean(g?.querySelector?.(':scope > .nav-main .nav-title')?.textContent || g?.querySelector?.(':scope > .nav-main')?.textContent || '');
+  const isParishGroup=el=>el && el.matches && el.matches('.nav-group') && groupTitle(el)==='parish administration';
+  const isParishMain=el=>el && el.matches && el.matches('.nav-main') && groupTitle(el.closest('.nav-group'))==='parish administration';
+  const isTargetSub=el=>el && el.matches && el.matches('.subnav a') && label && clean(el.textContent)===label;
+  const nativeAdd=DOMTokenList.prototype.add;
+  const nativeRemove=DOMTokenList.prototype.remove;
+  DOMTokenList.prototype.add=function(...tokens){
+    const el=this.ownerElement;
+    if(label && tokens.includes('active') && isDashboardMain(el)){
+      return this;
+    }
+    return nativeAdd.apply(this,tokens);
+  };
+  DOMTokenList.prototype.remove=function(...tokens){
+    const el=this.ownerElement;
+    if(label){
+      tokens=tokens.filter(t=>{
+        if((t==='open'||t==='active-parent') && isParishGroup(el)) return false;
+        if(t==='active' && (isParishMain(el)||isTargetSub(el))) return false;
+        if((t==='current-subnav') && isTargetSub(el)) return false;
+        return true;
+      });
+      if(!tokens.length) return this;
+    }
+    return nativeRemove.apply(this,tokens);
+  };
+  function applyStableNav(){
+    const nav=document.getElementById('navMenu');
+    if(!nav) return;
+    nav.querySelectorAll('.subnav a').forEach(a=>{
+      const key=clean(a.textContent);
+      if(hrefMap[key]) a.href=hrefMap[key];
+      if(!label || key!==label){
+        nativeRemove.call(a.classList,'active','current-subnav');
+        a.removeAttribute('aria-current');
+      }
+    });
+    nav.querySelectorAll('.nav-group').forEach(g=>{
+      if(!label || groupTitle(g)!=='parish administration'){
+        nativeRemove.call(g.classList,'open','active-parent');
+        const m=g.querySelector(':scope > .nav-main'); if(m) nativeRemove.call(m.classList,'active');
+      }
+    });
+    const dash=nav.querySelector('.nav-main[href="index.html"], .nav-main[href="./index.html"]');
+    if(dash && parishPages.has(page)) nativeRemove.call(dash.classList,'active');
+    if(!label){ if(page==='index.html'||page==='') dash && nativeAdd.call(dash.classList,'active'); return; }
+    const parish=[...nav.querySelectorAll('.nav-group')].find(g=>groupTitle(g)==='parish administration');
+    if(!parish) return;
+    nativeAdd.call(parish.classList,'open','active-parent');
+    const main=parish.querySelector(':scope > .nav-main'); if(main) nativeAdd.call(main.classList,'active');
+    if(label==='parish administration') return;
+    const target=[...parish.querySelectorAll('.subnav a')].find(a=>clean(a.textContent)===label);
+    if(target){
+      nativeAdd.call(target.classList,'active','current-subnav');
+      target.setAttribute('aria-current','page');
+      if(hrefMap[label]) target.href=hrefMap[label];
+    }
+  }
+  window.applyStableNav=applyStableNav;
+  document.addEventListener('DOMContentLoaded',()=>{applyStableNav();[30,120,300,700,1400].forEach(t=>setTimeout(applyStableNav,t));});
+  window.addEventListener('load',applyStableNav);
+  window.addEventListener('pageshow',applyStableNav);
+  document.addEventListener('click',function(e){
+    const sub=e.target.closest?.('.subnav a');
+    if(sub){ const key=clean(sub.textContent); if(hrefMap[key]) sub.href=hrefMap[key]; }
+  },true);
+})();
+
 const icon=(name,cls='')=>{const fa={home:'fa-house',folder:'fa-folder',users:'fa-users',book:'fa-book-bible',heart:'fa-heart',wallet:'fa-wallet',calendar:'fa-calendar-days',settings:'fa-gear',file:'fa-file-lines',chart:'fa-chart-line',cross:'fa-cross',bell:'fa-bell',megaphone:'fa-bullhorn',trophy:'fa-trophy',pray:'fa-hands-praying',church:'fa-church',map:'fa-location-dot',rupee:'fa-indian-rupee-sign',chevLeft:'fa-chevron-left',chevRight:'fa-chevron-right',down:'fa-chevron-down',search:'fa-magnifying-glass',menu:'fa-bars'};return `<i class="fa-solid ${fa[name]||fa.folder} ${cls}" aria-hidden="true"></i>`};const navData={'Parish Administration':['Upcoming Events & Services','Sacrament Reports','Birthdays & Anniversaries','Prayer Request Summary','Notifications & Announcements','Committee Activity Overview','Branch Church Overview'],'Member Management':['Family Registration','Individual Member Registration','Member Directory','New Member Enrollment','Visitor Management','Member Transfer In','Member Transfer Out','Inactive Member Tracking','Migrated Member Tracking','Senior Citizen Registry','Widow/Widower Registry','Member Photo Management'],'Sacramental Records':['Baptism Register','Confirmation Register','Holy Communion Register','Marriage Register','Funeral Register','Membership Certificate','Transfer Certificate','Baptism Certificate','Marriage Certificate','Confirmation Certificate'],'Family Management':['Family Directory','Family Tree','Family Visit Records','Family Contribution History'],'Finance & Accounting':['Tithe Collection','Sunday Offerings','Special Offerings','Mission Offerings','Donation Management','Donor Management','Expense Management','Income Management','General Ledger','Budget Planning','Fund Accounting','Endowment Fund Management','Payroll Management','Bank Reconciliation','Audit Management','Financial Statements'],'Online Giving & Payments':['Online Donation Portal','Payment Gateway Integration','Donation Receipt Generation','Recurring Donations','Donation Analytics'],'Sunday School Management':['Student Registration','Teacher Management','Class Management','Attendance Tracking','Exam Management','Progress Reports','Vacation Bible School'],'Youth Ministry':['Youth Registration','Youth Events','Youth Attendance','Youth Leadership Management','Youth Reports'],"Women's Fellowship":['Women Members','Women Programs','Women Attendance','Women Reports'],"Men's Fellowship":['Men Members','Men Programs','Men Attendance','Men Reports'],'Choir & Worship Team':['Choir Members','Practice Scheduling','Worship Team Roster','Song Library','Special Service Planning'],'Prayer Ministry':['Prayer Requests','Prayer Cell Management','Cottage Prayer Management','Intercessory Team Management','Prayer Reports'],'Event Management':['Church Calendar','Convention Management','Retreat Management','Seminar Management','Special Services','Event Registration','Volunteer Assignment'],'Volunteer Management':['Volunteer Registration','Skill Management','Duty Assignment','Duty Roster','Volunteer Attendance'],'Communication Module':['SMS Notifications','WhatsApp Integration','Email Broadcasting','Push Notifications','Church Announcements','Newsletter Management','Birthday Greetings','Anniversary Greetings'],'Cemetery Management':['Burial Records','Grave Allocation','Cemetery Mapping','Cemetery Reports'],'Asset Management':['Church Property Register','Building Management','Land Records','Vehicle Management','Furniture Inventory','Equipment Inventory','Asset Maintenance'],'Facility Booking':['Hall Booking','Auditorium Booking','Resource Booking','Booking Approval Workflow'],'Human Resource Management':['Staff Management','Employee Records','Leave Management','Payroll Processing','Performance Tracking','Retirement Tracking'],'Document Management':['Meeting Minutes','Circulars','Legal Documents','Property Documents','Policies & Procedures','Digital Archive'],'Election Management (CSI Specific)':['Parish Elections','Voter Registration','Nomination Management','Candidate Management','Voting Management','Election Results'],'Mission & Evangelism':['Mission Field Management','Missionary Records','Evangelism Events','Outreach Programs','Mission Fund Tracking'],'Reports & Analytics':['Membership Reports','Family Reports','Attendance Reports','Financial Reports','Donation Reports','Sacrament Reports','Sunday School Reports','Ministry Reports','Asset Reports','Diocese MIS Dashboard'],'Settings':['General Settings','Diocese Settings','Parish Settings','Payment Settings','SMS Settings','Email Settings','Backup & Restore','Audit Logs']};
 function setupNav(){
   const nav=document.getElementById('navMenu');if(!nav)return;

@@ -1354,3 +1354,17 @@ body.branch-page .member-breakdown-card .donut{border-radius:50%!important;overf
 body.branch-page .bottom-grid{grid-template-columns:minmax(0,1.55fr) minmax(280px,.62fr)!important;}
 body.branch-page .member-chart,body.branch-page .branch-card,body.branch-page .map-box{border-radius:16px!important;}
 @media(max-width:1200px){body.branch-page .bottom-grid{grid-template-columns:1fr!important;}body.branch-page .member-breakdown-card{max-width:100%!important;justify-self:stretch!important;}}
+
+
+/* === Stable Branch Church final visual fixes === */
+body.branch-page #navMenu .nav-group.open > .subnav,
+body.branch-page #navMenu .nav-group.active-parent > .subnav{display:block!important;visibility:visible!important;opacity:1!important;max-height:1600px!important;}
+body.branch-page #navMenu .nav-main[href="index.html"]{background:transparent!important;}
+body.branch-page #navMenu .nav-group.active-parent > .nav-main,
+body.branch-page #navMenu .nav-group.open > .nav-main.active{background:linear-gradient(90deg,#0077b6,#0096c7)!important;color:#fff!important;}
+body.branch-page #navMenu .subnav a.current-subnav,
+body.branch-page #navMenu .subnav a[aria-current="page"]{background:rgba(255,255,255,.24)!important;color:#fff!important;font-weight:800!important;}
+body.branch-page .member-breakdown-card{border-radius:16px!important;max-width:420px!important;width:100%!important;justify-self:end!important;overflow:hidden!important;}
+body.branch-page .member-breakdown-card .donut{border-radius:50%!important;overflow:hidden!important;}
+body.branch-page .member-chart,body.branch-page .map-box,body.branch-page .branch-card,body.branch-page .branch-tab-table,body.branch-page .branch-mini-card{border-radius:16px!important;}
+@media(max-width:1200px){body.branch-page .bottom-grid{grid-template-columns:1fr!important;}body.branch-page .member-breakdown-card{max-width:100%!important;justify-self:stretch!important;}}
