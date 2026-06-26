@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <title>Upcoming Events Services - CSI St. John's Church</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/sidebar.css" rel="stylesheet" />
+    <link href="css/header.css" rel="stylesheet" />
+    <link href="css/buttons.css" rel="stylesheet" />
+    <link href="css/cards.css" rel="stylesheet" />
+    <link href="css/forms.css" rel="stylesheet" />
+    <link href="css/tables.css" rel="stylesheet" />
+    <link href="css/modals.css" rel="stylesheet" />
+    <link href="css/charts.css" rel="stylesheet" />
+    <link href="css/calendar.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="css/upcoming-events-services.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand">
+                <i class="fa-solid fa-church"></i>
+                <div><strong>CSI St. John's Church</strong><span>Church Management System</span></div>
+            </div>
+            <nav class="side-nav">
+                <a class="nav-link" href="dashboard.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a>
+                <div class="nav-group open">
+                    <button class="nav-parent"><i class="fa-solid fa-calendar-days"></i><span>Parish Administration</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link active" href="parish-administration.html">Parish Administration</a><a class="sub-link" href="upcoming-events-services.html">Upcoming Events Services</a><a class="sub-link" href="sacrament-reports.html">Sacrament Reports</a><a class="sub-link" href="birthdays-anniversaries.html">Birthdays Anniversaries</a><a class="sub-link" href="prayer-request-summary.html">Prayer Request Summary</a><a class="sub-link" href="notifications-announcements.html">Notifications Announcements</a><a class="sub-link" href="committee-activity-overview.html">Committee Activity Overview</a><a class="sub-link" href="branch-church-overview.html">Branch Church Overview</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-users"></i><span>Member Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="member-management.html">Member Management</a><a class="sub-link" href="family-registration.html">Family Registration</a><a class="sub-link" href="individual-member-registration.html">Individual Member Registration</a><a class="sub-link" href="member-directory.html">Member Directory</a><a class="sub-link" href="new-member-enrollment.html">New Member Enrollment</a><a class="sub-link" href="visitor-management.html">Visitor Management</a><a class="sub-link" href="member-transfer-in.html">Member Transfer In</a><a class="sub-link" href="member-transfer-out.html">Member Transfer Out</a><a class="sub-link" href="inactive-member-tracking.html">Inactive Member Tracking</a><a class="sub-link" href="migrated-member-tracking.html">Migrated Member Tracking</a><a class="sub-link" href="senior-citizen-registry.html">Senior Citizen Registry</a><a class="sub-link" href="widow-widower-registry.html">Widow Widower Registry</a><a class="sub-link" href="member-photo-management.html">Member Photo Management</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-cross"></i><span>Sacramental Records</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="baptism-register.html">Baptism Register</a><a class="sub-link" href="confirmation-register.html">Confirmation Register</a><a class="sub-link" href="holy-communion-register.html">Holy Communion Register</a><a class="sub-link" href="marriage-register.html">Marriage Register</a><a class="sub-link" href="funeral-register.html">Funeral Register</a><a class="sub-link" href="membership-certificate.html">Membership Certificate</a><a class="sub-link" href="transfer-certificate.html">Transfer Certificate</a><a class="sub-link" href="baptism-certificate.html">Baptism Certificate</a><a class="sub-link" href="marriage-certificate.html">Marriage Certificate</a><a class="sub-link" href="confirmation-certificate.html">Confirmation Certificate</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-people-roof"></i><span>Family Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="family-directory.html">Family Directory</a><a class="sub-link" href="family-tree.html">Family Tree</a><a class="sub-link" href="family-visit-records.html">Family Visit Records</a><a class="sub-link" href="family-contribution-history.html">Family Contribution History</a><a class="sub-link" href="family-attendance-records.html">Family Attendance Records</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-indian-rupee-sign"></i><span>Finance &amp; Accounting</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="tithe-collection.html">Tithe Collection</a><a class="sub-link" href="sunday-offerings.html">Sunday Offerings</a><a class="sub-link" href="special-offerings.html">Special Offerings</a><a class="sub-link" href="mission-offerings.html">MISsion Offerings</a><a class="sub-link" href="donation-management.html">Donation Management</a><a class="sub-link" href="donor-management.html">Donor Management</a><a class="sub-link" href="expense-management.html">Expense Management</a><a class="sub-link" href="income-management.html">Income Management</a><a class="sub-link" href="general-ledger.html">General Ledger</a><a class="sub-link" href="budget-planning.html">Budget Planning</a><a class="sub-link" href="fund-accounting.html">Fund Accounting</a><a class="sub-link" href="endowment-fund-management.html">Endowment Fund Management</a><a class="sub-link" href="payroll-management.html">Payroll Management</a><a class="sub-link" href="bank-reconciliation.html">Bank Reconciliation</a><a class="sub-link" href="audit-management.html">Audit Management</a><a class="sub-link" href="financial-statements.html">Financial Statements</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-credit-card"></i><span>Online Giving &amp; Payments</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="online-donation-portal.html">Online Donation Portal</a><a class="sub-link" href="payment-gateway-integration.html">Payment Gateway Integration</a><a class="sub-link" href="donation-receipt-generation.html">Donation Receipt Generation</a><a class="sub-link" href="recurring-donations.html">Recurring Donations</a><a class="sub-link" href="donation-analytics.html">Donation Analytics</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-school"></i><span>Sunday School Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="student-registration.html">Student Registration</a><a class="sub-link" href="teacher-management.html">Teacher Management</a><a class="sub-link" href="class-management.html">Class Management</a><a class="sub-link" href="attendance-tracking.html">Attendance Tracking</a><a class="sub-link" href="exam-management.html">Exam Management</a><a class="sub-link" href="progress-reports.html">Progress Reports</a><a class="sub-link" href="vacation-bible-school.html">Vacation Bible School</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-child-reaching"></i><span>Youth Ministry</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="youth-registration.html">Youth Registration</a><a class="sub-link" href="youth-events.html">Youth Events</a><a class="sub-link" href="youth-attendance.html">Youth Attendance</a><a class="sub-link" href="youth-leadership-management.html">Youth Leadership Management</a><a class="sub-link" href="youth-reports.html">Youth Reports</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-person-dress"></i><span>Women’s Fellowship</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="women-members.html">Women Members</a><a class="sub-link" href="women-programs.html">Women Programs</a><a class="sub-link" href="women-attendance.html">Women Attendance</a><a class="sub-link" href="women-reports.html">Women Reports</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-person"></i><span>Men’s Fellowship</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="men-members.html">Men Members</a><a class="sub-link" href="men-programs.html">Men Programs</a><a class="sub-link" href="men-attendance.html">Men Attendance</a><a class="sub-link" href="men-reports.html">Men Reports</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-music"></i><span>Choir &amp; Worship Team</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="choir-members.html">Choir Members</a><a class="sub-link" href="practice-scheduling.html">Practice Scheduling</a><a class="sub-link" href="worship-team-roster.html">Worship Team Roster</a><a class="sub-link" href="song-library.html">Song Library</a><a class="sub-link" href="special-service-planning.html">Special Service Planning</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-hands-praying"></i><span>Prayer Ministry</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="prayer-requests.html">Prayer Requests</a><a class="sub-link" href="prayer-cell-management.html">Prayer Cell Management</a><a class="sub-link" href="cottage-prayer-management.html">Cottage Prayer Management</a><a class="sub-link" href="intercessory-team-management.html">Intercessory Team Management</a><a class="sub-link" href="prayer-reports.html">Prayer Reports</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-calendar-check"></i><span>Event Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="church-calendar.html">Church Calendar</a><a class="sub-link" href="convention-management.html">Convention Management</a><a class="sub-link" href="retreat-management.html">Retreat Management</a><a class="sub-link" href="seminar-management.html">Seminar Management</a><a class="sub-link" href="special-services.html">Special Services</a><a class="sub-link" href="event-registration.html">Event Registration</a><a class="sub-link" href="volunteer-assignment.html">Volunteer Assignment</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-handshake-angle"></i><span>Volunteer Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="volunteer-registration.html">Volunteer Registration</a><a class="sub-link" href="skill-management.html">Skill Management</a><a class="sub-link" href="duty-assignment.html">Duty Assignment</a><a class="sub-link" href="duty-roster.html">Duty Roster</a><a class="sub-link" href="volunteer-attendance.html">Volunteer Attendance</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-comments"></i><span>Communication Module</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="sms-notifications.html">SMS Notifications</a><a class="sub-link" href="whatsapp-integration.html">Whatsapp Integration</a><a class="sub-link" href="email-broadcasting.html">Email Broadcasting</a><a class="sub-link" href="push-notifications.html">Push Notifications</a><a class="sub-link" href="church-announcements.html">Church Announcements</a><a class="sub-link" href="newsletter-management.html">Newsletter Management</a><a class="sub-link" href="birthday-greetings.html">Birthday Greetings</a><a class="sub-link" href="anniversary-greetings.html">Anniversary Greetings</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-landmark"></i><span>Cemetery Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="burial-records.html">Burial Records</a><a class="sub-link" href="grave-allocation.html">Grave Allocation</a><a class="sub-link" href="cemetery-mapping.html">Cemetery Mapping</a><a class="sub-link" href="grave-renewal-tracking.html">Grave Renewal Tracking</a><a class="sub-link" href="cemetery-reports.html">Cemetery Reports</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-warehouse"></i><span>Asset Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="church-property-register.html">Church Property Register</a><a class="sub-link" href="building-management.html">Building Management</a><a class="sub-link" href="land-records.html">Land Records</a><a class="sub-link" href="vehicle-management.html">Vehicle Management</a><a class="sub-link" href="furniture-inventory.html">Furniture Inventory</a><a class="sub-link" href="equipment-inventory.html">Equipment Inventory</a><a class="sub-link" href="asset-maintenance.html">Asset Maintenance</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-building"></i><span>Facility Booking</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="hall-booking.html">Hall Booking</a><a class="sub-link" href="auditorium-booking.html">Auditorium Booking</a><a class="sub-link" href="resource-booking.html">Resource Booking</a><a class="sub-link" href="booking-approval-workflow.html">Booking Approval Workflow</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-id-badge"></i><span>Human Resource Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="staff-management.html">Staff Management</a><a class="sub-link" href="employee-records.html">Employee Records</a><a class="sub-link" href="leave-management.html">Leave Management</a><a class="sub-link" href="payroll-processing.html">Payroll Processing</a><a class="sub-link" href="performance-tracking.html">Performance Tracking</a><a class="sub-link" href="retirement-tracking.html">Retirement Tracking</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-folder-open"></i><span>Document Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="meeting-minutes.html">Meeting Minutes</a><a class="sub-link" href="circulars.html">Circulars</a><a class="sub-link" href="legal-documents.html">Legal Documents</a><a class="sub-link" href="property-documents.html">Property Documents</a><a class="sub-link" href="policies-procedures.html">Policies Procedures</a><a class="sub-link" href="digital-archive.html">Digital Archive</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-check-to-slot"></i><span>Election Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="parish-elections.html">Parish Elections</a><a class="sub-link" href="voter-registration.html">Voter Registration</a><a class="sub-link" href="nomination-management.html">Nomination Management</a><a class="sub-link" href="candidate-management.html">Candidate Management</a><a class="sub-link" href="voting-management.html">Voting Management</a><a class="sub-link" href="election-results.html">Election Results</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-globe"></i><span>Mission &amp; Evangelism</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="mission-field-management.html">MISsion Field Management</a><a class="sub-link" href="missionary-records.html">MISsionary Records</a><a class="sub-link" href="evangelism-events.html">Evangelism Events</a><a class="sub-link" href="outreach-programs.html">Outreach Programs</a><a class="sub-link" href="mission-fund-tracking.html">MISsion Fund Tracking</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-chart-line"></i><span>Reports &amp; Analytics</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="membership-reports.html">Membership Reports</a><a class="sub-link" href="family-reports.html">Family Reports</a><a class="sub-link" href="attendance-reports.html">Attendance Reports</a><a class="sub-link" href="financial-reports.html">Financial Reports</a><a class="sub-link" href="donation-reports.html">Donation Reports</a><a class="sub-link" href="sacrament-reports-analytics.html">Sacrament Reports Analytics</a><a class="sub-link" href="sunday-school-reports.html">Sunday School Reports</a><a class="sub-link" href="ministry-reports.html">Ministry Reports</a><a class="sub-link" href="asset-reports.html">Asset Reports</a><a class="sub-link" href="diocese-mis-dashboard.html">Diocese MIS Dashboard</a></div>
+                </div>
+                <div class="nav-group">
+                    <button class="nav-parent"><i class="fa-solid fa-gear"></i><span>Settings</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="general-settings.html">General Settings</a><a class="sub-link" href="diocese-settings.html">Diocese Settings</a><a class="sub-link" href="parish-settings.html">Parish Settings</a><a class="sub-link" href="payment-settings.html">Payment Settings</a><a class="sub-link" href="sms-settings.html">SMS Settings</a><a class="sub-link" href="email-settings.html">Email Settings</a><a class="sub-link" href="backup-restore.html">Backup Restore</a><a class="sub-link" href="audit-logs.html">Audit Logs</a></div>
+                </div>
+            </nav>
+            <div class="side-profile">
+                <div class="avatar">RM</div>
+                <div><strong>Rev. Michael</strong><span>Parish Priest</span></div>
+                <i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </aside>
+        <section class="main">
+            <header class="topbar">
+                <button aria-label="Toggle sidebar" class="hamburger"><i class="fa-solid fa-bars"></i></button>
+                <div class="global-search"><input id="globalSearch" placeholder="Search families, members, records..." /><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div class="top-actions">
+                    <button aria-expanded="false" aria-label="Open calendar" class="icon-btn calendar-toggle topbar-calendar-toggle" type="button"><i class="fa-regular fa-calendar"></i></button>
+                    <div class="dropdown-wrap">
+                        <button class="icon-btn notify-toggle"><i class="fa-regular fa-bell"></i><span class="badge">12</span></button>
+                        <div class="dropdown-panel notification-panel">
+                            <h4>Notifications</h4>
+                            <p><b>New prayer request</b><br />2 minutes ago</p>
+                            <p><b>Donation received</b><br />₹10,000 from John Samuel</p>
+                            <p><b>Meeting reminder</b><br />Committee at 6 PM</p>
+                        </div>
+                    </div>
+                    <div class="dropdown-wrap">
+                        <button class="profile-toggle"><span><b>Parish Office</b><small>St. John's Church</small></span><i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-panel profile-panel"><a href="#"><i class="fa-regular fa-user"></i> Profile</a><a href="general-settings.html"><i class="fa-solid fa-gear"></i> Settings</a><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></div>
+                    </div>
+                </div>
+                <div class="calendar-pop">
+                    <div class="cal-head"><button class="cal-prev"><i class="fa-solid fa-chevron-left"></i></button><strong class="cal-title"></strong><button class="cal-next"><i class="fa-solid fa-chevron-right"></i></button></div>
+                    <div class="cal-grid"></div>
+                    <div aria-live="polite" class="topbar-calendar-events"></div>
+                </div>
+            </header>
+            <main class="content upcoming-page">
+                <div class="events-titlebar">
+                    <div>
+                        <h1>Upcoming Events &amp; Services</h1>
+                        <div class="breadcrumb"><a href="parish-administration.html">Parish Administration</a><i class="fa-solid fa-chevron-right"></i><span>Upcoming Events &amp; Services</span></div>
+                    </div>
+                    <div class="events-actions">
+                        <button aria-controls="eventsCalendarPanel" aria-expanded="false" class="btn outline" id="calendarViewBtn" type="button"><i class="fa-regular fa-calendar"></i> Calendar View</button> 
+                        <button class="btn primary" id="addEventBtn"><i class="fa-solid fa-plus"></i> Add Event</button>
+                    </div>
+                </div>
+                <section aria-hidden="true" class="events-calendar-panel" id="eventsCalendarPanel">
+                    <div class="events-calendar-head">
+                        <div>
+                            <h3>Event Calendar</h3>
+                            <p>Switch between month and day view, navigate dates, and select an event day.</p>
+                        </div>
+                        <div class="events-calendar-controls">
+                            <button aria-label="Previous" class="calendar-nav" id="eventsCalPrev" type="button"><i class="fa-solid fa-chevron-left"></i></button>
+                            <strong id="eventsCalTitle">May 2025</strong>
+                            <button aria-label="Next" class="calendar-nav" id="eventsCalNext" type="button"><i class="fa-solid fa-chevron-right"></i></button>
+                            <div aria-label="Calendar view" class="view-switch" role="tablist">
+                                <button class="active" data-calendar-view="month" type="button">Month View</button>
+                                <button data-calendar-view="day" type="button">Day View</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="events-calendar-body month-view active" id="eventsMonthView">
+                        <div class="events-calendar-grid" id="eventsCalendarGrid"></div>
+                    </div>
+                    <div class="events-calendar-body day-view" id="eventsDayView">
+                        <div class="selected-day-card">
+                            <span id="selectedDayLabel">18 May 2025</span>
+                            <strong id="selectedDayCount">0 events</strong>
+                        </div>
+                        <div class="day-event-list" id="dayEventList"></div>
+                    </div>
+                </section>
+                <section class="events-stat-grid">
+                    <article class="event-stat">
+                        <div class="event-stat-icon teal"><i class="fa-regular fa-calendar"></i></div>
+                        <div><span>Total Events</span><strong>24</strong><small>This Month</small><a href="#">View Calendar</a></div>
+                    </article>
+                    <article class="event-stat">
+                        <div class="event-stat-icon orange"><i class="fa-solid fa-users"></i></div>
+                        <div><span>Services</span><strong>16</strong><small>This Month</small><a href="#">View Services</a></div>
+                    </article>
+                    <article class="event-stat">
+                        <div class="event-stat-icon purple"><i class="fa-solid fa-cross"></i></div>
+                        <div><span>Special Services</span><strong>4</strong><small>This Month</small><a href="#">View Details</a></div>
+                    </article>
+                    <article class="event-stat">
+                        <div class="event-stat-icon mint"><i class="fa-solid fa-users-line"></i></div>
+                        <div><span>Retreats &amp; Programs</span><strong>3</strong><small>This Month</small><a href="#">View Details</a></div>
+                    </article>
+                    <article class="event-stat">
+                        <div class="event-stat-icon green"><i class="fa-solid fa-bullhorn"></i></div>
+                        <div><span>Registrations</span><strong>178</strong><small>This Month</small><a href="#">View Registrations </a></div>
+                    </article>
+                </section>
+                <section class="events-panel">
+                    <div class="events-table-toolbar">
+                        <div class="events-tabs" role="tablist">
+                            <button class="events-tab active" data-filter="all">All</button>
+                            <button class="events-tab" data-filter="Event">Events</button>
+                            <button class="events-tab" data-filter="Service">Services</button>
+                            <button class="events-tab" data-filter="Special Service">Special Services</button>
+                            <button class="events-tab" data-filter="Program">Programs</button>
+                            <button class="events-tab" data-filter="Retreat">Retreats</button>
+                            <button class="events-tab" data-filter="Meeting">Meetings</button>
+                        </div>
+                        <div class="events-filters">
+                            <button class="filter-control date-range"><i class="fa-regular fa-calendar"></i> 18 May 2025 - 18 Aug 2025</button>
+                            <select class="filter-control" id="categoryFilter">
+                                <option>All Categories</option>
+                                <option>Event</option>
+                                <option>Service</option>
+                                <option>Special Service</option>
+                                <option>Program</option>
+                                <option>Retreat</option>
+                                <option>Meeting</option>
+                            </select>
+                            <select class="filter-control" id="locationFilter">
+                                <option>All Locations</option>
+                                <option>Main Church</option>
+                                <option>Youth Hall</option>
+                                <option>Main Auditorium</option>
+                                <option>Retreat Center</option>
+                            </select>
+                            <button class="filter-control filter-btn" id="filterBtn"><i class="fa-solid fa-filter"></i> Filter</button>
+                        </div>
+                    </div>
+                    <div class="events-table-wrap">
+                        <table class="events-table" id="eventsTable">
+                            <thead>
+                                <tr>
+                                    <th>Date &amp; Time</th>
+                                    <th>Event / Service</th>
+                                    <th>Category</th>
+                                    <th>Location</th>
+                                    <th>Organized By</th>
+                                    <th>Registrations</th>
+                                    <th>Status</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="events-pagination">
+                        <span>Showing 1 to 10 of 24 events</span>
+                        <div class="page-buttons"><button disabled=""><i class="fa-solid fa-chevron-left"></i></button><button class="active">1</button><button>2</button><button>3</button><button><i class="fa-solid fa-chevron-right"></i></button></div>
+                        <label>
+                            Rows per page:
+                            <select>
+                                <option>10</option>
+                                <option>25</option>
+                            </select>
+                        </label>
+                    </div>
+                </section>
+                <div aria-hidden="true" class="event-modal-backdrop" id="eventWizardModal">
+                    <div aria-labelledby="eventModalTitle" aria-modal="true" class="event-wizard-card" role="dialog">
+                        <div class="event-wizard-head">
+                            <h2 id="eventModalTitle">Add Event</h2>
+                            <button aria-label="Close" class="event-modal-close" type="button"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <div class="event-step-tabs">
+                            <button class="step-tab active" data-step="0"><i class="fa-regular fa-calendar"></i> Event Details</button>
+                            <button class="step-tab" data-step="1"><i class="fa-regular fa-calendar-days"></i> Schedule</button>
+                            <button class="step-tab" data-step="2"><i class="fa-solid fa-location-dot"></i> Location</button>
+                            <button class="step-tab" data-step="3"><i class="fa-solid fa-users"></i> Organizers</button>
+                            <button class="step-tab" data-step="4"><i class="fa-solid fa-circle-info"></i> Additional Info</button>
+                        </div>
+                        <form id="eventWizardForm" novalidate="">
+                            <div class="wizard-body">
+                                <section class="wizard-step active" data-step="0">
+                                    <div class="event-form-grid two-col">
+                                        <div class="form-stack">
+                                            <label>Event / Service Title <b>*</b><input name="eventTitle" placeholder="Enter event or service title" required="" /></label>
+                                            <label>
+                                                Category <b>*</b>
+                                                <select name="eventCategory" required="">
+                                                    <option value="">Select category</option>
+                                                    <option>Event</option>
+                                                    <option>Service</option>
+                                                    <option>Special Service</option>
+                                                    <option>Meeting</option>
+                                                    <option>Program</option>
+                                                    <option>Retreat</option>
+                                                </select>
+                                            </label>
+                                            <label>
+                                                Description <b>*</b>
+                                                <div class="editor-toolbar">
+                                                    <select>
+                                                        <option>Normal</option>
+                                                    </select>
+                                                    <i class="fa-solid fa-bold"></i><i class="fa-solid fa-italic"></i><i class="fa-solid fa-underline"></i><i class="fa-solid fa-list-ul"></i><i class="fa-solid fa-list-ol"></i><i class="fa-solid fa-link"></i>
+                                                </div>
+                                                <textarea name="description" placeholder="Enter event description..." required=""></textarea>
+                                                <small class="count">0 / 1000</small>
+                                            </label>
+                                            <div class="field-row">
+                                                <label>
+                                                    Organized By <b>*</b>
+                                                    <select name="organizedBy" required="">
+                                                        <option value="">Select ministry / department</option>
+                                                        <option>Youth Ministry</option>
+                                                        <option>Parish Council</option>
+                                                        <option>Sunday School</option>
+                                                        <option>Worship Committee</option>
+                                                    </select>
+                                                </label>
+                                                <label>
+                                                    In Collaboration With
+                                                    <select>
+                                                        <option>Select (optional)</option>
+                                                        <option>Choir Team</option>
+                                                        <option>Women’s Fellowship</option>
+                                                    </select>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="form-stack">
+                                            <label>Date <b>*</b><input name="eventDate" required="" value="18/05/2025" /><i class="field-icon fa-regular fa-calendar"></i></label>
+                                            <div class="field-row"><label>Start Time <b>*</b><input name="startTime" required="" value="06:00 PM" /><i class="field-icon fa-regular fa-clock"></i></label><label>End Time<input name="endTime" value="07:30 PM" /><i class="field-icon fa-regular fa-clock"></i></label></div>
+                                            <label class="check-line"><input name="allDay" type="checkbox" /> All Day Event</label>
+                                            <label>
+                                                Repeat
+                                                <select>
+                                                    <option>Does not repeat</option>
+                                                    <option>Daily</option>
+                                                    <option>Weekly</option>
+                                                    <option>Monthly</option>
+                                                </select>
+                                            </label>
+                                            <div class="field-block">
+                                                <span>Registration Required</span>
+                                                <div class="radio-grid small"><label><input checked="" name="registration" type="radio" value="Yes" /> Yes</label><label><input name="registration" type="radio" value="No" /> No</label></div>
+                                            </div>
+                                            <label>Registration Limit<input name="registrationLimit" placeholder="Enter limit (e.g., 100)" /></label>
+                                            <label>
+                                                Visibility
+                                                <select>
+                                                    <option>Public (Visible to all)</option>
+                                                    <option>Members Only</option>
+                                                    <option>Private</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="wizard-split-bottom">
+                                        <div>
+                                            <h4>Target Audience</h4>
+                                            <div class="checkbox-grid audience"><label><input checked="" type="checkbox" /> All Members</label><label><input type="checkbox" /> Families</label><label><input type="checkbox" /> Youth</label><label><input type="checkbox" /> Children</label><label><input type="checkbox" /> Women</label><label><input type="checkbox" /> Men</label><label><input type="checkbox" /> Seniors</label><label><input type="checkbox" /> Others</label></div>
+                                        </div>
+                                        <div>
+                                            <h4>Cover Image <span>(Optional)</span></h4>
+                                            <div class="drop-area"><i class="fa-regular fa-image"></i><strong>Click to upload</strong> or drag and drop<br /><small>JPG, PNG or WEBP (Max. 2MB)</small></div>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="wizard-step" data-step="1">
+                                    <h3>Schedule Type</h3>
+                                    <div class="radio-row"><label><input name="scheduleType" type="radio" value="One Time Event" /> One Time Event</label><label><input checked="" name="scheduleType" type="radio" value="Multiple Sessions" /> Multiple Sessions</label><label><input name="scheduleType" type="radio" value="Recurring Event" /> Recurring Event</label></div>
+                                    <h3>Schedule</h3>
+                                    <div class="session-table-box">
+                                        <table class="session-table">
+                                            <thead>
+                                                <tr>
+                                                    <th>#</th>
+                                                    <th>Date <b>*</b></th>
+                                                    <th>Day</th>
+                                                    <th>Start Time <b>*</b></th>
+                                                    <th>End Time <b>*</b></th>
+                                                    <th>Session Title <span>(Optional)</span></th>
+                                                    <th>Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody id="sessionRows"></tbody>
+                                        </table>
+                                        <button class="btn dashed" id="addSessionBtn" type="button"><i class="fa-solid fa-plus"></i> Add Session</button>
+                                    </div>
+                                    <div class="event-form-grid two-col schedule-bottom">
+                                        <div>
+                                            <h3>Registration Schedule</h3>
+                                            <label>Registration Opens On<input value="01/05/2025" /><i class="field-icon fa-regular fa-calendar"></i></label><label>Registration Closes On<input value="18/05/2025" /><i class="field-icon fa-regular fa-calendar"></i></label>
+                                        </div>
+                                        <div>
+                                            <h3>Reminder Notifications</h3>
+                                            <label class="reminder-line">
+                                                <span><input checked="" type="checkbox" /> Send reminder before event</span>
+                                                <select>
+                                                    <option>1 Day Before</option>
+                                                    <option>2 Days Before</option>
+                                                </select>
+                                            </label>
+                                            <label class="reminder-line">
+                                                <span><input checked="" type="checkbox" /> Send follow-up after event</span>
+                                                <select>
+                                                    <option>1 Day After</option>
+                                                    <option>2 Days After</option>
+                                                </select>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </section>
+                                <section class="wizard-step" data-step="2">
+                                    <div class="event-form-grid two-col map-layout">
+                                        <div class="form-stack">
+                                            <h3>Event Location</h3>
+                                            <div class="field-block">
+                                                <span>Location Type <b>*</b></span>
+                                                <div class="radio-row compact"><label><input checked="" name="locationType" type="radio" /> Church / Parish Location</label><label><input name="locationType" type="radio" /> Custom Location</label></div>
+                                            </div>
+                                            <label>
+                                                Venue / Location <b>*</b>
+                                                <select required="">
+                                                    <option>Select church / venue</option>
+                                                    <option>Main Church</option>
+                                                    <option>Youth Hall</option>
+                                                </select>
+                                            </label>
+                                            <label>
+                                                Building / Hall <span>(Optional)</span>
+                                                <select>
+                                                    <option>Select building / hall</option>
+                                                    <option>Main Auditorium</option>
+                                                </select>
+                                            </label>
+                                            <label>Address<textarea readonly="">12, Church Road, Nagercoil,
+                                    Tamil Nadu – 629001, India</textarea></label><label>Landmark <span>(Optional)</span><input value="Near CSI School" /></label><label>Capacity <span>(Optional)</span><input value="200" /><i class="field-icon fa-solid fa-users"></i></label><label class="check-line"><input checked="" type="checkbox" /> Display location on event details</label>
+                                        </div>
+                                        <div>
+                                            <h3>Location Map</h3>
+                                            <div class="map-card">
+                                                <div class="fake-map"><span class="map-label school">CSI School</span><span class="map-label aud">St. John's Auditorium</span><span class="map-label hosp">St. Mary's Hospital</span><span class="map-pin"><i class="fa-solid fa-location-dot"></i> CSI St. John’s Church</span><button class="map-full"><i class="fa-solid fa-expand"></i></button><button class="map-plus">+</button><button class="map-minus">−</button></div>
+                                                <div class="map-foot"><span>Drag the pin to adjust the exact location</span><button class="btn primary small" type="button">Reset Location</button></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="specific-location">
+                                        <h3>Service / Program Specific Location <span>(Optional)</span></h3>
+                                        <p>If this event includes multiple programs or sessions at different locations, you can add them here.</p>
+                                        <button class="btn outline" type="button"><i class="fa-solid fa-plus"></i> Add Another Location</button>
+                                    </div>
+                                </section>
+                                <section class="wizard-step" data-step="3">
+                                    <div class="event-form-grid two-col organizers-layout">
+                                        <div>
+                                            <h3>Event Organizers</h3>
+                                            <label>
+                                                Primary Organizer <b>*</b>
+                                                <div class="input-button">
+                                                    <select required="">
+                                                        <option>Select primary organizer</option>
+                                                        <option>John Samuel</option>
+                                                    </select>
+                                                    <button type="button"><i class="fa-solid fa-user-group"></i></button>
+                                                </div>
+                                            </label>
+                                            <label>Co-Organizers<input id="organizerSearch" placeholder="Search members..." /></label>
+                                            <div class="organizer-list" id="organizerList"></div>
+                                            <button class="link-btn" type="button"><i class="fa-solid fa-plus"></i> Add Co-Organizer</button>
+                                        </div>
+                                        <div>
+                                            <label>
+                                                Organizer Role
+                                                <select>
+                                                    <option>Select role</option>
+                                                    <option>Event Coordinator</option>
+                                                    <option>Host</option>
+                                                </select>
+                                                <small>Role of the primary organizer for this event.</small>
+                                            </label>
+                                            <label>
+                                                Contact Person (For Queries)
+                                                <select>
+                                                    <option>Same as Primary Organizer</option>
+                                                    <option>Parish Office</option>
+                                                </select>
+                                                <small>Choose who will be the main contact for queries.</small>
+                                            </label>
+                                            <label>Contact Phone<input readonly="" value="+91 98765 43210" /></label><label>Contact Email<input readonly="" value="john.samuel@stjohnschurch.org" /></label><label>Organizer Note <span>(Optional)</span><textarea placeholder="Add a note for organizers..."></textarea><small class="count">0 / 500</small></label>
+                                        </div>
+                                    </div>
+                                    <div class="permission-box">
+                                        <h3>Organizer Permissions</h3>
+                                        <p>Define what organizers can manage for this event.</p>
+                                        <div class="checkbox-grid two"><label><input checked="" type="checkbox" /> Can edit event details</label><label><input checked="" type="checkbox" /> Can manage schedule</label><label><input checked="" type="checkbox" /> Can manage registrations</label><label><input checked="" type="checkbox" /> Can send notifications</label><label><input checked="" type="checkbox" /> Can manage attendees</label><label><input type="checkbox" /> Can delete event</label></div>
+                                    </div>
+                                </section>
+                                <section class="wizard-step" data-step="4">
+                                    <div class="event-form-grid two-col">
+                                        <div class="form-stack">
+                                            <label>
+                                                Event Description
+                                                <div class="editor-toolbar">
+                                                    <select>
+                                                        <option>Normal</option>
+                                                    </select>
+                                                    <i class="fa-solid fa-bold"></i><i class="fa-solid fa-italic"></i><i class="fa-solid fa-underline"></i><i class="fa-solid fa-list-ul"></i><i class="fa-solid fa-align-left"></i><i class="fa-solid fa-link"></i>
+                                                </div>
+                                                <textarea placeholder="Provide more details about the event, its purpose, and what participants can expect..."></textarea>
+                                                <small class="count">0 / 2000</small>
+                                            </label>
+                                            <label>Event Guidelines <span>(Optional)</span><textarea placeholder="Add any guidelines or instructions for organizers, volunteers, or participants..."></textarea><small class="count">0 / 1000</small></label><label>What to Bring <span>(Optional)</span><input placeholder="e.g., Bible, Notebook, Pen, Water Bottle..." /></label>
+                                            <label>
+                                                Attachments <span>(Optional)</span>
+                                                <div class="drop-area large"><i class="fa-solid fa-cloud-arrow-up"></i><strong>Click to upload</strong> or drag and drop<br /><small>PDF, DOC, DOCX, PPT, XLS, JPG, PNG (Max. 10MB each)</small><button class="btn outline small" type="button"><i class="fa-solid fa-plus"></i> Add Another File</button></div>
+                                            </label>
+                                        </div>
+                                        <div class="form-stack">
+                                            <label>
+                                                Event Category <b>*</b>
+                                                <select required="">
+                                                    <option>Select category</option>
+                                                    <option>Event</option>
+                                                    <option>Service</option>
+                                                </select>
+                                                <small>Choose the most relevant category for this event.</small>
+                                            </label>
+                                            <label>Event Tags <span>(Optional)</span><input placeholder="Type and press Enter to add tags" /><small>Add tags to help people find this event easily.</small></label>
+                                            <div class="field-block">
+                                                <span>Target Age Group <span>(Optional)</span></span>
+                                                <div class="checkbox-grid one"><label><input type="checkbox" /> Children (0-12)</label><label><input type="checkbox" /> Youth (13-18)</label><label><input type="checkbox" /> Young Adults (19-30)</label><label><input checked="" type="checkbox" /> Adults (31-60)</label><label><input type="checkbox" /> Seniors (60+)</label><label><input checked="" type="checkbox" /> All Age Groups</label></div>
+                                            </div>
+                                            <label>
+                                                Language
+                                                <select>
+                                                    <option>English</option>
+                                                    <option>Tamil</option>
+                                                </select>
+                                            </label>
+                                            <label>
+                                                Dress Code <span>(Optional)</span>
+                                                <select>
+                                                    <option>Select dress code</option>
+                                                    <option>Formal</option>
+                                                    <option>Traditional</option>
+                                                </select>
+                                                <small>e.g., Formal, Casual, Traditional, etc.</small>
+                                            </label>
+                                            <div class="field-block">
+                                                <span>Accessibility <span>(Optional)</span></span>
+                                                <div class="checkbox-grid two"><label><input type="checkbox" /> Wheelchair Accessible</label><label><input type="checkbox" /> Sign Language Support</label></div>
+                                            </div>
+                                            <label>Notes <span>(Internal Use Only)</span><textarea placeholder="Add internal notes for reference. This will not be visible to event participants."></textarea><small class="count">0 / 1000</small></label>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="wizard-errors" id="wizardErrors"></div>
+                            <div class="event-wizard-foot">
+                                <button class="btn outline" id="wizardBack" type="button">Back</button>
+                                <div><button class="btn outline event-modal-close" type="button">Cancel</button><button class="btn primary" id="wizardNext" type="button">Next</button><button class="btn primary" id="wizardSave" type="submit">Save Event</button></div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </main>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/dropdowns.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/tables.js"></script>
+    <script src="js/upcoming-events-services.js"></script>
+</body>
+
+</html>

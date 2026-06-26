@@ -1,104 +1,177 @@
-// Page specific scripts extracted from CommitteeActivityOverview.html
-document.addEventListener('DOMContentLoaded',function(){
-      const rows=[['Worship Committee',28,22,4,2,78.6],['Christian Education Committee',24,18,3,3,75.0],['Youth Ministry Committee',22,15,4,3,68.2],['Social Service Committee',26,19,5,2,73.1],['Finance Committee',18,14,2,2,77.8],['Property Management Committee',16,10,3,3,62.5]];
-      const meetings=[['Finance Committee Meeting','24 May 2025 (Sat) · 10:00 AM','Parish Office Conference Room'],['Worship Committee Meeting','25 May 2025 (Sun) · 11:30 AM','Church Meeting Hall'],['Youth Ministry Meeting','27 May 2025 (Tue) · 06:00 PM','Youth Room'],['Social Service Committee Meeting','28 May 2025 (Wed) · 04:00 PM','Parish Office Conference Room']];
-      const recent=[['fa-kit-medical','Medical Camp Organized','Health Committee','23 May 2025'],['fa-person-hiking','Youth Retreat Planning','Youth Ministry Committee','22 May 2025'],['fa-book-open','Sunday School Curriculum Update','Christian Education Committee','21 May 2025'],['fa-music','Choir Practice Session','Worship Committee','20 May 2025'],['fa-seedling','Environment Clean Drive','Social Service Committee','19 May 2025']];
-      document.getElementById('committeeRows').innerHTML=rows.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td>${r[3]}</td><td>${r[4]}</td><td><div class="completion"><span>${r[5]}%</span><div class="bar"><em style="width:${r[5]}%"></em></div></div></td><td><div class="action-wrap"><button class="table-view-btn" data-view-committee="${r[0]}"><i class="fa-regular fa-eye"></i></button><button class="table-more-btn" data-more-committee="${r[0]}"><i class="fa-solid fa-ellipsis-vertical"></i></button><div class="row-action-menu"><button data-edit-committee="${r[0]}"><i class="fa-regular fa-pen-to-square"></i> Edit</button><button data-delete-committee="${r[0]}"><i class="fa-regular fa-trash-can"></i> Delete</button></div></div></td></tr>`).join('');
-      const meetingHTML=meetings.map(m=>`<div class="meeting-item"><div class="meeting-icon"><i class="fa-regular fa-calendar-days"></i></div><div><h4>${m[0]}</h4><p>${m[1]}</p><span>${m[2]}</span></div></div>`).join(''); document.getElementById('meetingList').innerHTML=meetingHTML; document.getElementById('meetingList2').innerHTML=meetingHTML;
-      document.getElementById('recentList').innerHTML=recent.map(r=>`<div class="recent-item"><div class="recent-icon"><i class="fa-solid ${r[0]}"></i></div><div><h4>${r[1]}</h4><p>${r[2]}</p></div><span>${r[3]}</span></div>`).join('');
-      document.querySelectorAll('#committeeTabs button').forEach(btn=>btn.addEventListener('click',()=>{document.querySelectorAll('#committeeTabs button').forEach(b=>b.classList.remove('active'));btn.classList.add('active');document.querySelectorAll('.committee-panel').forEach(p=>p.classList.remove('active'));document.getElementById(btn.dataset.panel+'Panel')?.classList.add('active')}));
-      function openCommitteeModal(title,body){const modal=document.getElementById('modal'),content=document.getElementById('modalContent');content.innerHTML=`<div class="modal-head"><h2>${title}</h2></div><div class="modal-body">${body}</div><div class="modal-foot"><button class="btn" onclick="document.getElementById('modal').classList.remove('show')">Cancel</button><button class="btn primary" onclick="document.getElementById('modal').classList.remove('show')">Save</button></div>`;modal.classList.add('show')}
-      document.querySelectorAll('[data-committee-action]').forEach(btn=>btn.addEventListener('click',()=>openCommitteeModal(btn.dataset.committeeAction,`<div class="form-grid"><div class="field"><label>Title</label><input placeholder="Enter title"></div><div class="field"><label>Committee</label><select><option>Worship Committee</option><option>Finance Committee</option><option>Youth Ministry Committee</option></select></div><div class="field"><label>Date</label><input type="date" value="2025-05-23"></div><div class="field"><label>Status</label><select><option>Active</option><option>Pending</option></select></div><div class="field full"><label>Description</label><textarea rows="6" placeholder="Enter details"></textarea></div></div>`)));
-      document.addEventListener('click',e=>{
-        const more=e.target.closest('[data-more-committee]');
-        if(more){e.preventDefault();e.stopPropagation();document.querySelectorAll('.row-action-menu.show').forEach(m=>{if(m!==more.nextElementSibling)m.classList.remove('show')});more.nextElementSibling?.classList.toggle('show');return;}
-        if(!e.target.closest('.action-wrap')) document.querySelectorAll('.row-action-menu.show').forEach(m=>m.classList.remove('show'));
-        const edit=e.target.closest('[data-edit-committee]');
-        if(edit){openCommitteeModal('Edit Committee',`<div class="form-grid"><div class="field"><label>Committee Name</label><input value="${edit.dataset.editCommittee}"></div><div class="field"><label>Status</label><select><option>Active</option><option>Inactive</option></select></div><div class="field full"><label>Description</label><textarea rows="5">Update committee details, activities and responsibilities.</textarea></div></div>`);return;}
-        const del=e.target.closest('[data-delete-committee]');
-        if(del){openCommitteeModal('Delete Committee',`<p style="margin:0;color:#34456d">Are you sure you want to delete <b>${del.dataset.deleteCommittee}</b>?</p>`);return;}
-        const b=e.target.closest('[data-view-committee]');
-        if(b)openCommitteeModal('Committee Details',`<div class="summary-list"><div><i class="fa-solid fa-people-group"></i><span>Committee</span><b>${b.dataset.viewCommittee}</b></div><div><i class="fa-regular fa-calendar-check"></i><span>Total Activities</span><b>28</b></div><div><i class="fa-solid fa-clipboard-check"></i><span>Completion</span><b>78.6%</b></div></div><p style="margin-top:18px;color:#34456d;line-height:1.6">This popup displays the selected committee content with activity status, member participation, pending tasks and recent meeting summary.</p>`);
-      });
-      document.getElementById('committeeExport')?.addEventListener('click',()=>openCommitteeModal('Export Report','<p style="margin:0;color:#34456d">Committee activity report is ready to export.</p>'));document.getElementById('reportGenerate')?.addEventListener('click',()=>openCommitteeModal('Generate Report','<p style="margin:0;color:#34456d">Monthly committee report generated successfully.</p>'));
-      setTimeout(()=>{const nav=document.getElementById('navMenu');if(nav){nav.querySelectorAll('.nav-group').forEach(g=>{g.classList.remove('open','active-parent');g.querySelector('.nav-main')?.classList.remove('active');g.querySelectorAll('.subnav a').forEach(a=>a.classList.remove('active','current-subnav'));});const active=[...nav.querySelectorAll('.subnav a')].find(a=>a.textContent.replace(/^[\s\-–—]+/,'').trim()==='Committee Activity Overview');if(active){active.classList.add('active','current-subnav');active.setAttribute('aria-current','page');const g=active.closest('.nav-group');g?.classList.add('open','active-parent');g?.querySelector('.nav-main')?.classList.add('active');}}},160);
-    });
-  
-
-
 (function(){
-  function clean(v){return String(v||'').replace(/^[\s\-–—•]+/,'').replace(/\s+/g,' ').trim().toLowerCase();}
-  function forceCommitteeActive(){
-    if(!/CommitteeActivityOverview\.html$/i.test(location.pathname)) return;
-    var nav=document.getElementById('navMenu'); if(!nav) return;
-    nav.querySelectorAll('.subnav a').forEach(function(a){
-      if(clean(a.textContent)==='committee activity overview') a.setAttribute('href','CommitteeActivityOverview.html');
+  'use strict';
+
+  const COLORS = {
+    teal: '#007f72',
+    blue: '#5a61ff',
+    orange: '#ff7a2c',
+    red: '#f35269',
+    grid: '#e7edf6',
+    text: '#030b5d'
+  };
+
+  function showToast(message){
+    let toast = document.querySelector('.committee-toast');
+    if(!toast){
+      toast = document.createElement('div');
+      toast.className = 'committee-toast';
+      document.body.appendChild(toast);
+    }
+    toast.textContent = message;
+    toast.style.display = 'block';
+    clearTimeout(showToast.timer);
+    showToast.timer = setTimeout(()=> toast.style.display = 'none', 1800);
+  }
+
+  function ensureModal(){
+    let modal = document.querySelector('.committee-modal');
+    if(modal) return modal;
+    modal = document.createElement('div');
+    modal.className = 'committee-modal';
+    modal.innerHTML = `
+      <div class="committee-modal-card" role="dialog" aria-modal="true">
+        <div class="committee-modal-head"><h3>Committee Details</h3><button type="button" class="committee-modal-close" aria-label="Close">&times;</button></div>
+        <div class="committee-modal-body"></div>
+        <div class="committee-modal-foot"><button type="button" class="committee-modal-ok">Close</button></div>
+      </div>`;
+    document.body.appendChild(modal);
+    modal.addEventListener('click', e => {
+      if(e.target === modal || e.target.closest('.committee-modal-close') || e.target.closest('.committee-modal-ok')) modal.classList.remove('active');
     });
-    nav.querySelectorAll('.nav-group').forEach(function(g){g.classList.remove('open','active-parent'); var m=g.querySelector(':scope > .nav-main'); if(m)m.classList.remove('active');});
-    nav.querySelectorAll('.subnav a').forEach(function(a){a.classList.remove('active','current-subnav');a.removeAttribute('aria-current');});
-    var target=[].slice.call(nav.querySelectorAll('.subnav a')).find(function(a){return clean(a.textContent)==='committee activity overview' || /CommitteeActivityOverview\.html$/i.test(a.getAttribute('href')||'');});
-    if(target){
-      target.classList.add('active','current-subnav'); target.setAttribute('aria-current','page');
-      var group=target.closest('.nav-group'); if(group){group.classList.add('open','active-parent'); var main=group.querySelector(':scope > .nav-main'); if(main)main.classList.add('active');}
+    return modal;
+  }
+
+  function openModal(title, body){
+    const modal = ensureModal();
+    modal.querySelector('h3').textContent = title;
+    modal.querySelector('.committee-modal-body').innerHTML = body;
+    modal.classList.add('active');
+  }
+
+  function destroyChart(canvas){
+    if(!canvas || !window.Chart || canvas.tagName !== 'CANVAS') return;
+    const existing = Chart.getChart(canvas);
+    if(existing) existing.destroy();
+  }
+
+
+  function renderPerformanceChart(target){
+    if(!target) return;
+    const labels = ['Dec 2024','Jan 2025','Feb 2025','Mar 2025','Apr 2025','May 2025'];
+    const series = [
+      {name:'Activities Completed', values:[80,92,110,125,138,144], color:COLORS.teal},
+      {name:'New Activities', values:[34,47,47,58,58,52], color:COLORS.blue},
+      {name:'Cancelled Activities', values:[15,16,16,16,21,25], color:COLORS.orange}
+    ];
+    const w = 620, h = 218, left = 46, right = 16, top = 14, bottom = 42, max = 150;
+    const plotW = w - left - right;
+    const plotH = h - top - bottom;
+    const x = i => left + (plotW/(labels.length-1))*i;
+    const y = v => top + plotH - (v/max)*plotH;
+    const gridVals = [0,25,50,75,100,125,150];
+    const grid = gridVals.map(v=>`<g><line x1="${left}" y1="${y(v)}" x2="${w-right}" y2="${y(v)}" stroke="#e7edf6" stroke-width="1"/><text x="8" y="${y(v)+4}" fill="#030b5d" font-size="11" font-family="Open Sans">${v}</text></g>`).join('');
+    const xLabels = labels.map((lab,i)=>`<text x="${x(i)}" y="${h-12}" text-anchor="middle" fill="#030b5d" font-size="11" font-family="Open Sans">${lab}</text>`).join('');
+    const lines = series.map(s=>{
+      const pts = s.values.map((v,i)=>`${x(i)},${y(v)}`).join(' ');
+      const circles = s.values.map((v,i)=>`<circle cx="${x(i)}" cy="${y(v)}" r="4" fill="${s.color}" stroke="#fff" stroke-width="2"/>`).join('');
+      return `<polyline points="${pts}" fill="none" stroke="${s.color}" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>${circles}`;
+    }).join('');
+    target.innerHTML = `<svg viewBox="0 0 ${w} ${h}" role="img" aria-label="Committee performance trend">${grid}${xLabels}${lines}</svg>`;
+  }
+
+
+  function initCharts(){
+    if(!window.Chart) return;
+
+    const line = document.getElementById('committeePerformanceChart') || document.getElementById('committeeLine');
+    if(line){
+      renderPerformanceChart(line);
+    }
+
+    const donutOptions = {responsive:true,maintainAspectRatio:false,cutout:'62%',radius:'96%',plugins:{legend:{display:false},tooltip:{enabled:true}},animation:{duration:250}};
+    const activity = document.getElementById('activityStatusChart') || document.getElementById('activityDonut');
+    if(activity){
+      destroyChart(activity);
+      new Chart(activity,{type:'doughnut',data:{labels:['Completed','In Progress','Pending','Cancelled'],datasets:[{data:[142,27,21,6],backgroundColor:[COLORS.teal,COLORS.blue,COLORS.orange,COLORS.red],borderWidth:0}]},options:donutOptions});
+    }
+    const member = document.getElementById('memberParticipationChart') || document.getElementById('memberDonut');
+    if(member){
+      destroyChart(member);
+      new Chart(member,{type:'doughnut',data:{labels:['Active','Moderate','Low','Inactive'],datasets:[{data:[268,66,24,10],backgroundColor:[COLORS.teal,COLORS.blue,COLORS.orange,COLORS.red],borderWidth:0}]},options:donutOptions});
     }
   }
-  document.addEventListener('click',function(e){
-    var more=e.target.closest('[data-more-committee]');
-    if(more){e.preventDefault();e.stopPropagation();var menu=more.parentElement.querySelector('.row-action-menu');document.querySelectorAll('.row-action-menu.show').forEach(function(m){if(m!==menu)m.classList.remove('show')}); if(menu)menu.classList.toggle('show');}
-    else if(!e.target.closest('.row-action-menu')) document.querySelectorAll('.row-action-menu.show').forEach(function(m){m.classList.remove('show')});
-  },true);
-  if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',forceCommitteeActive); else forceCommitteeActive();
-  window.addEventListener('load',forceCommitteeActive); window.addEventListener('pageshow',forceCommitteeActive);
-  setInterval(forceCommitteeActive,500);
-})();
 
+  function initTabs(){
+    const tabs = document.querySelectorAll('.committee-tabs button');
+    const layout = document.querySelector('.committee-layout');
+    if(!tabs.length || !layout) return;
 
+    const overviewHtml = layout.innerHTML;
+    const tabData = {
+      committees: ['Committee Name','Chairperson','Members','Status','Actions'],
+      activities: ['Activity','Committee','Date','Status','Actions'],
+      meetings: ['Meeting','Date & Time','Venue','Status','Actions'],
+      tasks: ['Task','Assigned To','Due Date','Priority','Actions'],
+      reports: ['Report','Generated By','Period','Status','Actions']
+    };
 
-(function(){
-  function cleanCommitteeText(v){return String(v||'').replace(/^[\s\-–—•]+/,'').replace(/\s+/g,' ').trim().toLowerCase();}
-  function lockCommitteeSidebar(){
-    if(!/CommitteeActivityOverview\.html$/i.test(location.pathname)) return;
-    var nav=document.getElementById('navMenu');
-    if(!nav) return;
-    var target=null;
-    nav.querySelectorAll('.subnav a').forEach(function(a){
-      if(cleanCommitteeText(a.textContent)==='committee activity overview'){
-        a.href='CommitteeActivityOverview.html';
-        target=a;
-      }
-    });
-    nav.querySelectorAll('.nav-group').forEach(function(g){
-      g.classList.remove('open','active-parent');
-      var main=g.querySelector(':scope > .nav-main');
-      if(main) main.classList.remove('active');
-      g.querySelectorAll('.subnav a').forEach(function(a){a.classList.remove('active','current-subnav');a.removeAttribute('aria-current');});
-    });
-    if(target){
-      target.classList.add('active','current-subnav');
-      target.setAttribute('aria-current','page');
-      var group=target.closest('.nav-group');
-      if(group){
-        group.classList.add('open','active-parent');
-        var main=group.querySelector(':scope > .nav-main');
-        if(main) main.classList.add('active');
-      }
+    function placeholder(name){
+      const title = name.charAt(0).toUpperCase() + name.slice(1);
+      const heads = tabData[name] || tabData.committees;
+      const rows = [
+        ['Worship Committee','Rev. Michael','24','Active'],
+        ['Finance Committee','John Samuel','18','Active'],
+        ['Youth Ministry Committee','Mary Samuel','22','In Progress'],
+        ['Social Service Committee','David Joseph','26','Active']
+      ];
+      return `<section class="committee-tab-panel active"><div class="committee-placeholder"><h3>${title}</h3><div class="table-responsive"><table><thead><tr>${heads.map(h=>`<th>${h}</th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(c=>`<td>${c}</td>`).join('')}<td><button class="icon-action" type="button" data-view="${title}"><i class="fa-regular fa-eye"></i></button><button class="dots" type="button"><i class="fa-solid fa-ellipsis-vertical"></i></button></td></tr>`).join('')}</tbody></table></div></div></section>`;
     }
+
+    tabs.forEach(btn=>btn.addEventListener('click',()=>{
+      tabs.forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      const target = btn.dataset.tabTarget || 'overview';
+      if(target === 'overview'){
+        layout.innerHTML = overviewHtml;
+        initCharts();
+        bindActions(layout);
+      }else{
+        layout.innerHTML = placeholder(target);
+        bindActions(layout);
+      }
+    }));
   }
-  document.addEventListener('DOMContentLoaded',function(){
-    lockCommitteeSidebar();
-    setTimeout(lockCommitteeSidebar,100);
-    setTimeout(lockCommitteeSidebar,400);
-    setTimeout(lockCommitteeSidebar,1000);
+
+  function bindActions(scope=document){
+    scope.querySelectorAll('.committee-export').forEach(btn=>btn.addEventListener('click',()=>showToast('Committee report exported')));
+    scope.querySelectorAll('.side-card a').forEach(link=>link.addEventListener('click',e=>{
+      e.preventDefault();
+      const text = link.textContent.trim();
+      openModal(text, `<p>${text} form/action is ready for demo use.</p>`);
+    }));
+    scope.querySelectorAll('.icon-action,[data-view]').forEach(btn=>btn.addEventListener('click',()=>{
+      const row = btn.closest('tr');
+      const name = row ? row.children[0].textContent.trim() : 'Committee Activity';
+      openModal('View Details', `<p><strong>${name}</strong></p><p>Status, activity count, member participation and schedule details are shown here.</p>`);
+    }));
+    scope.querySelectorAll('.dots').forEach(btn=>btn.addEventListener('click',()=>showToast('Action menu opened')));
+    scope.querySelectorAll('.full-btn').forEach(btn=>btn.addEventListener('click',()=>openModal('All Activities','<p>Full activity list is available in this section.</p>')));
+    scope.querySelectorAll('.mini-select').forEach(sel=>sel.addEventListener('change',()=>{initCharts();showToast('Committee chart refreshed');}));
+  }
+
+  function setActiveSidebar(){
+    const path = location.pathname.split('/').pop() || 'committee-activity-overview.html';
+    document.querySelectorAll('.sub-link').forEach(a=>{
+      a.classList.toggle('active', a.getAttribute('href') === path);
+      if(a.classList.contains('active')) a.closest('.nav-group')?.classList.add('open');
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded',()=>{
+    setActiveSidebar();
+    initCharts();
+    initTabs();
+    bindActions();
+    window.addEventListener('resize',()=>{ clearTimeout(window.__committeeResize); window.__committeeResize=setTimeout(initCharts,160); });
   });
-  window.addEventListener('load',lockCommitteeSidebar);
-  window.addEventListener('pageshow',lockCommitteeSidebar);
-  document.addEventListener('click',function(e){
-    var a=e.target.closest('#navMenu .subnav a');
-    if(a && cleanCommitteeText(a.textContent)==='committee activity overview'){
-      a.href='CommitteeActivityOverview.html';
-      var g=a.closest('.nav-group');
-      if(g){g.classList.add('open','active-parent');g.querySelector(':scope > .nav-main')?.classList.add('active');}
-    }
-  },true);
-  setInterval(lockCommitteeSidebar,700);
 })();

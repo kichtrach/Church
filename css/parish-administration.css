@@ -1,9 +1,221 @@
+.events-calendar-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.1fr;
+    gap: 18px
+}
+
+.event-stack {
+    padding-right: 10px
+}
+
+.event-row {
+    display: grid;
+    grid-template-columns: 52px 1fr 140px;
+    gap: 12px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--line)
+}
+
+.event-row b {
+    font-weight: 600
+}
+
+.date-chip {
+    width: 46px;
+    height: 52px;
+    background: #eef6ff;
+    color: #3b48c4;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    font-weight: 600
+}
+
+.date-chip span {
+    font-size: 11px
+}
+
+.date-chip b {
+    font-size: 19px;
+    line-height: 1
+}
+
+.date-chip.orange {
+    background: #fff2e0;
+    color: #f58220
+}
+
+.date-chip.green {
+    background: #e5f8e8;
+    color: #12954d
+}
+
+.announce-list {
+    display: flex;
+    flex-direction: column
+}
+
+.announce {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 14px;
+    border-left: 3px solid #0096c7;
+    padding: 8px 0 12px 14px;
+    border-bottom: 1px solid var(--line)
+}
+
+.announce b {
+    font-weight: 600
+}
+
+.announce span {
+    font-size: 12px;
+    color: #33415f
+}
+
+.announce.orange {
+    border-color: #ff8a00
+}
+
+.announce.teal {
+    border-color: #009688
+}
+
+.announce.red {
+    border-color: #ff4c4c
+}
+
+.people-list p,
+.ann-list p {
+    display: grid;
+    grid-template-columns: 28px 1fr auto;
+    gap: 10px;
+    align-items: center;
+    padding: 8px 0;
+    border-bottom: 1px solid #edf2f7;
+    font-size: 12.5px
+}
+
+.people-list b,
+.ann-list b {
+    font-weight: 600
+}
+
+.ann-list i {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #fff2e4;
+    color: #f58220;
+    display: grid;
+    place-items: center;
+    font-size: 11px
+}
+
+.committee-list p {
+    display: grid;
+    grid-template-columns: 1fr 110px 40px;
+    gap: 10px;
+    align-items: center;
+    padding: 7px 0;
+    font-size: 12.5px
+}
+
+.committee-list span i {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background: #dff7f1;
+    color: #00897b;
+    display: inline-grid;
+    place-items: center;
+    margin-right: 7px;
+    font-size: 10px
+}
+
+.committee-list b {
+    font-weight: 600;
+    text-align: right
+}
+
+.branch-panel .data-table {
+    margin-bottom: 10px
+}
+
+@media(max-width:1100px) {
+    .events-calendar-layout {
+        grid-template-columns: 1fr
+    }
+
+    .event-row {
+        grid-template-columns: 52px 1fr
+    }
+
+    .event-row small:last-child {
+        grid-column: 2
+    }
+}
+
+/* Parish page date dropdown */
+.page-actions {
+    position: relative;
+}
 
 
-/* Extracted inline element styles from ParishAdministration.html */
-.extracted-style-parishadministration-1{background:#ff8d1a;}
-.extracted-style-parishadministration-2{background:#8b65d6;}
-.extracted-style-parishadministration-3{background:#51c76a;}
-.extracted-style-parishadministration-4{background:#3478f6;}
-.extracted-style-parishadministration-5{background:#ff9f1c;}
-.extracted-style-parishadministration-6{background:#51c76a;}
+.parish-dashboard .round-icon {
+    margin: 0;
+}
+
+.page-actions .date-btn {
+    cursor: pointer;
+    user-select: none;
+}
+
+.page-date-menu {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 8px);
+    width: 240px;
+    background: #fff;
+    border: 1px solid var(--line, #dbe3ef);
+    box-shadow: 0 12px 30px rgba(8, 25, 71, .12);
+    z-index: 40;
+    display: none;
+    padding: 8px;
+}
+
+.page-date-menu.show {
+    display: block;
+}
+
+.page-date-menu button {
+    width: 100%;
+    border: 0;
+    background: #fff;
+    text-align: left;
+    padding: 10px 12px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    align-items: center;
+    font-family: 'Open Sans', sans-serif;
+    color: #071947;
+    cursor: pointer;
+}
+
+.page-date-menu button:hover,
+.page-date-menu button.active {
+    background: #eef8fb;
+    color: #0077b6;
+}
+
+.page-date-menu b {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.page-date-menu span {
+    font-size: 11px;
+    color: #667085;
+}

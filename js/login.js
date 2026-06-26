@@ -1,2 +1,0 @@
-document.getElementById('togglePass')?.addEventListener('click',()=>{const input=document.getElementById('loginPass');const ico=document.querySelector('#togglePass i');input.type=input.type==='password'?'text':'password';ico.className=input.type==='password'?'fa-solid fa-eye':'fa-solid fa-eye-slash';});
-document.getElementById('loginForm')?.addEventListener('submit',e=>{e.preventDefault();location.href='index.html';});
