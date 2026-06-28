@@ -176,3 +176,35 @@
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init,{once:true}); else init();
   window.CSICommon={init,applyFilters,paginate,toast};
 })();
+
+
+// Global file upload/dropzone handler
+(function(){
+  function renderList(box, files){
+    const list = box.querySelector('.upload-list');
+    if(!list) return;
+    list.innerHTML = '';
+    Array.from(files || []).forEach((file, index) => {
+      const li = document.createElement('li');
+      li.innerHTML = `<span><i class="fa-regular fa-file"></i> ${file.name}</span><button type="button" aria-label="Remove file"><i class="fa-solid fa-xmark"></i></button>`;
+      li.querySelector('button').addEventListener('click', (e)=>{ e.stopPropagation(); li.remove(); });
+      list.appendChild(li);
+    });
+  }
+  function initUploads(scope=document){
+    scope.querySelectorAll('.file-upload,.upload-box').forEach(box=>{
+      if(box.dataset.uploadReady === '1') return;
+      const input = box.querySelector('input[type="file"]');
+      if(!input) return;
+      box.dataset.uploadReady = '1';
+      box.addEventListener('click', e=>{ if(!e.target.closest('button')) input.click(); });
+      input.addEventListener('click', e=>e.stopPropagation());
+      input.addEventListener('change', ()=>renderList(box,input.files));
+      ['dragenter','dragover'].forEach(evt=>box.addEventListener(evt,e=>{e.preventDefault(); box.classList.add('dragover');}));
+      ['dragleave','drop'].forEach(evt=>box.addEventListener(evt,e=>{e.preventDefault(); box.classList.remove('dragover');}));
+      box.addEventListener('drop', e=>{ if(e.dataTransfer?.files?.length){ input.files=e.dataTransfer.files; renderList(box,input.files); } });
+    });
+  }
+  document.addEventListener('DOMContentLoaded',()=>initUploads());
+  window.initFileUploads = initUploads;
+})();

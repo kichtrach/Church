@@ -29,7 +29,7 @@
     font-size: 16px;
     line-height: 1.1;
     display: block;
-    font-weight: 600
+    font-weight: 500
 }
 
 .brand span,
@@ -73,7 +73,7 @@
     text-align: left;
     font-family: inherit;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer
 }
 
@@ -116,7 +116,7 @@
     color: #fff;
     padding: 6px 8px;
     font-size: 12.5px;
-    font-weight: 600;
+    font-weight: 500;
     line-height: 1.2;
     opacity: .96
 }
@@ -124,11 +124,11 @@
 .sub-link:before {
     content: '–';
     margin-right: 10px;
-    font-weight: 600
+    font-weight: 500
 }
 
 .sub-link.active {
-    font-weight: 600;
+    font-weight: 500;
     color: #fff
 }
 
@@ -157,7 +157,7 @@
     color: var(--primary);
     display: grid;
     place-items: center;
-    font-weight: 600;
+    font-weight: 500;
     overflow: hidden
 }
 
@@ -195,7 +195,7 @@
 .sidebar {
     background: #006f67;
     color: #fff;
-    min-width: 280px;
+    min-width: 300px;
     transition: transform .25s ease, width .25s ease;
 }
 
@@ -255,19 +255,19 @@ body.sidebar-collapsed .brand {
         transform: translateX(0);
     }
 
-    body.sidebar-open:after {
+/*    body.sidebar-open:after {
         content: "";
         position: fixed;
         inset: 0;
         background: rgba(5, 18, 35, .42);
         z-index: 999;
-    }
+    }*/
 }
 
 
 /* Final dashboard/sidebar/page-actions consistency fixes */
 .side-nav>.nav-link.active {
-    background: var(--primary, #0096c7) !important;
+    background: var(--primary, #009688) !important;
     color: #fff !important;
 }
 
@@ -338,7 +338,7 @@ body.sidebar-collapsed .nav-group.open>.nav-parent {
 
 body.sidebar-collapsed .nav-link.active,
 body.sidebar-collapsed .nav-parent.active {
-    background: var(--primary, #0096c7) !important;
+    background: var(--primary, #009688) !important;
 }
 
 body.page-dashboard.sidebar-collapsed .sidebar {
@@ -352,5 +352,110 @@ body.page-dashboard.sidebar-collapsed .sidebar {
 body.page-dashboard.sidebar-collapsed .brand,
 body.page-dashboard.sidebar-collapsed .side-nav,
 body.page-dashboard.sidebar-collapsed .side-profile {
+    display: none !important;
+}
+
+/* Final sidebar standardization: consistent visible submenu color and safe collapsed mode */
+.sidebar {
+    background: linear-gradient(180deg, #00695C 0%, #00796B 52%, #004D40 100%) !important;
+    color: #fff !important;
+}
+
+.nav-link,
+.nav-parent {
+    color: #E8F5F2 !important;
+    background: transparent !important;
+    border-radius: 6px !important;
+}
+
+.nav-link i,
+.nav-parent>i:first-child,
+.nav-parent .arrow {
+    color: #E8F5F2 !important;
+}
+
+.nav-link:hover,
+.nav-parent:hover {
+    background: rgba(255, 255, 255, .10) !important;
+    color: #fff !important;
+}
+
+.nav-link.active,
+.nav-parent.active,
+.nav-group.open>.nav-parent {
+    background: #00796B !important;
+    color: #fff !important;
+    box-shadow: inset 3px 0 0 #26A69A !important;
+}
+
+.sub-nav {
+    display: none !important;
+    margin: 4px 0 6px 19px !important;
+    padding: 4px 0 4px 14px !important;
+    border-left: 1px solid rgba(232, 245, 242, .22) !important;
+}
+
+.nav-group.open>.sub-nav {
+    display: block !important;
+}
+
+.sub-link {
+    color: #E8F5F2 !important;
+    opacity: 1 !important;
+    background: transparent !important;
+    border-radius: 5px !important;
+    min-height: 28px !important;
+    padding: 6px 10px !important;
+    font-size: 12.5px !important;
+    font-weight: 500 !important;
+    line-height: 1.25 !important;
+    text-decoration: none !important;
+}
+
+.sub-link:hover {
+    background: rgba(255, 255, 255, .10) !important;
+    color: #fff !important;
+}
+
+.sub-link.active {
+    background: rgba(38, 166, 154, .32) !important;
+    color: #fff !important;
+    font-weight: 600 !important;
+    box-shadow: inset 3px 0 0 #26A69A !important;
+}
+
+body.sidebar-collapsed .sidebar {
+    width: 82px !important;
+    min-width: 82px !important;
+    overflow: hidden !important;
+}
+
+body.sidebar-collapsed .sidebar .brand div,
+body.sidebar-collapsed .sidebar .nav-link span,
+body.sidebar-collapsed .sidebar .nav-parent span,
+body.sidebar-collapsed .sidebar .side-profile div,
+body.sidebar-collapsed .sidebar .side-profile .fa-chevron-down {
+    display: none !important;
+}
+
+body.sidebar-collapsed .sidebar .sub-nav,
+body.sidebar-collapsed .sidebar .nav-group.open>.sub-nav {
+    display: none !important;
+    visibility: hidden !important;
+    height: 0 !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+}
+
+body.sidebar-collapsed .sidebar .nav-link,
+body.sidebar-collapsed .sidebar .nav-parent {
+    justify-content: center !important;
+    padding: 10px 0 !important;
+    gap: 0 !important;
+}
+
+body.sidebar-collapsed .sidebar .nav-parent .arrow {
     display: none !important;
 }

@@ -18,7 +18,7 @@
     margin: 0 0 8px;
     font-size: 28px;
     line-height: 1.15;
-    font-weight: 700;
+    font-weight: 600;
     letter-spacing: -.25px;
     color: #031253;
 }
@@ -28,7 +28,7 @@
     align-items: center;
     gap: 12px;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
     color: #031253;
 }
 
@@ -42,7 +42,7 @@
     gap: 18px;
     color: #031253;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .committee-actions .asof {
@@ -69,7 +69,7 @@
     border: 1px solid #dce6f3 !important;
     border-radius: 6px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     box-shadow: none;
 }
 
@@ -134,7 +134,7 @@
     margin: 0 0 8px;
     color: #031253;
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 700;
     white-space: nowrap;
 }
 
@@ -144,14 +144,14 @@
     color: #031253;
     font-size: 31px;
     line-height: 1;
-    font-weight: 800;
+    font-weight: 700;
 }
 
 .committee-kpi small {
     display: block;
     color: #031253;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     white-space: nowrap;
 }
 
@@ -177,7 +177,7 @@
     background: transparent;
     color: #031253;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
     white-space: nowrap;
     cursor: pointer;
     position: relative;
@@ -246,14 +246,14 @@
     margin: 0;
     color: #031253;
     font-size: 16px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.25;
 }
 
 .card-head a {
     color: #007c72;
     font-size: 13px;
-    font-weight: 800;
+    font-weight: 700;
     text-decoration: none;
 }
 
@@ -266,7 +266,7 @@
     color: #031253;
     padding: 0 12px;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .performance-card canvas {
@@ -284,7 +284,7 @@
     margin-top: 11px;
     color: #031253;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .legend-dot {
@@ -338,7 +338,7 @@
     gap: 12px;
     color: #031253;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .donut-legend li {
@@ -349,7 +349,7 @@
 
 .donut-legend b {
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 700;
     color: #031253;
 }
 
@@ -390,7 +390,7 @@
     display: block;
     color: #031253;
     font-size: 13px;
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: 5px;
 }
 
@@ -399,7 +399,7 @@
     display: block;
     color: #031253;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 3px;
 }
 
@@ -420,7 +420,7 @@
     border-bottom: 1px solid #e3ebf5;
     color: #031253;
     font-size: 12px;
-    font-weight: 800;
+    font-weight: 700;
     text-align: left;
     white-space: nowrap;
 }
@@ -431,7 +431,7 @@
     border-bottom: 1px solid #edf2f8;
     color: #031253;
     font-size: 12px;
-    font-weight: 600;
+    font-weight: 500;
     vertical-align: middle;
 }
 
@@ -444,7 +444,7 @@
 
 .percent span {
     width: 42px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .percent b {
@@ -495,7 +495,7 @@
     margin-top: 16px;
     color: #031253;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .committee-pagination div {
@@ -510,7 +510,7 @@
     border-radius: 6px;
     background: #fff;
     color: #031253;
-    font-weight: 800;
+    font-weight: 700;
     cursor: pointer;
 }
 
@@ -554,7 +554,7 @@
     color: #031253;
     text-decoration: none;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
     cursor: pointer;
 }
 
@@ -572,7 +572,7 @@
     padding: 10px 0;
     color: #031253;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 .side-card p i {
@@ -606,7 +606,7 @@
     display: block;
     font-size: 12px;
     color: #031253;
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: 2px;
 }
 
@@ -628,7 +628,7 @@
     background: #fff;
     color: #031253;
     border-radius: 6px;
-    font-weight: 800;
+    font-weight: 700;
     width: 100%;
     cursor: pointer;
 }
@@ -677,7 +677,7 @@
     color: #fff;
     padding: 12px 18px;
     z-index: 9999;
-    font-weight: 700;
+    font-weight: 600;
     box-shadow: 0 12px 30px rgba(0, 0, 0, .18);
 }
 
@@ -746,7 +746,7 @@
     background: #007c72;
     color: #fff;
     border: 0;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 @media(max-width:1450px) {

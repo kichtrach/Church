@@ -1,6 +1,6 @@
 :root {
-    --ev-primary: #0096c7;
-    --ev-secondary: #0077b6;
+    --ev-primary: #009688;
+    --ev-secondary: #00796b;
     --ev-teal: #007f78;
     --ev-text: #081947;
     --ev-muted: #6b7895;
@@ -29,7 +29,7 @@
     font-size: 28px;
     line-height: 1.2;
     margin: 0 0 8px;
-    font-weight: 600;
+    font-weight: 500;
     color: var(--ev-text)
 }
 
@@ -61,7 +61,7 @@
     height: 44px;
     padding: 0 22px;
     border-radius: 6px;
-    font-weight: 600
+    font-weight: 500
 }
 
 .btn.primary {
@@ -139,7 +139,7 @@
 
 .event-stat span {
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
     display: block;
     color: #0b1e4f
 }
@@ -150,7 +150,7 @@
     margin: 5px 0 2px;
     display: block;
     color: #061746;
-    font-weight: 700
+    font-weight: 600
 }
 
 .event-stat small {
@@ -162,7 +162,7 @@
 
 .event-stat a {
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
     color: #007f78;
     text-decoration: none
 }
@@ -202,7 +202,7 @@
     color: #132450;
     padding: 14px 0 16px;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     position: relative;
     cursor: pointer
 }
@@ -235,7 +235,7 @@
     border-radius: 5px;
     padding: 0 16px;
     min-width: 146px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 13px
 }
 
@@ -272,7 +272,7 @@
     font-size: 12px;
     text-align: left;
     padding: 0 18px;
-    font-weight: 700
+    font-weight: 600
 }
 
 .events-table td {
@@ -303,7 +303,7 @@
     background: #e9f9fb;
     color: #007f78;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
     line-height: 1.05
 }
 
@@ -337,7 +337,7 @@
 
 .date-time {
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     color: #0b1e4f
 }
 
@@ -358,7 +358,7 @@
     border-radius: 5px;
     padding: 6px 10px;
     font-size: 12px;
-    font-weight: 700
+    font-weight: 600
 }
 
 .cat-Meeting {
@@ -420,7 +420,7 @@
     color: #0d7b3b;
     padding: 6px 12px;
     border-radius: 5px;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 12px
 }
 
@@ -455,7 +455,7 @@
     background: #fff;
     border-radius: 5px;
     color: #0e2050;
-    font-weight: 600
+    font-weight: 500
 }
 
 .page-buttons .active {
@@ -508,7 +508,7 @@
 
 .event-wizard-head h2 {
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 500;
     margin: 0
 }
 
@@ -534,7 +534,7 @@
     background: transparent;
     color: #0e2050;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     display: flex;
     gap: 11px;
     align-items: center;
@@ -592,7 +592,7 @@
     display: block;
     position: relative;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 600;
     color: #071947
 }
 
@@ -602,7 +602,7 @@
 
 .event-wizard-card label span,
 .field-block span {
-    font-weight: 500;
+    font-weight: 400;
     color: #53617b
 }
 
@@ -632,13 +632,13 @@
 .event-wizard-card select:focus,
 .event-wizard-card textarea:focus {
     outline: 2px solid rgba(0, 150, 199, .14);
-    border-color: #0096c7
+    border-color: #009688
 }
 
 .event-wizard-card small {
     display: block;
     color: #65718d;
-    font-weight: 500;
+    font-weight: 400;
     margin-top: 8px
 }
 
@@ -668,7 +668,7 @@
 .radio-row label,
 .check-line,
 .reminder-line span {
-    font-weight: 500 !important;
+    font-weight: 400 !important;
     font-size: 14px;
     color: #132450;
     display: flex !important;
@@ -744,7 +744,7 @@
 .wizard-step h3 {
     margin: 0 0 14px;
     font-size: 15px;
-    font-weight: 700
+    font-weight: 600
 }
 
 .audience {
@@ -900,7 +900,7 @@
     top: 255px;
     color: #e63b35;
     font-size: 14px;
-    font-weight: 700
+    font-weight: 600
 }
 
 .map-pin i {
@@ -1004,7 +1004,7 @@
     display: grid;
     place-items: center;
     font-size: 12px;
-    font-weight: 700
+    font-weight: 600
 }
 
 .organizer-row b {
@@ -1023,7 +1023,7 @@
     margin-top: 12px;
     color: #0d285e;
     font-size: 14px;
-    font-weight: 700
+    font-weight: 600
 }
 
 .permission-box {
@@ -1070,7 +1070,7 @@
 .wizard-errors {
     padding: 0 32px;
     color: #d93025;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 13px
 }
 
@@ -1203,7 +1203,7 @@
 .events-calendar-head h3 {
     margin: 0 0 5px;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 500;
     color: #071947;
 }
 
@@ -1225,7 +1225,7 @@
     min-width: 118px;
     text-align: center;
     color: #071947;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .calendar-nav {
@@ -1241,8 +1241,8 @@
 }
 
 .calendar-nav:hover {
-    border-color: #0096c7;
-    color: #0096c7;
+    border-color: #009688;
+    color: #009688;
     background: #eef8fb;
 }
 
@@ -1260,7 +1260,7 @@
     background: #fff;
     padding: 0 14px;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
     color: #102650;
     cursor: pointer;
     font-family: 'Open Sans', sans-serif;
@@ -1271,7 +1271,7 @@
 }
 
 .view-switch button.active {
-    background: #0096c7;
+    background: #009688;
     color: #fff;
 }
 
@@ -1294,7 +1294,7 @@
     display: grid;
     place-items: center;
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 600;
     color: #667085;
     background: #f4f7fb;
     text-transform: uppercase;
@@ -1316,7 +1316,7 @@
 }
 
 .events-calendar-day:hover {
-    border-color: #0096c7;
+    border-color: #009688;
     box-shadow: 0 4px 12px rgba(0, 150, 199, .10);
 }
 
@@ -1327,12 +1327,12 @@
 }
 
 .events-calendar-day.selected {
-    border-color: #0096c7;
+    border-color: #009688;
     background: #eef9fc;
 }
 
 .events-calendar-day .date-num {
-    font-weight: 700;
+    font-weight: 600;
     color: #071947;
     font-size: 13px;
 }
@@ -1344,16 +1344,16 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     background: #e6f7fb;
-    color: #0077b6;
+    color: #00796b;
     font-size: 10.5px;
-    font-weight: 700;
+    font-weight: 600;
     padding: 3px 5px;
     border-radius: 4px;
 }
 
 .events-calendar-day .more-events {
     font-size: 10px;
-    font-weight: 700;
+    font-weight: 600;
     color: #667085;
 }
 
@@ -1362,20 +1362,20 @@
     align-items: center;
     justify-content: space-between;
     background: #eef9fc;
-    border-left: 3px solid #0096c7;
+    border-left: 3px solid #009688;
     padding: 12px 14px;
     margin-bottom: 12px;
     border-radius: 4px;
 }
 
 .selected-day-card span {
-    font-weight: 700;
+    font-weight: 600;
     color: #071947;
 }
 
 .selected-day-card strong {
-    font-weight: 600;
-    color: #0077b6;
+    font-weight: 500;
+    color: #00796b;
 }
 
 .day-event-list {
@@ -1400,14 +1400,14 @@
     border-radius: 50%;
     display: grid;
     place-items: center;
-    background: #0096c7;
+    background: #009688;
     color: #fff;
 }
 
 .day-event-item b {
     display: block;
     color: #071947;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .day-event-item span {
@@ -1418,8 +1418,8 @@
 .day-event-item em {
     font-style: normal;
     font-size: 12px;
-    font-weight: 700;
-    color: #0077b6;
+    font-weight: 600;
+    color: #00796b;
 }
 
 @media(max-width:900px) {
@@ -1499,7 +1499,7 @@
     height: 36px;
     border: 1px solid #dbe3ef;
     background: #fff;
-    color: #0077b6;
+    color: #00796b;
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -1508,7 +1508,7 @@
 
 .events-calendar-controls .calendar-nav:hover {
     background: #eef8fb;
-    border-color: #0096c7;
+    border-color: #009688;
 }
 
 .events-calendar-controls .view-switch {
@@ -1524,11 +1524,11 @@
     background: #fff;
     padding: 0 14px;
     color: #071947;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
 }
 
 .events-calendar-controls .view-switch button.active {
-    background: #0096c7;
+    background: #009688;
     color: #fff;
 }

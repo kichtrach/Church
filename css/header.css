@@ -1,4 +1,4 @@
-.topbar{height:64px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 28px;gap:18px;position:sticky;top:0;z-index:20}.hamburger,.icon-btn{border:0;background:#fff;color:#07163d;font-size:20px;cursor:pointer}.hamburger{width:28px;height:42px}.global-search{width:500px;position:relative}.global-search input{width:100%;height:42px;border:1px solid #ccd8e5;padding:0 48px 0 18px;font-size:13px;color:#091942;box-shadow:0 2px 8px #00152b08}.global-search i{position:absolute;right:16px;top:12px;font-size:18px;color:#07163d}.top-actions{margin-left:auto;display:flex;align-items:center;gap:18px}.icon-btn{position:relative;width:32px;height:42px}.badge{position:absolute;top:4px;right:-4px;background:#009688;color:#fff;border-radius:50%;font-size:10px;min-width:18px;height:18px;display:grid;place-items:center;padding:0}.profile-toggle{display:flex;align-items:center;gap:16px;border:0;background:#fff;color:#07163d;cursor:pointer;border-left:1px solid var(--line);padding-left:18px}.profile-toggle span{text-align:left;font-size:12px}.profile-toggle b{font-weight:600}.profile-toggle small{display:block;font-size:12px;color:#33415f}.dropdown-wrap{position:relative}.dropdown-panel,.calendar-pop{display:none;position:absolute;right:0;top:50px;background:#fff;border:1px solid var(--line);box-shadow:0 14px 35px #00153018;padding:14px;min-width:260px;z-index:50}.dropdown-panel.show,.calendar-pop.show{display:block}.dropdown-panel a{display:block;padding:10px;color:var(--ink)}.notification-panel p{padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}.calendar-pop{right:160px;width:310px}.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.cal-head button{border:1px solid var(--line);background:#fff;padding:7px 10px}.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}.cal-grid span{padding:7px;text-align:center;border:1px solid var(--line);font-size:12px}.cal-grid .today{background:var(--primary);color:#fff}
+.topbar{height:64px;background:#fff;border-bottom:1px solid var(--line);display:flex;align-items:center;padding:0 28px;gap:18px;position:sticky;top:0;z-index:20}.hamburger,.icon-btn{border:0;background:#fff;color:#07163d;font-size:20px;cursor:pointer}.hamburger{width:28px;height:42px}.global-search{width:500px;position:relative}.global-search input{width:100%;height:42px;border:1px solid #ccd8e5;padding:0 48px 0 18px;font-size:13px;color:#091942;box-shadow:0 2px 8px #00152b08}.global-search i{position:absolute;right:16px;top:12px;font-size:18px;color:#07163d}.top-actions{margin-left:auto;display:flex;align-items:center;gap:18px}.icon-btn{position:relative;width:32px;height:42px}.badge{position:absolute;top:4px;right:-4px;background:#009688;color:#fff;border-radius:50%;font-size:10px;min-width:18px;height:18px;display:grid;place-items:center;padding:0}.profile-toggle{display:flex;align-items:center;gap:16px;border:0;background:#fff;color:#07163d;cursor:pointer;border-left:1px solid var(--line);padding-left:18px}.profile-toggle span{text-align:left;font-size:12px}.profile-toggle b{font-weight:500}.profile-toggle small{display:block;font-size:12px;color:#33415f}.dropdown-wrap{position:relative}.dropdown-panel,.calendar-pop{display:none;position:absolute;right:0;top:50px;background:#fff;border:1px solid var(--line);box-shadow:0 14px 35px #00153018;padding:14px;min-width:260px;z-index:50}.dropdown-panel.show,.calendar-pop.show{display:block}.dropdown-panel a{display:block;padding:10px;color:var(--ink)}.notification-panel p{padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}.calendar-pop{right:160px;width:310px}.cal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}.cal-head button{border:1px solid var(--line);background:#fff;padding:7px 10px}.cal-grid{display:grid;grid-template-columns:repeat(7,1fr);gap:3px}.cal-grid span{padding:7px;text-align:center;border:1px solid var(--line);font-size:12px}.cal-grid .today{background:var(--primary);color:#fff}
 
 /* === Shared topbar calendar and dropdown polish: merged into header.css === */
 .topbar{height:60px!important;background:#fff!important;border-bottom:1px solid var(--line)!important;display:flex!important;align-items:center!important;padding:0 20px!important;gap:14px!important;position:sticky!important;top:0!important;z-index:30!important;}
@@ -15,19 +15,19 @@
 .topbar .calendar-pop{right:96px!important;width:318px!important;border-radius:14px!important;}
 .topbar .cal-head{display:flex!important;align-items:center!important;justify-content:space-between!important;margin-bottom:10px!important;}
 .topbar .cal-head button{width:32px!important;height:32px!important;border-radius:50%!important;border:1px solid var(--line)!important;background:#fff!important;color:var(--ink)!important;display:grid!important;place-items:center!important;padding:0!important;}
-.topbar .cal-title{font-size:14px!important;font-weight:700!important;color:var(--ink)!important;}
+.topbar .cal-title{font-size:14px!important;font-weight:600!important;color:var(--ink)!important;}
 .topbar .cal-grid{display:grid!important;grid-template-columns:repeat(7,1fr)!important;gap:5px!important;}
 .topbar .cal-grid b{font-size:11px!important;text-align:center!important;color:#78869a!important;padding:4px 0!important;}
 .topbar .cal-grid span,.topbar .cal-grid button{height:34px!important;border:1px solid transparent!important;border-radius:10px!important;background:#fff!important;color:var(--ink)!important;font-size:12px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0!important;position:relative!important;}
 .topbar .cal-grid button{flex-direction:column!important;gap:1px!important;cursor:pointer!important;}
 .topbar .cal-grid button:hover{background:#eef9fc!important;border-color:#b9e3f0!important;}
-.topbar .cal-grid button.today:not(.active){border-color:var(--primary)!important;color:var(--primary)!important;font-weight:700!important;}
+.topbar .cal-grid button.today:not(.active){border-color:var(--primary)!important;color:var(--primary)!important;font-weight:600!important;}
 .topbar .cal-grid button.active{background:var(--primary)!important;color:#fff!important;border-color:var(--primary)!important;}
 .topbar .event-dots{display:flex!important;gap:2px!important;height:4px!important;align-items:center!important;justify-content:center!important;}
 .topbar .event-dots i{width:4px!important;height:4px!important;border-radius:50%!important;background:#ff9f1c!important;display:block!important;}
 .topbar .cal-grid button.active .event-dots i{background:#fff!important;}
 .topbar-calendar-events{margin-top:10px;padding-top:10px;border-top:1px solid var(--line);max-height:105px;overflow:auto;scrollbar-width:thin;}
-.topbar-calendar-events::-webkit-scrollbar{width:5px}.topbar-calendar-events::-webkit-scrollbar-thumb{background:#b8d2e0;border-radius:10px}.topbar-calendar-events p{margin:0 0 7px;font-size:12px;color:#61708a;display:flex;gap:7px;align-items:flex-start}.topbar-calendar-events p i{color:var(--primary);margin-top:2px}.topbar-calendar-events strong{display:block;color:var(--ink);font-size:12px;font-weight:700}
+.topbar-calendar-events::-webkit-scrollbar{width:5px}.topbar-calendar-events::-webkit-scrollbar-thumb{background:#b8d2e0;border-radius:10px}.topbar-calendar-events p{margin:0 0 7px;font-size:12px;color:#61708a;display:flex;gap:7px;align-items:flex-start}.topbar-calendar-events p i{color:var(--primary);margin-top:2px}.topbar-calendar-events strong{display:block;color:var(--ink);font-size:12px;font-weight:600}
 @media(max-width:768px){.topbar{padding:0 12px!important}.topbar .global-search{display:none!important}.topbar .calendar-pop{right:10px!important;width:min(318px,calc(100vw - 20px))!important}.profile-toggle span{display:none!important}}
 
 
@@ -36,14 +36,14 @@
 .page-date-menu{position:absolute;right:0;top:calc(100% + 8px);z-index:1200;min-width:230px;background:#fff;border:1px solid #e5eef3;box-shadow:0 12px 30px rgba(12,42,70,.14);display:none;padding:8px;}
 .page-date-menu.show{display:block;}
 .page-date-menu button{width:100%;display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:8px;text-align:left;border:0;background:#fff;padding:10px 12px;color:#24313d;cursor:pointer;}
-.page-date-menu button:hover,.page-date-menu button.active{background:#edf9fd;color:var(--secondary,#0077b6);}
+.page-date-menu button:hover,.page-date-menu button.active{background:#edf9fd;color:var(--secondary,#00796b);}
 .page-date-menu button span{font-size:12px;color:#7a8793;}
-.date-btn.calendar-toggle[aria-expanded="true"]{border-color:var(--primary,#0096c7);color:var(--primary,#0096c7);}
+.date-btn.calendar-toggle[aria-expanded="true"]{border-color:var(--primary,#009688);color:var(--primary,#009688);}
 .topbar .calendar-pop{z-index:1300;}
 
 
 /* Final dashboard/sidebar/page-actions consistency fixes */
-.side-nav > .nav-link.active{background:var(--primary,#0096c7)!important;color:#fff!important;}
+.side-nav > .nav-link.active{background:var(--primary,#009688)!important;color:#fff!important;}
 .side-nav > .nav-link.active i{color:#fff!important;}
 .nav-group:not(.open) > .sub-nav{display:none!important;}
 .nav-group.open > .sub-nav{display:block!important;}
@@ -58,6 +58,6 @@
 .page-date-menu{position:absolute;right:0;top:calc(100% + 8px);z-index:3000;min-width:240px;background:#fff;border:1px solid #dbe3ef;box-shadow:0 14px 34px rgba(8,25,71,.14);padding:8px;display:none;}
 .page-date-menu.show{display:block!important;}
 .page-date-menu button{width:100%;min-height:42px;border:0;background:#fff;color:#071947;display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:space-between!important;gap:12px;text-align:left;padding:9px 12px;cursor:pointer;}
-.page-date-menu button:hover,.page-date-menu button.active{background:#eef8fb;color:#0077b6;}
-.page-date-menu button b{font-size:13px;font-weight:600;}
+.page-date-menu button:hover,.page-date-menu button.active{background:#eef8fb;color:#00796b;}
+.page-date-menu button b{font-size:13px;font-weight:500;}
 .page-date-menu button span{font-size:12px;color:#667085;}

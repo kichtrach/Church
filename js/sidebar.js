@@ -11,13 +11,24 @@
 
   function markActive(){
     const currentFile = (location.pathname.split('/').pop() || 'dashboard.html').toLowerCase();
+    const activeMap = {
+      'add-visitor.html': 'visitor-management.html',
+      'edit-visitor.html': 'visitor-management.html',
+      'visitor-details.html': 'visitor-management.html',
+      'visitor-followup.html': 'visitor-management.html',
+      'add-member.html': 'member-management.html',
+      'add-family.html': 'family-registration.html'
+    };
+    const targetFile = activeMap[currentFile] || currentFile;
+
     $$('.side-nav a').forEach(a=>a.classList.remove('active'));
+    $$('.nav-parent').forEach(btn=>btn.classList.remove('active'));
     $$('.nav-group.open').forEach(g=>g.classList.remove('open'));
 
     let activeLink = null;
     $$('.side-nav a[href]').some(a=>{
       const href=(a.getAttribute('href')||'').split('/').pop().toLowerCase();
-      if(href === currentFile){ activeLink = a; return true; }
+      if(href === targetFile){ activeLink = a; return true; }
       return false;
     });
 
@@ -27,7 +38,10 @@
     if(activeLink){
       activeLink.classList.add('active');
       const group = activeLink.closest('.nav-group');
-      if(group) group.classList.add('open');
+      if(group){
+        group.classList.add('open');
+        group.querySelector('.nav-parent')?.classList.add('active');
+      }
     }
   }
 

@@ -1,2 +1,388 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Member Management - CSI St. John's Church</title><link href="https://fonts.googleapis.com" rel="preconnect"/><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/><link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet"/><link href="css/common.css" rel="stylesheet"/><link href="css/sidebar.css" rel="stylesheet"/><link href="css/header.css" rel="stylesheet"/><link href="css/buttons.css" rel="stylesheet"/><link href="css/cards.css" rel="stylesheet"/><link href="css/forms.css" rel="stylesheet"/><link href="css/tables.css" rel="stylesheet"/><link href="css/modals.css" rel="stylesheet"/><link href="css/charts.css" rel="stylesheet"/><link href="css/calendar.css" rel="stylesheet"/><link href="css/responsive.css" rel="stylesheet"/><link href="css/member-management.css" rel="stylesheet"/></head><body><div class="app"><aside class="sidebar"><div class="brand"><i class="fa-solid fa-church"></i><div><strong>CSI St. John's Church</strong><span>Church Management System</span></div></div><nav class="side-nav"><a class="nav-link" href="dashboard.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a><div class="nav-group open"><button class="nav-parent"><i class="fa-solid fa-calendar-days"></i><span>Parish Administration</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link active" href="parish-administration.html">Parish Administration</a><a class="sub-link" href="upcoming-events-services.html">Upcoming Events Services</a><a class="sub-link" href="sacrament-reports.html">Sacrament Reports</a><a class="sub-link" href="birthdays-anniversaries.html">Birthdays Anniversaries</a><a class="sub-link" href="prayer-request-summary.html">Prayer Request Summary</a><a class="sub-link" href="notifications-announcements.html">Notifications Announcements</a><a class="sub-link" href="committee-activity-overview.html">Committee Activity Overview</a><a class="sub-link" href="branch-church-overview.html">Branch Church Overview</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-users"></i><span>Member Management</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="member-management.html">Member Management</a><a class="sub-link" href="family-registration.html">Family Registration</a><a class="sub-link" href="individual-member-registration.html">Individual Member Registration</a><a class="sub-link" href="member-directory.html">Member Directory</a><a class="sub-link" href="new-member-enrollment.html">New Member Enrollment</a><a class="sub-link" href="visitor-management.html">Visitor Management</a><a class="sub-link" href="member-transfer-in.html">Member Transfer In</a><a class="sub-link" href="member-transfer-out.html">Member Transfer Out</a><a class="sub-link" href="inactive-member-tracking.html">Inactive Member Tracking</a><a class="sub-link" href="migrated-member-tracking.html">Migrated Member Tracking</a><a class="sub-link" href="senior-citizen-registry.html">Senior Citizen Registry</a><a class="sub-link" href="widow-widower-registry.html">Widow Widower Registry</a><a class="sub-link" href="member-photo-management.html">Member Photo Management</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-cross"></i><span>Sacramental Records</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="baptism-register.html">Baptism Register</a><a class="sub-link" href="confirmation-register.html">Confirmation Register</a><a class="sub-link" href="holy-communion-register.html">Holy Communion Register</a><a class="sub-link" href="marriage-register.html">Marriage Register</a><a class="sub-link" href="funeral-register.html">Funeral Register</a><a class="sub-link" href="membership-certificate.html">Membership Certificate</a><a class="sub-link" href="transfer-certificate.html">Transfer Certificate</a><a class="sub-link" href="baptism-certificate.html">Baptism Certificate</a><a class="sub-link" href="marriage-certificate.html">Marriage Certificate</a><a class="sub-link" href="confirmation-certificate.html">Confirmation Certificate</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-people-roof"></i><span>Family Management</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="family-directory.html">Family Directory</a><a class="sub-link" href="family-tree.html">Family Tree</a><a class="sub-link" href="family-visit-records.html">Family Visit Records</a><a class="sub-link" href="family-contribution-history.html">Family Contribution History</a><a class="sub-link" href="family-attendance-records.html">Family Attendance Records</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-indian-rupee-sign"></i><span>Finance &amp; Accounting</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="tithe-collection.html">Tithe Collection</a><a class="sub-link" href="sunday-offerings.html">Sunday Offerings</a><a class="sub-link" href="special-offerings.html">Special Offerings</a><a class="sub-link" href="mission-offerings.html">MISsion Offerings</a><a class="sub-link" href="donation-management.html">Donation Management</a><a class="sub-link" href="donor-management.html">Donor Management</a><a class="sub-link" href="expense-management.html">Expense Management</a><a class="sub-link" href="income-management.html">Income Management</a><a class="sub-link" href="general-ledger.html">General Ledger</a><a class="sub-link" href="budget-planning.html">Budget Planning</a><a class="sub-link" href="fund-accounting.html">Fund Accounting</a><a class="sub-link" href="endowment-fund-management.html">Endowment Fund Management</a><a class="sub-link" href="payroll-management.html">Payroll Management</a><a class="sub-link" href="bank-reconciliation.html">Bank Reconciliation</a><a class="sub-link" href="audit-management.html">Audit Management</a><a class="sub-link" href="financial-statements.html">Financial Statements</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-credit-card"></i><span>Online Giving &amp; Payments</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="online-donation-portal.html">Online Donation Portal</a><a class="sub-link" href="payment-gateway-integration.html">Payment Gateway Integration</a><a class="sub-link" href="donation-receipt-generation.html">Donation Receipt Generation</a><a class="sub-link" href="recurring-donations.html">Recurring Donations</a><a class="sub-link" href="donation-analytics.html">Donation Analytics</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-school"></i><span>Sunday School Management</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="student-registration.html">Student Registration</a><a class="sub-link" href="teacher-management.html">Teacher Management</a><a class="sub-link" href="class-management.html">Class Management</a><a class="sub-link" href="attendance-tracking.html">Attendance Tracking</a><a class="sub-link" href="exam-management.html">Exam Management</a><a class="sub-link" href="progress-reports.html">Progress Reports</a><a class="sub-link" href="vacation-bible-school.html">Vacation Bible School</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-child-reaching"></i><span>Youth Ministry</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="youth-registration.html">Youth Registration</a><a class="sub-link" href="youth-events.html">Youth Events</a><a class="sub-link" href="youth-attendance.html">Youth Attendance</a><a class="sub-link" href="youth-leadership-management.html">Youth Leadership Management</a><a class="sub-link" href="youth-reports.html">Youth Reports</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-person-dress"></i><span>Women’s Fellowship</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="women-members.html">Women Members</a><a class="sub-link" href="women-programs.html">Women Programs</a><a class="sub-link" href="women-attendance.html">Women Attendance</a><a class="sub-link" href="women-reports.html">Women Reports</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-person"></i><span>Men’s Fellowship</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="men-members.html">Men Members</a><a class="sub-link" href="men-programs.html">Men Programs</a><a class="sub-link" href="men-attendance.html">Men Attendance</a><a class="sub-link" href="men-reports.html">Men Reports</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-music"></i><span>Choir &amp; Worship Team</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="choir-members.html">Choir Members</a><a class="sub-link" href="practice-scheduling.html">Practice Scheduling</a><a class="sub-link" href="worship-team-roster.html">Worship Team Roster</a><a class="sub-link" href="song-library.html">Song Library</a><a class="sub-link" href="special-service-planning.html">Special Service Planning</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-hands-praying"></i><span>Prayer Ministry</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="prayer-requests.html">Prayer Requests</a><a class="sub-link" href="prayer-cell-management.html">Prayer Cell Management</a><a class="sub-link" href="cottage-prayer-management.html">Cottage Prayer Management</a><a class="sub-link" href="intercessory-team-management.html">Intercessory Team Management</a><a class="sub-link" href="prayer-reports.html">Prayer Reports</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-calendar-check"></i><span>Event Management</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="church-calendar.html">Church Calendar</a><a class="sub-link" href="convention-management.html">Convention Management</a><a class="sub-link" href="retreat-management.html">Retreat Management</a><a class="sub-link" href="seminar-management.html">Seminar Management</a><a class="sub-link" href="special-services.html">Special Services</a><a class="sub-link" href="event-registration.html">Event Registration</a><a class="sub-link" href="volunteer-assignment.html">Volunteer Assignment</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-handshake-angle"></i><span>Volunteer Management</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="volunteer-registration.html">Volunteer Registration</a><a class="sub-link" href="skill-management.html">Skill Management</a><a class="sub-link" href="duty-assignment.html">Duty Assignment</a><a class="sub-link" href="duty-roster.html">Duty Roster</a><a class="sub-link" href="volunteer-attendance.html">Volunteer Attendance</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-comments"></i><span>Communication Module</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="sms-notifications.html">SMS Notifications</a><a class="sub-link" href="whatsapp-integration.html">Whatsapp Integration</a><a class="sub-link" href="email-broadcasting.html">Email Broadcasting</a><a class="sub-link" href="push-notifications.html">Push Notifications</a><a class="sub-link" href="church-announcements.html">Church Announcements</a><a class="sub-link" href="newsletter-management.html">Newsletter Management</a><a class="sub-link" href="birthday-greetings.html">Birthday Greetings</a><a class="sub-link" href="anniversary-greetings.html">Anniversary Greetings</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-landmark"></i><span>Cemetery Management</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="burial-records.html">Burial Records</a><a class="sub-link" href="grave-allocation.html">Grave Allocation</a><a class="sub-link" href="cemetery-mapping.html">Cemetery Mapping</a><a class="sub-link" href="grave-renewal-tracking.html">Grave Renewal Tracking</a><a class="sub-link" href="cemetery-reports.html">Cemetery Reports</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-warehouse"></i><span>Asset Management</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="church-property-register.html">Church Property Register</a><a class="sub-link" href="building-management.html">Building Management</a><a class="sub-link" href="land-records.html">Land Records</a><a class="sub-link" href="vehicle-management.html">Vehicle Management</a><a class="sub-link" href="furniture-inventory.html">Furniture Inventory</a><a class="sub-link" href="equipment-inventory.html">Equipment Inventory</a><a class="sub-link" href="asset-maintenance.html">Asset Maintenance</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-building"></i><span>Facility Booking</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="hall-booking.html">Hall Booking</a><a class="sub-link" href="auditorium-booking.html">Auditorium Booking</a><a class="sub-link" href="resource-booking.html">Resource Booking</a><a class="sub-link" href="booking-approval-workflow.html">Booking Approval Workflow</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-id-badge"></i><span>Human Resource Management</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="staff-management.html">Staff Management</a><a class="sub-link" href="employee-records.html">Employee Records</a><a class="sub-link" href="leave-management.html">Leave Management</a><a class="sub-link" href="payroll-processing.html">Payroll Processing</a><a class="sub-link" href="performance-tracking.html">Performance Tracking</a><a class="sub-link" href="retirement-tracking.html">Retirement Tracking</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-folder-open"></i><span>Document Management</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="meeting-minutes.html">Meeting Minutes</a><a class="sub-link" href="circulars.html">Circulars</a><a class="sub-link" href="legal-documents.html">Legal Documents</a><a class="sub-link" href="property-documents.html">Property Documents</a><a class="sub-link" href="policies-procedures.html">Policies Procedures</a><a class="sub-link" href="digital-archive.html">Digital Archive</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-check-to-slot"></i><span>Election Management</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="parish-elections.html">Parish Elections</a><a class="sub-link" href="voter-registration.html">Voter Registration</a><a class="sub-link" href="nomination-management.html">Nomination Management</a><a class="sub-link" href="candidate-management.html">Candidate Management</a><a class="sub-link" href="voting-management.html">Voting Management</a><a class="sub-link" href="election-results.html">Election Results</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-globe"></i><span>Mission &amp; Evangelism</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="mission-field-management.html">MISsion Field Management</a><a class="sub-link" href="missionary-records.html">MISsionary Records</a><a class="sub-link" href="evangelism-events.html">Evangelism Events</a><a class="sub-link" href="outreach-programs.html">Outreach Programs</a><a class="sub-link" href="mission-fund-tracking.html">MISsion Fund Tracking</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-chart-line"></i><span>Reports &amp; Analytics</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="membership-reports.html">Membership Reports</a><a class="sub-link" href="family-reports.html">Family Reports</a><a class="sub-link" href="attendance-reports.html">Attendance Reports</a><a class="sub-link" href="financial-reports.html">Financial Reports</a><a class="sub-link" href="donation-reports.html">Donation Reports</a><a class="sub-link" href="sacrament-reports-analytics.html">Sacrament Reports Analytics</a><a class="sub-link" href="sunday-school-reports.html">Sunday School Reports</a><a class="sub-link" href="ministry-reports.html">Ministry Reports</a><a class="sub-link" href="asset-reports.html">Asset Reports</a><a class="sub-link" href="diocese-mis-dashboard.html">Diocese MIS Dashboard</a></div></div><div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-gear"></i><span>Settings</span><i class="fa-solid fa-chevron-down arrow"></i></button><div class="sub-nav"><a class="sub-link" href="general-settings.html">General Settings</a><a class="sub-link" href="diocese-settings.html">Diocese Settings</a><a class="sub-link" href="parish-settings.html">Parish Settings</a><a class="sub-link" href="payment-settings.html">Payment Settings</a><a class="sub-link" href="sms-settings.html">SMS Settings</a><a class="sub-link" href="email-settings.html">Email Settings</a><a class="sub-link" href="backup-restore.html">Backup Restore</a><a class="sub-link" href="audit-logs.html">Audit Logs</a></div></div></nav><div class="side-profile"><div class="avatar">RM</div><div><strong>Rev. Michael</strong><span>Parish Priest</span></div><i class="fa-solid fa-chevron-down"></i></div></aside><section class="main"><header class="topbar"><button aria-label="Toggle sidebar" class="hamburger"><i class="fa-solid fa-bars"></i></button><div class="global-search"><input id="globalSearch" placeholder="Search families, members, records..."/><i class="fa-solid fa-magnifying-glass"></i></div><div class="top-actions"><button aria-expanded="false" aria-label="Open calendar" class="icon-btn calendar-toggle topbar-calendar-toggle" type="button"><i class="fa-regular fa-calendar"></i></button><div class="dropdown-wrap"><button class="icon-btn notify-toggle"><i class="fa-regular fa-bell"></i><span class="badge">12</span></button><div class="dropdown-panel notification-panel"><h4>Notifications</h4><p><b>New prayer request</b><br/>2 minutes ago</p><p><b>Donation received</b><br/>₹10,000 from John Samuel</p><p><b>Meeting reminder</b><br/>Committee at 6 PM</p></div></div><div class="dropdown-wrap"><button class="profile-toggle"><span><b>Parish Office</b><small>St. John's Church</small></span><i class="fa-solid fa-chevron-down"></i></button><div class="dropdown-panel profile-panel"><a href="#"><i class="fa-regular fa-user"></i> Profile</a><a href="general-settings.html"><i class="fa-solid fa-gear"></i> Settings</a><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></div></div></div><div class="calendar-pop"><div class="cal-head"><button class="cal-prev"><i class="fa-solid fa-chevron-left"></i></button><strong class="cal-title"></strong><button class="cal-next"><i class="fa-solid fa-chevron-right"></i></button></div><div class="cal-grid"></div><div aria-live="polite" class="topbar-calendar-events"></div></div></header><main class="content"><div class="page-title"><div><h1>Member Management</h1><p>Dashboard › Member Management</p></div><button class="btn primary open-modal" data-mode="add"><i class="fa-solid fa-plus"></i> Add New</button></div><section class="stat-grid"><div class="stat-card"><div class="icon-box"><i class="fa-solid fa-folder-open"></i></div><div><span>Total Records</span><strong>248</strong><small>Updated today</small></div></div><div class="stat-card"><div class="icon-box"><i class="fa-solid fa-circle-check"></i></div><div><span>Active Items</span><strong>186</strong><small>Updated today</small></div></div><div class="stat-card"><div class="icon-box"><i class="fa-solid fa-clock"></i></div><div><span>Pending Review</span><strong>32</strong><small>Needs action</small></div></div><div class="stat-card"><div class="icon-box"><i class="fa-solid fa-calendar-days"></i></div><div><span>This Month</span><strong>24</strong><small>Needs action</small></div></div></section><section class="panel"><div class="panel-head"><h3>Member Management List</h3><div><button class="btn outline export-btn"><i class="fa-solid fa-download"></i> Export</button><button class="btn primary open-modal" data-mode="add"><i class="fa-solid fa-plus"></i> Add New</button></div></div><div class="filters"><input class="table-search" placeholder="Search records..."/><select><option>All Categories</option><option>Active</option><option>Pending</option></select><select><option>All Status</option><option>Approved</option><option>Upcoming</option></select><button class="btn filter-btn"><i class="fa-solid fa-filter"></i> Filter</button></div><div class="tabs"><button class="tab active" data-tab="all">All</button><button class="tab" data-tab="active">Active</button><button class="tab" data-tab="pending">Pending</button><button class="tab" data-tab="archived">Archived</button></div><div class="tab-content active" id="all"><table class="data-table"><thead><tr><th>Name / Title</th><th>Category</th><th>Date</th><th>Owner</th><th>Status</th><th>Actions</th></tr></thead><tbody><tr><td><b>John Samuel</b><small>Member Management record</small></td><td>Member</td><td>18/05/2025</td><td>Parish Office</td><td><span class="status warning">Pending</span></td><td><button class="table-action view"><i class="fa-regular fa-eye"></i></button><button class="table-action edit"><i class="fa-regular fa-pen-to-square"></i></button><button class="table-action delete"><i class="fa-regular fa-trash-can"></i></button></td></tr><tr><td><b>Mary Grace</b><small>Member Management record</small></td><td>Church</td><td>17/05/2025</td><td>Parish Office</td><td><span class="status success">Active</span></td><td><button class="table-action view"><i class="fa-regular fa-eye"></i></button><button class="table-action edit"><i class="fa-regular fa-pen-to-square"></i></button><button class="table-action delete"><i class="fa-regular fa-trash-can"></i></button></td></tr><tr><td><b>Daniel Joseph</b><small>Member Management record</small></td><td>Member</td><td>16/05/2025</td><td>Parish Office</td><td><span class="status success">Active</span></td><td><button class="table-action view"><i class="fa-regular fa-eye"></i></button><button class="table-action edit"><i class="fa-regular fa-pen-to-square"></i></button><button class="table-action delete"><i class="fa-regular fa-trash-can"></i></button></td></tr><tr><td><b>Sarah Elizabeth</b><small>Member Management record</small></td><td>Church</td><td>15/05/2025</td><td>Parish Office</td><td><span class="status warning">Pending</span></td><td><button class="table-action view"><i class="fa-regular fa-eye"></i></button><button class="table-action edit"><i class="fa-regular fa-pen-to-square"></i></button><button class="table-action delete"><i class="fa-regular fa-trash-can"></i></button></td></tr><tr><td><b>Michael David</b><small>Member Management record</small></td><td>Member</td><td>14/05/2025</td><td>Parish Office</td><td><span class="status success">Active</span></td><td><button class="table-action view"><i class="fa-regular fa-eye"></i></button><button class="table-action edit"><i class="fa-regular fa-pen-to-square"></i></button><button class="table-action delete"><i class="fa-regular fa-trash-can"></i></button></td></tr><tr><td><b>Anna Thomas</b><small>Member Management record</small></td><td>Church</td><td>13/05/2025</td><td>Parish Office</td><td><span class="status success">Active</span></td><td><button class="table-action view"><i class="fa-regular fa-eye"></i></button><button class="table-action edit"><i class="fa-regular fa-pen-to-square"></i></button><button class="table-action delete"><i class="fa-regular fa-trash-can"></i></button></td></tr><tr><td><b>George Mathew</b><small>Member Management record</small></td><td>Member</td><td>12/05/2025</td><td>Parish Office</td><td><span class="status warning">Pending</span></td><td><button class="table-action view"><i class="fa-regular fa-eye"></i></button><button class="table-action edit"><i class="fa-regular fa-pen-to-square"></i></button><button class="table-action delete"><i class="fa-regular fa-trash-can"></i></button></td></tr><tr><td><b>Rebecca Paul</b><small>Member Management record</small></td><td>Church</td><td>11/05/2025</td><td>Parish Office</td><td><span class="status success">Active</span></td><td><button class="table-action view"><i class="fa-regular fa-eye"></i></button><button class="table-action edit"><i class="fa-regular fa-pen-to-square"></i></button><button class="table-action delete"><i class="fa-regular fa-trash-can"></i></button></td></tr></tbody></table></div><div class="tab-content" id="active"><div class="empty-state"><i class="fa-solid fa-check"></i><p>Active records are filtered from the same table.</p></div></div><div class="tab-content" id="pending"><div class="empty-state"><i class="fa-solid fa-clock"></i><p>Pending approval items will appear here.</p></div></div><div class="tab-content" id="archived"><div class="empty-state"><i class="fa-solid fa-box-archive"></i><p>No archived records.</p></div></div></section><div class="modal" id="recordModal"><div class="modal-card"><div class="modal-head"><h2>Add / Edit Record</h2><button class="close-modal"><i class="fa-solid fa-xmark"></i></button></div><div class="modal-tabs"><button class="tab active" data-tab="m1"><i class="fa-regular fa-calendar"></i> Details</button><button class="tab" data-tab="m2"><i class="fa-solid fa-location-dot"></i> Additional Info</button></div><form id="recordForm" novalidate=""><div class="tab-content active" id="m1"><div class="form-grid"><label>Title *<input name="title" placeholder="Enter title" required=""/></label><label>Date *<input name="date" required="" type="date"/></label><label>Category *<select name="category" required=""><option value="">Select category</option><option>Event</option><option>Member</option><option>Finance</option></select></label><label>Status<select name="status"><option>Active</option><option>Pending</option><option>Upcoming</option></select></label><label class="full">Description<textarea name="description" placeholder="Enter description"></textarea></label></div></div><div class="tab-content" id="m2"><div class="form-grid"><label>Contact Person<input placeholder="Contact person"/></label><label>Phone<input placeholder="Phone"/></label><label class="full">Notes<textarea placeholder="Notes"></textarea></label></div></div><div class="form-errors"></div><div class="modal-foot"><button class="btn outline close-modal" type="button">Cancel</button><button class="btn primary" type="submit">Save Record</button></div></form></div></div></main></section></div><script src="https://cdn.jsdelivr.net/npm/chart.js"></script><script src="js/common.js"></script><script src="js/sidebar.js"></script><script src="js/header.js"></script><script src="js/dropdowns.js"></script><script src="js/calendar.js"></script><script src="js/modals.js"></script><script src="js/charts.js"></script><script src="js/tables.js"></script><script src="js/member-management.js"></script></body></html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width,initial-scale=1" name="viewport" />
+    <title>Member Management - CSI St. John's Church</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet" />
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/sidebar.css" rel="stylesheet" />
+    <link href="css/header.css" rel="stylesheet" />
+    <link href="css/buttons.css" rel="stylesheet" />
+    <link href="css/cards.css" rel="stylesheet" />
+    <link href="css/forms.css" rel="stylesheet" />
+    <link href="css/tables.css" rel="stylesheet" />
+    <link href="css/modals.css" rel="stylesheet" />
+    <link href="css/charts.css" rel="stylesheet" />
+    <link href="css/calendar.css" rel="stylesheet" />
+    <link href="css/responsive.css" rel="stylesheet" />
+    <link href="css/member-management.css" rel="stylesheet" />
+    <link href="css/design-system.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="brand"><i class="fa-solid fa-church"></i>
+                <div><strong>CSI St. John's Church</strong><span>Church Management System</span></div>
+            </div>
+            <nav class="side-nav"><a class="nav-link" href="dashboard.html"><i class="fa-solid fa-house"></i><span>Dashboard</span></a>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-calendar-days"></i><span>Parish Administration</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="parish-administration.html">Parish Administration</a><a class="sub-link" href="upcoming-events-services.html">Upcoming Events Services</a><a class="sub-link" href="sacrament-reports.html">Sacrament Reports</a><a class="sub-link" href="birthdays-anniversaries.html">Birthdays Anniversaries</a><a class="sub-link" href="prayer-request-summary.html">Prayer Request Summary</a><a class="sub-link" href="notifications-announcements.html">Notifications Announcements</a><a class="sub-link" href="committee-activity-overview.html">Committee Activity Overview</a><a class="sub-link" href="branch-church-overview.html">Branch Church Overview</a></div>
+                </div>
+                <div class="nav-group open"><button class="nav-parent"><i class="fa-solid fa-users"></i><span>Member Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link active" href="member-management.html">Member Management</a><a class="sub-link" href="family-registration.html">Family Registration</a><a class="sub-link" href="individual-member-registration.html">Individual Member Registration</a><a class="sub-link" href="member-directory.html">Member Directory</a><a class="sub-link" href="new-member-enrollment.html">New Member Enrollment</a><a class="sub-link" href="visitor-management.html">Visitor Management</a><a class="sub-link" href="member-transfer-in.html">Member Transfer In</a><a class="sub-link" href="member-transfer-out.html">Member Transfer Out</a><a class="sub-link" href="inactive-member-tracking.html">Inactive Member Tracking</a><a class="sub-link" href="migrated-member-tracking.html">Migrated Member Tracking</a><a class="sub-link" href="senior-citizen-registry.html">Senior Citizen Registry</a><a class="sub-link" href="widow-widower-registry.html">Widow Widower Registry</a><a class="sub-link" href="member-photo-management.html">Member Photo Management</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-cross"></i><span>Sacramental Records</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="baptism-register.html">Baptism Register</a><a class="sub-link" href="confirmation-register.html">Confirmation Register</a><a class="sub-link" href="holy-communion-register.html">Holy Communion Register</a><a class="sub-link" href="marriage-register.html">Marriage Register</a><a class="sub-link" href="funeral-register.html">Funeral Register</a><a class="sub-link" href="membership-certificate.html">Membership Certificate</a><a class="sub-link" href="transfer-certificate.html">Transfer Certificate</a><a class="sub-link" href="baptism-certificate.html">Baptism Certificate</a><a class="sub-link" href="marriage-certificate.html">Marriage Certificate</a><a class="sub-link" href="confirmation-certificate.html">Confirmation Certificate</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-people-roof"></i><span>Family Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="family-directory.html">Family Directory</a><a class="sub-link" href="family-tree.html">Family Tree</a><a class="sub-link" href="family-visit-records.html">Family Visit Records</a><a class="sub-link" href="family-contribution-history.html">Family Contribution History</a><a class="sub-link" href="family-attendance-records.html">Family Attendance Records</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-indian-rupee-sign"></i><span>Finance &amp; Accounting</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="tithe-collection.html">Tithe Collection</a><a class="sub-link" href="sunday-offerings.html">Sunday Offerings</a><a class="sub-link" href="special-offerings.html">Special Offerings</a><a class="sub-link" href="mission-offerings.html">MISsion Offerings</a><a class="sub-link" href="donation-management.html">Donation Management</a><a class="sub-link" href="donor-management.html">Donor Management</a><a class="sub-link" href="expense-management.html">Expense Management</a><a class="sub-link" href="income-management.html">Income Management</a><a class="sub-link" href="general-ledger.html">General Ledger</a><a class="sub-link" href="budget-planning.html">Budget Planning</a><a class="sub-link" href="fund-accounting.html">Fund Accounting</a><a class="sub-link" href="endowment-fund-management.html">Endowment Fund Management</a><a class="sub-link" href="payroll-management.html">Payroll Management</a><a class="sub-link" href="bank-reconciliation.html">Bank Reconciliation</a><a class="sub-link" href="audit-management.html">Audit Management</a><a class="sub-link" href="financial-statements.html">Financial Statements</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-credit-card"></i><span>Online Giving &amp; Payments</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="online-donation-portal.html">Online Donation Portal</a><a class="sub-link" href="payment-gateway-integration.html">Payment Gateway Integration</a><a class="sub-link" href="donation-receipt-generation.html">Donation Receipt Generation</a><a class="sub-link" href="recurring-donations.html">Recurring Donations</a><a class="sub-link" href="donation-analytics.html">Donation Analytics</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-school"></i><span>Sunday School Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="student-registration.html">Student Registration</a><a class="sub-link" href="teacher-management.html">Teacher Management</a><a class="sub-link" href="class-management.html">Class Management</a><a class="sub-link" href="attendance-tracking.html">Attendance Tracking</a><a class="sub-link" href="exam-management.html">Exam Management</a><a class="sub-link" href="progress-reports.html">Progress Reports</a><a class="sub-link" href="vacation-bible-school.html">Vacation Bible School</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-child-reaching"></i><span>Youth Ministry</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="youth-registration.html">Youth Registration</a><a class="sub-link" href="youth-events.html">Youth Events</a><a class="sub-link" href="youth-attendance.html">Youth Attendance</a><a class="sub-link" href="youth-leadership-management.html">Youth Leadership Management</a><a class="sub-link" href="youth-reports.html">Youth Reports</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-person-dress"></i><span>Women’s Fellowship</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="women-members.html">Women Members</a><a class="sub-link" href="women-programs.html">Women Programs</a><a class="sub-link" href="women-attendance.html">Women Attendance</a><a class="sub-link" href="women-reports.html">Women Reports</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-person"></i><span>Men’s Fellowship</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="men-members.html">Men Members</a><a class="sub-link" href="men-programs.html">Men Programs</a><a class="sub-link" href="men-attendance.html">Men Attendance</a><a class="sub-link" href="men-reports.html">Men Reports</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-music"></i><span>Choir &amp; Worship Team</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="choir-members.html">Choir Members</a><a class="sub-link" href="practice-scheduling.html">Practice Scheduling</a><a class="sub-link" href="worship-team-roster.html">Worship Team Roster</a><a class="sub-link" href="song-library.html">Song Library</a><a class="sub-link" href="special-service-planning.html">Special Service Planning</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-hands-praying"></i><span>Prayer Ministry</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="prayer-requests.html">Prayer Requests</a><a class="sub-link" href="prayer-cell-management.html">Prayer Cell Management</a><a class="sub-link" href="cottage-prayer-management.html">Cottage Prayer Management</a><a class="sub-link" href="intercessory-team-management.html">Intercessory Team Management</a><a class="sub-link" href="prayer-reports.html">Prayer Reports</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-calendar-check"></i><span>Event Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="church-calendar.html">Church Calendar</a><a class="sub-link" href="convention-management.html">Convention Management</a><a class="sub-link" href="retreat-management.html">Retreat Management</a><a class="sub-link" href="seminar-management.html">Seminar Management</a><a class="sub-link" href="special-services.html">Special Services</a><a class="sub-link" href="event-registration.html">Event Registration</a><a class="sub-link" href="volunteer-assignment.html">Volunteer Assignment</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-handshake-angle"></i><span>Volunteer Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="volunteer-registration.html">Volunteer Registration</a><a class="sub-link" href="skill-management.html">Skill Management</a><a class="sub-link" href="duty-assignment.html">Duty Assignment</a><a class="sub-link" href="duty-roster.html">Duty Roster</a><a class="sub-link" href="volunteer-attendance.html">Volunteer Attendance</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-comments"></i><span>Communication Module</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="sms-notifications.html">SMS Notifications</a><a class="sub-link" href="whatsapp-integration.html">Whatsapp Integration</a><a class="sub-link" href="email-broadcasting.html">Email Broadcasting</a><a class="sub-link" href="push-notifications.html">Push Notifications</a><a class="sub-link" href="church-announcements.html">Church Announcements</a><a class="sub-link" href="newsletter-management.html">Newsletter Management</a><a class="sub-link" href="birthday-greetings.html">Birthday Greetings</a><a class="sub-link" href="anniversary-greetings.html">Anniversary Greetings</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-landmark"></i><span>Cemetery Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="burial-records.html">Burial Records</a><a class="sub-link" href="grave-allocation.html">Grave Allocation</a><a class="sub-link" href="cemetery-mapping.html">Cemetery Mapping</a><a class="sub-link" href="grave-renewal-tracking.html">Grave Renewal Tracking</a><a class="sub-link" href="cemetery-reports.html">Cemetery Reports</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-warehouse"></i><span>Asset Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="church-property-register.html">Church Property Register</a><a class="sub-link" href="building-management.html">Building Management</a><a class="sub-link" href="land-records.html">Land Records</a><a class="sub-link" href="vehicle-management.html">Vehicle Management</a><a class="sub-link" href="furniture-inventory.html">Furniture Inventory</a><a class="sub-link" href="equipment-inventory.html">Equipment Inventory</a><a class="sub-link" href="asset-maintenance.html">Asset Maintenance</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-building"></i><span>Facility Booking</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="hall-booking.html">Hall Booking</a><a class="sub-link" href="auditorium-booking.html">Auditorium Booking</a><a class="sub-link" href="resource-booking.html">Resource Booking</a><a class="sub-link" href="booking-approval-workflow.html">Booking Approval Workflow</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-id-badge"></i><span>Human Resource Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="staff-management.html">Staff Management</a><a class="sub-link" href="employee-records.html">Employee Records</a><a class="sub-link" href="leave-management.html">Leave Management</a><a class="sub-link" href="payroll-processing.html">Payroll Processing</a><a class="sub-link" href="performance-tracking.html">Performance Tracking</a><a class="sub-link" href="retirement-tracking.html">Retirement Tracking</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-folder-open"></i><span>Document Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="meeting-minutes.html">Meeting Minutes</a><a class="sub-link" href="circulars.html">Circulars</a><a class="sub-link" href="legal-documents.html">Legal Documents</a><a class="sub-link" href="property-documents.html">Property Documents</a><a class="sub-link" href="policies-procedures.html">Policies Procedures</a><a class="sub-link" href="digital-archive.html">Digital Archive</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-check-to-slot"></i><span>Election Management</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="parish-elections.html">Parish Elections</a><a class="sub-link" href="voter-registration.html">Voter Registration</a><a class="sub-link" href="nomination-management.html">Nomination Management</a><a class="sub-link" href="candidate-management.html">Candidate Management</a><a class="sub-link" href="voting-management.html">Voting Management</a><a class="sub-link" href="election-results.html">Election Results</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-globe"></i><span>Mission &amp; Evangelism</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="mission-field-management.html">MISsion Field Management</a><a class="sub-link" href="missionary-records.html">MISsionary Records</a><a class="sub-link" href="evangelism-events.html">Evangelism Events</a><a class="sub-link" href="outreach-programs.html">Outreach Programs</a><a class="sub-link" href="mission-fund-tracking.html">MISsion Fund Tracking</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-chart-line"></i><span>Reports &amp; Analytics</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="membership-reports.html">Membership Reports</a><a class="sub-link" href="family-reports.html">Family Reports</a><a class="sub-link" href="attendance-reports.html">Attendance Reports</a><a class="sub-link" href="financial-reports.html">Financial Reports</a><a class="sub-link" href="donation-reports.html">Donation Reports</a><a class="sub-link" href="sacrament-reports-analytics.html">Sacrament Reports Analytics</a><a class="sub-link" href="sunday-school-reports.html">Sunday School Reports</a><a class="sub-link" href="ministry-reports.html">Ministry Reports</a><a class="sub-link" href="asset-reports.html">Asset Reports</a><a class="sub-link" href="diocese-mis-dashboard.html">Diocese MIS Dashboard</a></div>
+                </div>
+                <div class="nav-group"><button class="nav-parent"><i class="fa-solid fa-gear"></i><span>Settings</span><i class="fa-solid fa-chevron-down arrow"></i></button>
+                    <div class="sub-nav"><a class="sub-link" href="general-settings.html">General Settings</a><a class="sub-link" href="diocese-settings.html">Diocese Settings</a><a class="sub-link" href="parish-settings.html">Parish Settings</a><a class="sub-link" href="payment-settings.html">Payment Settings</a><a class="sub-link" href="sms-settings.html">SMS Settings</a><a class="sub-link" href="email-settings.html">Email Settings</a><a class="sub-link" href="backup-restore.html">Backup Restore</a><a class="sub-link" href="audit-logs.html">Audit Logs</a></div>
+                </div>
+            </nav>
+            <div class="side-profile">
+                <div class="avatar">RM</div>
+                <div><strong>Rev. Michael</strong><span>Parish Priest</span></div><i class="fa-solid fa-chevron-down"></i>
+            </div>
+        </aside>
+        <section class="main">
+            <header class="topbar"><button aria-label="Toggle sidebar" class="hamburger"><i class="fa-solid fa-bars"></i></button>
+                <div class="global-search"><input id="globalSearch" placeholder="Search families, members, records..." /><i class="fa-solid fa-magnifying-glass"></i></div>
+                <div class="top-actions"><button aria-expanded="false" aria-label="Open calendar" class="icon-btn calendar-toggle topbar-calendar-toggle" type="button"><i class="fa-regular fa-calendar"></i></button>
+                    <div class="dropdown-wrap"><button class="icon-btn notify-toggle"><i class="fa-regular fa-bell"></i><span class="badge">12</span></button>
+                        <div class="dropdown-panel notification-panel">
+                            <h4>Notifications</h4>
+                            <p><b>New prayer request</b><br />2 minutes ago</p>
+                            <p><b>Donation received</b><br />₹10,000 from John Samuel</p>
+                            <p><b>Meeting reminder</b><br />Committee at 6 PM</p>
+                        </div>
+                    </div>
+                    <div class="dropdown-wrap"><button class="profile-toggle"><span><b>Parish Office</b><small>St. John's Church</small></span><i class="fa-solid fa-chevron-down"></i></button>
+                        <div class="dropdown-panel profile-panel"><a href="#"><i class="fa-regular fa-user"></i> Profile</a><a href="general-settings.html"><i class="fa-solid fa-gear"></i> Settings</a><a href="login.html"><i class="fa-solid fa-right-from-bracket"></i> Logout</a></div>
+                    </div>
+                </div>
+                <div class="calendar-pop">
+                    <div class="cal-head"><button class="cal-prev"><i class="fa-solid fa-chevron-left"></i></button><strong class="cal-title"></strong><button class="cal-next"><i class="fa-solid fa-chevron-right"></i></button></div>
+                    <div class="cal-grid"></div>
+                    <div aria-live="polite" class="topbar-calendar-events"></div>
+                </div>
+            </header>
+            <main class="content">
+                <div class="mm-page">
+                    <div class="mm-page-head">
+                        <div>
+                            <h1>Member Management</h1>
+                            <div class="mm-breadcrumb"><a href="parish-administration.html">Parish Administration</a><i class="fa-solid fa-chevron-right"></i><span>Member Management</span></div>
+                        </div> 
+                    </div>
+                    <section class="mm-stat-grid">
+                        <article class="mm-stat-card"><span class="mm-stat-icon blue"><i class="fa-solid fa-users"></i></span>
+                            <div>
+                                <p>Total Members</p>
+                                <h3>4,732</h3><small><i class="fa-solid fa-arrow-up"></i>68 this month</small>
+                            </div>
+                        </article>
+                        <article class="mm-stat-card"><span class="mm-stat-icon green"><i class="fa-solid fa-shield-halved"></i></span>
+                            <div>
+                                <p>Active Members</p>
+                                <h3>3,890</h3><small>82.2% of total</small>
+                            </div>
+                        </article>
+                        <article class="mm-stat-card"><span class="mm-stat-icon orange"><i class="fa-regular fa-clipboard"></i></span>
+                            <div>
+                                <p>Inactive Members</p>
+                                <h3>642</h3><small>13.6% of total</small>
+                            </div>
+                        </article>
+                        <article class="mm-stat-card"><span class="mm-stat-icon purple"><i class="fa-regular fa-circle-check"></i></span>
+                            <div>
+                                <p>New Members (May)</p>
+                                <h3>32</h3><small><i class="fa-solid fa-arrow-up"></i>12 this month</small>
+                            </div>
+                        </article>
+                        <article class="mm-stat-card"><span class="mm-stat-icon cyan"><i class="fa-solid fa-users"></i></span>
+                            <div>
+                                <p>Baptized Members</p>
+                                <h3>4,215</h3><small>89.1% of total</small>
+                            </div>
+                        </article>
+                        <article class="mm-stat-card"><span class="mm-stat-icon red"><i class="fa-regular fa-calendar"></i></span>
+                            <div>
+                                <p>Families</p>
+                                <h3>1,248</h3><small><i class="fa-solid fa-arrow-up"></i>24 this month</small>
+                            </div>
+                        </article>
+                    </section>
+                    <section class="mm-filter-card">
+                        <div class="mm-filter-group mm-search-field"><label>Search Member</label>
+                            <div><input id="memberSearch" placeholder="Search by name, phone or email..." type="search" /><i class="fa-solid fa-magnifying-glass"></i></div>
+                        </div>
+                        <div class="mm-filter-group"><label>Member Type</label><select id="memberType">
+                                <option value="all">All Types</option>
+                                <option>Family Head</option>
+                                <option>Spouse</option>
+                                <option>Child</option>
+                                <option>Individual</option>
+                            </select></div>
+                        <div class="mm-filter-group"><label>Status</label><select id="memberStatus">
+                                <option value="all">All Status</option>
+                                <option>Active</option>
+                                <option>Inactive</option>
+                            </select></div>
+                        <div class="mm-filter-group"><label>Branch / Church</label><select id="memberBranch">
+                                <option value="all">All Branches</option>
+                                <option>St. John's Church</option>
+                                <option>St. Peter's Church</option>
+                                <option>CSI Church</option>
+                                <option>St. Thomas Church</option>
+                            </select></div>
+                        <div class="mm-filter-group"><label>Age Group</label><select id="memberAge">
+                                <option value="all">All Age Groups</option>
+                                <option>Adult</option>
+                                <option>Youth</option>
+                                <option>Child</option>
+                                <option>Senior</option>
+                            </select></div>
+                        <button class="mm-btn mm-btn-outline mm-more-filter" id="moreFilters"><i class="fa-solid fa-sliders"></i>More Filters</button><button class="mm-btn mm-btn-outline mm-reset-filter" id="resetMemberFilters" type="button"><i class="fa-solid fa-rotate-left"></i>Reset</button>
+                    </section>
+                    <div class="mm-layout-grid">
+                        <section class="mm-main-panel">
+                            <div class="mm-tabs" role="tablist">
+                                <button class="active" data-member-tab="all">All Members</button>
+                                <button data-member-tab="active">Active Members</button>
+                                <button data-member-tab="new">New Members</button>
+                                <button data-member-tab="baptized">Baptized Members</button>
+                                <button data-member-tab="inactive">Inactive Members</button>
+                                <button data-member-tab="directory">Member Directory</button>
+                            </div>
+                            <div class="mm-table-card">
+                                <div class="mm-table-head">
+                                    <h3 id="memberTableTitle">All Members (4,732)</h3>
+                                    <div class="mm-table-actions">
+                                        <button class="mm-btn mm-btn-outline" id="bulkActions"><i class="fa-solid fa-layer-group"></i>Bulk Actions<i class="fa-solid fa-chevron-down"></i></button>
+                                        <button class="mm-icon-btn active" data-view="list" title="List view"><i class="fa-solid fa-list"></i></button>
+                                        <button class="mm-icon-btn" data-view="grid" title="Grid view"><i class="fa-solid fa-table-cells-large"></i></button>
+                                    </div>
+                                </div>
+                                <div class="mm-table-wrap" id="memberListWrap">
+                                    <table class="mm-member-table">
+                                        <thead>
+                                            <tr>
+                                                <th><input id="selectAllMembers" type="checkbox" /></th>
+                                                <th>Member Name</th>
+                                                <th>Member ID</th>
+                                                <th>Member Type</th>
+                                                <th>Branch / Church</th>
+                                                <th>Phone</th>
+                                                <th>Status</th>
+                                                <th>Joined On</th>
+                                                <th>Actions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody id="memberRows"></tbody>
+                                    </table>
+                                </div>
+                                <div class="mm-grid-view" id="memberGridView"></div>
+                                <div class="mm-pagination"><span id="memberResultText">Showing 1 to 10 of 4,732 members</span>
+                                    <div class="mm-pages"><button class="mm-page-btn" data-page="prev"><i class="fa-solid fa-chevron-left"></i></button><button class="mm-page-btn active" data-page="1">1</button><button class="mm-page-btn" data-page="2">2</button><button class="mm-page-btn" data-page="3">3</button><button class="mm-page-btn" data-page="4">4</button><button class="mm-page-btn" data-page="5">5</button><button class="mm-page-btn dots">...</button><button class="mm-page-btn" data-page="474">474</button><button class="mm-page-btn" data-page="next"><i class="fa-solid fa-chevron-right"></i></button></div><label>Rows per page:<select id="memberRowsPerPage">
+                                            <option>10</option>
+                                            <option>25</option>
+                                            <option>50</option>
+                                        </select></label>
+                                </div>
+                            </div>
+                        </section>
+                        <aside class="mm-side-panel">
+                            <section class="mm-side-card">
+                                <h3>Quick Actions</h3><button class="mm-quick" data-url="add-member.html"><i class="fa-solid fa-plus"></i>Add New Member</button><a class="mm-quick mm-quick-link" href="family-registration.html"><i class="fa-regular fa-calendar-plus"></i>Add New Family</a><button class="mm-quick"><i class="fa-regular fa-file-lines"></i>Import Members</button><button class="mm-quick"><i class="fa-regular fa-clipboard"></i>Bulk Update Members</button><button class="mm-quick" data-url="member-directory.html"><i class="fa-regular fa-address-book"></i>Member Directory</button><button class="mm-quick"><i class="fa-solid fa-magnifying-glass"></i>Advanced Search</button>
+                            </section>
+                            <section class="mm-side-card">
+                                <h3>Member Statistics</h3>
+                                <div class="mm-donut-row">
+                                    <div class="mm-donut"><span>4,732<small>Total Members</small></span></div>
+                                    <ul class="mm-legend">
+                                        <li><i class="dot blue"></i>Adults (18+)<b>2,756 (58.2%)</b></li>
+                                        <li><i class="dot cyan"></i>Youth (13-17)<b>842 (17.8%)</b></li>
+                                        <li><i class="dot orange"></i>Children (0-12)<b>1,134 (23.9%)</b></li>
+                                    </ul>
+                                </div>
+                            </section>
+                            <section class="mm-side-card">
+                                <h3>Members by Branch</h3>
+                                <div class="mm-bar-list">
+                                    <p>St. John's Church (Main)<span><i style="width:82%"></i></span><b>2,845</b></p>
+                                    <p>St. Peter's Church (North)<span><i style="width:50%"></i></span><b>876</b></p>
+                                    <p>CSI Church (West)<span><i style="width:35%"></i></span><b>562</b></p>
+                                    <p>St. Thomas Church (South)<span><i style="width:31%"></i></span><b>449</b></p>
+                                    <div class="mm-total-row"><span>Total Members</span><b>4,732</b></div>
+                                </div>
+                            </section>
+                            <section class="mm-side-card">
+                                <div class="mm-card-title-row">
+                                    <h3>Recent Registrations</h3><a href="#">View All</a>
+                                </div>
+                                <div class="mm-registration-list">
+                                    <div><img src="https://i.pravatar.cc/80?img=11" />
+                                        <p><b>James Thomas</b><span>St. John's Church (Main)</span></p><time>18 May 2025</time>
+                                    </div>
+                                    <div><img src="https://i.pravatar.cc/80?img=12" />
+                                        <p><b>Reena Mathew</b><span>St. Peter's Church (North)</span></p><time>17 May 2025</time>
+                                    </div>
+                                    <div><img src="https://i.pravatar.cc/80?img=13" />
+                                        <p><b>Alen Varghese</b><span>CSI Church (West)</span></p><time>16 May 2025</time>
+                                    </div>
+                                </div>
+                            </section>
+                        </aside>
+                    </div>
+                </div>
+                <div class="mm-modal-backdrop" id="memberModal">
+                    <div class="mm-modal mm-member-add-modal">
+                        <div class="mm-modal-head">
+                            <h2>Add New Member</h2><button id="closeMemberModal" type="button"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <form id="memberForm" novalidate="">
+                            <h4 class="mm-form-section-title">Personal Details</h4>
+                            <div class="mm-form-grid">
+                                <label>Full Name *<div class="mm-input-icon"><i class="fa-regular fa-user"></i><input name="name" placeholder="Enter full name" required="" /></div></label>
+                                <label>Email Address *<div class="mm-input-icon"><i class="fa-regular fa-envelope"></i><input name="email" placeholder="Enter email address" required="" type="email" /></div></label>
+                                <label>Phone Number *<div class="mm-input-icon"><i class="fa-solid fa-phone"></i><input name="phone" placeholder="Enter phone number" required="" /></div></label>
+                                <label>Date of Birth<div class="mm-input-icon"><i class="fa-regular fa-calendar"></i><input name="dob" type="date" /></div></label>
+                                <label>Gender *<select name="gender" required="">
+                                        <option value="">Select gender</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                        <option>Other</option>
+                                    </select></label>
+                                <label>Marital Status<select name="marital">
+                                        <option value="">Select status</option>
+                                        <option>Single</option>
+                                        <option>Married</option>
+                                        <option>Widow/Widower</option>
+                                    </select></label>
+                            </div>
+                            <h4 class="mm-form-section-title">Church &amp; Membership Details</h4>
+                            <div class="mm-radio-cards">
+                                <label class="mm-role-card active"><input checked="" hidden="" name="role" type="radio" value="Member" /><i class="fa-regular fa-user"></i>Member</label>
+                                <label class="mm-role-card"><input hidden="" name="role" type="radio" value="Volunteer" /><i class="fa-solid fa-hand-holding-heart"></i>Volunteer</label>
+                                <label class="mm-role-card"><input hidden="" name="role" type="radio" value="Staff" /><i class="fa-solid fa-users-gear"></i>Staff</label>
+                                <label class="mm-role-card"><input hidden="" name="role" type="radio" value="Priest / Pastor" /><i class="fa-solid fa-church"></i>Priest / Pastor</label>
+                            </div>
+                            <div class="mm-form-grid">
+                                <label>Member Type *<select name="type" required="">
+                                        <option value="">Select type</option>
+                                        <option>Family Head</option>
+                                        <option>Spouse</option>
+                                        <option>Child</option>
+                                        <option>Individual</option>
+                                    </select></label>
+                                <label>Branch / Church *<select name="branch" required="">
+                                        <option value="">Select branch</option>
+                                        <option>St. John's Church</option>
+                                        <option>St. Peter's Church</option>
+                                        <option>CSI Church</option>
+                                        <option>St. Thomas Church</option>
+                                    </select></label>
+                                <label>Joined On *<input name="joined" required="" type="date" /></label>
+                                <label>Status<select name="status">
+                                        <option>Active</option>
+                                        <option>Inactive</option>
+                                    </select></label>
+                                <label>Address<textarea name="address" placeholder="Enter full address" style="height:76px;width:100%;margin-top:8px;border:1px solid #d7e3f1;border-radius:4px;padding:10px;font-family:Open Sans"></textarea></label>
+                                <label>Notes<textarea name="notes" placeholder="Additional notes" style="height:76px;width:100%;margin-top:8px;border:1px solid #d7e3f1;border-radius:4px;padding:10px;font-family:Open Sans"></textarea></label>
+                            </div>
+                            <div class="mm-form-error" id="memberFormError"></div>
+                            <div class="mm-modal-foot"><button class="mm-btn mm-btn-outline" id="cancelMemberModal" type="button">Cancel</button><button class="mm-btn mm-btn-primary" type="submit"><i class="fa-solid fa-floppy-disk"></i> Save Member</button></div>
+                        </form>
+                    </div>
+                </div>
+                <div class="mm-modal-backdrop" id="memberViewModal">
+                    <div class="mm-modal">
+                        <div class="mm-modal-head">
+                            <h2>Member Details</h2><button id="closeMemberViewModal" type="button"><i class="fa-solid fa-xmark"></i></button>
+                        </div>
+                        <div id="memberViewContent"></div>
+                        <div class="mm-modal-foot"><button class="mm-btn mm-btn-outline" id="closeMemberViewBtn" type="button">Close</button><button class="mm-btn mm-btn-primary" id="editViewedMember" type="button"><i class="fa-regular fa-pen-to-square"></i> Edit Member</button></div>
+                    </div>
+                </div>
+            </main>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/common.js"></script>
+    <script src="js/sidebar.js"></script>
+    <script src="js/header.js"></script>
+    <script src="js/dropdowns.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/modals.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/tables.js"></script>
+    <script src="js/member-management.js"></script>
+    <script src="js/design-system.js"></script>
+</body>
+
+</html>

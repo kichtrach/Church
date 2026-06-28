@@ -18,7 +18,7 @@
 }
 
 .event-row b {
-    font-weight: 600
+    font-weight: 500
 }
 
 .date-chip {
@@ -29,7 +29,7 @@
     display: grid;
     place-items: center;
     text-align: center;
-    font-weight: 600
+    font-weight: 500
 }
 
 .date-chip span {
@@ -60,13 +60,13 @@
     display: grid;
     grid-template-columns: 1fr auto;
     gap: 14px;
-    border-left: 3px solid #0096c7;
+    border-left: 3px solid #009688;
     padding: 8px 0 12px 14px;
     border-bottom: 1px solid var(--line)
 }
 
 .announce b {
-    font-weight: 600
+    font-weight: 500
 }
 
 .announce span {
@@ -99,7 +99,7 @@
 
 .people-list b,
 .ann-list b {
-    font-weight: 600
+    font-weight: 500
 }
 
 .ann-list i {
@@ -135,7 +135,7 @@
 }
 
 .committee-list b {
-    font-weight: 600;
+    font-weight: 500;
     text-align: right
 }
 
@@ -207,15 +207,20 @@
 .page-date-menu button:hover,
 .page-date-menu button.active {
     background: #eef8fb;
-    color: #0077b6;
+    color: #00796b;
 }
 
 .page-date-menu b {
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
 }
 
 .page-date-menu span {
     font-size: 11px;
     color: #667085;
+}
+@media (max-width: 700px) {
+    .branch-panel {
+        min-width: 100%;
+    }
 }

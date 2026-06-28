@@ -12,7 +12,7 @@
     line-height: 1.15;
     margin: 0 0 10px;
     color: #030b5d;
-    font-weight: 700
+    font-weight: 600
 }
 
 .page-head p {
@@ -36,7 +36,7 @@
     height: 44px;
     padding: 0 22px;
     border-radius: 4px;
-    font-weight: 700
+    font-weight: 600
 }
 
 .head-actions .primary {
@@ -72,7 +72,7 @@
 .co-stat span {
     font-size: 14px;
     color: #030b5d;
-    font-weight: 700
+    font-weight: 600
 }
 
 .na-stat strong,
@@ -95,7 +95,7 @@
     display: block;
     margin-top: 28px;
     color: #030b5d;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 14px
 }
 
@@ -175,12 +175,12 @@
 
 .na-tabs button,
 .co-tabs button {
-    height: 58px;
+    height: 40px;
     border: 0;
     background: transparent;
     color: #030b5d;
     font-size: 14px;
-    font-weight: 500;
+    font-weight: 400;
     border-bottom: 3px solid transparent;
     padding: 0 0 16px
 }
@@ -189,7 +189,7 @@
 .co-tabs button.active {
     color: #007c72;
     border-color: #007c72;
-    font-weight: 700
+    font-weight: 600
 }
 
 .na-table-head {
@@ -210,7 +210,7 @@
     align-items: center;
     gap: 10px;
     color: #030b5d;
-    font-weight: 600
+    font-weight: 500
 }
 
 .na-table-head select,
@@ -223,7 +223,7 @@
     color: #030b5d;
     padding: 0 14px;
     min-width: 205px;
-    font-weight: 600
+    font-weight: 500
 }
 
 .announcement-list {
@@ -293,7 +293,7 @@
     padding: 5px 11px;
     border-radius: 4px;
     font-size: 12px;
-    font-weight: 600
+    font-weight: 500
 }
 
 .pill.green {
@@ -349,7 +349,7 @@
     justify-content: space-between;
     padding: 0 22px;
     color: #030b5d;
-    font-weight: 600
+    font-weight: 500
 }
 
 .pager {
@@ -365,7 +365,7 @@
     background: #fff;
     border-radius: 5px;
     color: #030b5d;
-    font-weight: 700
+    font-weight: 600
 }
 
 .pager .active {
@@ -403,7 +403,7 @@
     gap: 18px;
     margin: 0 0 22px;
     color: #030b5d;
-    font-weight: 600
+    font-weight: 500
 }
 
 .side-card a i {
@@ -415,7 +415,7 @@
     display: block;
     color: #030b5d;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
     margin-bottom: 18px
 }
 
@@ -446,7 +446,7 @@
     gap: 12px;
     padding: 0 12px;
     margin-top: 9px;
-    font-weight: 600
+    font-weight: 500
 }
 
 .filter-actions {
@@ -600,7 +600,7 @@
     margin: 0 0 18px;
     color: #030b5d;
     font-size: 18px;
-    font-weight: 800
+    font-weight: 700
 }
 
 .announcement-form-grid {
@@ -614,7 +614,7 @@
     flex-direction: column;
     gap: 9px;
     color: #030b5d;
-    font-weight: 700;
+    font-weight: 600;
     font-size: 13px
 }
 
@@ -631,7 +631,7 @@
     border-radius: 4px;
     padding: 0 14px;
     color: #030b5d;
-    font: 600 13px 'Open Sans', sans-serif;
+    font: 500 13px 'Open Sans', sans-serif;
     background: #fff
 }
 
@@ -660,7 +660,7 @@
     align-self: flex-end;
     color: #61708e;
     font-size: 11px;
-    font-weight: 600
+    font-weight: 500
 }
 
 .radio-row {
@@ -675,7 +675,7 @@
     flex-direction: row !important;
     align-items: center;
     gap: 8px;
-    font-weight: 600 !important
+    font-weight: 500 !important
 }
 
 .radio-row input,
@@ -728,7 +728,7 @@
 }
 
 .upload-box strong span {
-    font-weight: 500;
+    font-weight: 400;
     color: #66728b
 }
 
@@ -741,12 +741,12 @@
 
 .upload-box i {
     font-size: 24px;
-    color: #0096c7
+    color: #009688
 }
 
 .upload-box p {
     margin: 4px 0 2px;
-    font-weight: 700
+    font-weight: 600
 }
 
 .upload-box small {
@@ -758,7 +758,7 @@
     height: 42px;
     min-width: 130px;
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
     border-radius: 4px
 }
 
@@ -853,7 +853,7 @@
 /* Final Notifications & Announcements stat grid match */
 .na-stats {
     display: grid !important;
-    grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
     gap: 14px !important;
 }
 

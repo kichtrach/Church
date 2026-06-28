@@ -13,7 +13,7 @@
 
 .sacrament-header h1 {
     font-size: 25px;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: -.4px;
     margin: 0 0 10px;
     color: #08194a
@@ -30,7 +30,7 @@
 .breadcrumb a,
 .breadcrumb span {
     color: #07194b;
-    font-weight: 500
+    font-weight: 400
 }
 
 .breadcrumb i {
@@ -83,13 +83,13 @@
 
 .card-caption {
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
     color: #06184a;
     margin-bottom: 18px
 }
 
 .card-caption span {
-    font-weight: 600;
+    font-weight: 500;
     color: #26385d
 }
 
@@ -117,7 +117,7 @@
     height: 56px;
     display: grid;
     place-items: center;
-    background: #0096c7;
+    background: #009688;
     color: #fff;
     font-size: 24px;
     border-radius: 0;
@@ -152,7 +152,7 @@
 .sacrament-kpi span {
     font-size: 12px;
     color: #06184a;
-    font-weight: 700;
+    font-weight: 600;
     display: block;
     margin-bottom: 6px
 }
@@ -161,7 +161,7 @@
     font-size: 28px;
     color: #07194b;
     line-height: 1;
-    font-weight: 700;
+    font-weight: 600;
     display: block
 }
 
@@ -176,7 +176,7 @@
     font-style: normal;
     color: #00845f;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
     margin-top: 10px
 }
 
@@ -203,7 +203,7 @@
     width: 142px;
     height: 142px;
     border-radius: 50%;
-    background: conic-gradient(#007a72 0 45.6%, #ff8617 45.6% 65.5%, #7c3aed 65.5% 83.6%, #8bd4b0 83.6% 100%);
+    background: conic-gradient(#00796b 0 45.6%, #ff8617 45.6% 65.5%, #7c3aed 65.5% 83.6%, #8bd4b0 83.6% 100%);
     position: relative;
     display: grid;
     place-items: center
@@ -257,7 +257,7 @@
 }
 
 .location-legend b {
-    font-weight: 700
+    font-weight: 600
 }
 
 .sacrament-filter-card {
@@ -274,7 +274,7 @@
 
 .filter-inline label {
     font-size: 13px;
-    font-weight: 700;
+    font-weight: 600;
     color: #07194b;
     display: grid;
     grid-template-columns: auto 1fr;
@@ -290,10 +290,10 @@
     background: #fff;
     color: #07194b;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
     padding: 0 14px;
     min-width: 0;
-    border-radius: 0 !important
+    /*border-radius: 0 !important*/
 }
 
 .field-with-icon {
@@ -321,8 +321,8 @@
     height: 44px;
     border: 0;
     background: transparent;
-    color: #007a72;
-    font-weight: 700;
+    color: #00796b;
+    font-weight: 600;
     padding: 0 8px;
     cursor: pointer
 }
@@ -345,14 +345,14 @@
     background: transparent;
     color: #07194b;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 500;
     padding: 0 8px;
     position: relative;
     cursor: pointer
 }
 
 .sacrament-tabs button.active {
-    color: #007a72
+    color: #00796b
 }
 
 .sacrament-tabs button.active:after {
@@ -362,7 +362,7 @@
     right: 0;
     bottom: -1px;
     height: 3px;
-    background: #0096c7
+    background: #009688
 }
 
 .records-head {
@@ -375,11 +375,11 @@
 .records-head h3 {
     color: #06184a;
     font-size: 16px;
-    font-weight: 700
+    font-weight: 600
 }
 
 .records-head h3 span {
-    font-weight: 600
+    font-weight: 500
 }
 
 .view-tools {
@@ -388,7 +388,7 @@
     gap: 8px;
     color: #07194b;
     font-size: 12px;
-    font-weight: 700
+    font-weight: 600
 }
 
 .view-tools button {
@@ -396,7 +396,7 @@
     height: 36px;
     border: 1px solid #d6e1ec;
     background: #fff;
-    color: #007a72;
+    color: #00796b;
     display: grid;
     place-items: center;
     cursor: pointer
@@ -426,7 +426,7 @@
     padding: 0 16px;
     color: #07194b;
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
     border-bottom: 1px solid #dfe8f1
 }
 
@@ -444,7 +444,7 @@
 }
 
 .sacrament-table td b {
-    font-weight: 700
+    font-weight: 600
 }
 
 .sacrament-table td small {
@@ -475,7 +475,7 @@
 .date-chip span {
     font-size: 8px;
     color: #1d43a6;
-    font-weight: 700
+    font-weight: 600
 }
 
 .sacrament-badge,
@@ -486,7 +486,7 @@
     height: 22px;
     padding: 0 10px;
     font-size: 11px;
-    font-weight: 700;
+    font-weight: 600;
     border-radius: 0 !important
 }
 
@@ -598,18 +598,18 @@
     border: 1px solid #d6e1ec;
     background: #fff;
     color: #07194b;
-    font-weight: 700;
+    font-weight: 600;
     cursor: pointer
 }
 
 .pages button.active {
-    background: #007a72;
+    background: #00796b;
     color: #fff
 }
 
 .pages span {
     color: #07194b;
-    font-weight: 700
+    font-weight: 600
 }
 
 .sacrament-pagination label {
@@ -619,7 +619,7 @@
     gap: 10px;
     color: #07194b;
     font-size: 13px;
-    font-weight: 600
+    font-weight: 500
 }
 
 .sacrament-pagination select {
@@ -750,6 +750,7 @@
     align-items: center;
     gap: 8px;
     min-width: 260px;
+    border: none !important; 
 }
 
 .sacrament-filter-card .date-range-control input[type="date"] {
@@ -771,7 +772,7 @@
 
 .sacrament-filter-card .date-range-control i {
     margin-left: auto;
-    color: #0096c7;
+    color: #009688;
 }
 
 .row-menu {
@@ -793,12 +794,12 @@
     padding: 0 12px;
     cursor: pointer;
     color: #07194b;
-    font: 600 13px 'Open Sans', sans-serif;
+    font: 500 13px 'Open Sans', sans-serif;
 }
 
 .row-menu button:hover {
     background: #eef9fd;
-    color: #0077b6;
+    color: #00796b;
 }
 
 .sacrament-pagination .pages button:disabled {
@@ -826,8 +827,8 @@
 
 .sacrament-records-panel .view-tools button:hover,
 .sacrament-records-panel .view-tools button.active {
-    background: #0096c7 !important;
-    border-color: #0096c7 !important;
+    background: #009688 !important;
+    border-color: #009688 !important;
     color: #fff !important;
 }
 
@@ -868,7 +869,7 @@
 
 .sacrament-grid-card h4 {
     font-size: 16px;
-    font-weight: 700;
+    font-weight: 600;
     color: #0f172a;
     margin: 0 0 4px;
 }
@@ -900,7 +901,7 @@
     align-items: center;
     justify-content: center;
     background: #e6f7fc;
-    color: #0096c7;
+    color: #009688;
     font-size: 11px;
 }
 
@@ -931,8 +932,8 @@
 
 .sacrament-records-panel .view-tools button.active,
 .sacrament-records-panel .view-tools button:hover {
-    background: #0096c7 !important;
-    border-color: #0096c7 !important;
+    background: #009688 !important;
+    border-color: #009688 !important;
     color: #fff !important;
 }
 
@@ -970,6 +971,9 @@
     justify-content: center;
     flex-direction: column;
     gap: 10px;
+}
+input:not([type='checkbox']):not([type='radio']):not([type='range']), select, textarea {
+    padding: 0 10px !important;
 }
 
 @media(max-width:1200px) {

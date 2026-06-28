@@ -15,7 +15,7 @@
     font-size: 30px;
     line-height: 1.15;
     margin: 0 0 10px;
-    font-weight: 800;
+    font-weight: 700;
     color: #071052
 }
 
@@ -26,7 +26,7 @@
 
 .branch-breadcrumb span {
     margin: 0 12px;
-    color: #0077b6
+    color: #00796b
 }
 
 .branch-actions {
@@ -43,7 +43,7 @@
 
 .branch-date i {
     margin-left: 10px;
-    color: #0077b6
+    color: #00796b
 }
 
 .branch-kpis {
@@ -100,7 +100,7 @@
 .branch-kpi span {
     display: block;
     font-size: 13px;
-    font-weight: 800;
+    font-weight: 700;
     color: #071052;
     margin-bottom: 8px
 }
@@ -109,7 +109,7 @@
     display: block;
     font-size: 32px;
     line-height: 1;
-    font-weight: 900;
+    font-weight: 800;
     color: #00095b;
     letter-spacing: .2px
 }
@@ -130,7 +130,7 @@
 
 .branch-card h3 {
     font-size: 16px;
-    font-weight: 900;
+    font-weight: 800;
     margin: 0;
     color: #00095b
 }
@@ -222,7 +222,7 @@
     font-size: 15px;
     margin: 12px 0 24px;
     color: #071052;
-    font-weight: 900
+    font-weight: 800
 }
 
 .region-list p {
@@ -266,7 +266,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 14px;
-    font-weight: 900
+    font-weight: 800
 }
 
 .trend-card {
@@ -286,7 +286,7 @@
     background: #fff;
     color: #071052;
     padding: 0 15px;
-    font-weight: 800;
+    font-weight: 700;
     border-radius: 0
 }
 
@@ -319,7 +319,7 @@
 }
 
 .summary-row strong {
-    font-weight: 900
+    font-weight: 800
 }
 
 .quick-actions button {
@@ -331,14 +331,14 @@
     background: transparent;
     color: #071052;
     font-size: 13px;
-    font-weight: 800;
+    font-weight: 700;
     padding: 10px 0;
     text-align: left;
     cursor: pointer
 }
 
 .quick-actions i {
-    color: #0077b6;
+    color: #00796b;
     width: 18px
 }
 
@@ -364,15 +364,15 @@
     place-items: center;
     background: #e7f6f2;
     color: #008677;
-    font-weight: 900
-}
-
-.rank-row b {
     font-weight: 800
 }
 
+.rank-row b {
+    font-weight: 700
+}
+
 .rank-row strong {
-    font-weight: 900
+    font-weight: 800
 }
 
 .full-btn {
@@ -382,7 +382,7 @@
     border: 1px solid #dfe7f2;
     background: #fff;
     color: #071052;
-    font-weight: 900;
+    font-weight: 800;
     border-radius: 0
 }
 
@@ -399,7 +399,7 @@
 }
 
 .note-card i {
-    color: #0077b6;
+    color: #00796b;
     margin-right: 8px
 }
 
@@ -429,7 +429,7 @@
 .branch-table th {
     height: 42px;
     text-align: left;
-    font-weight: 900;
+    font-weight: 800;
     color: #071052;
     border-bottom: 1px solid #e5ebf4;
     background: #fff
@@ -442,11 +442,11 @@
 .branch-table td {
     height: 58px;
     border-bottom: 1px solid #edf1f7;
-    font-weight: 700
+    font-weight: 600
 }
 
 .branch-table td:first-child {
-    font-weight: 900
+    font-weight: 800
 }
 
 .status.active {
@@ -457,7 +457,7 @@
     background: #d8f4e6;
     color: #00843d;
     border-radius: 0;
-    font-weight: 900;
+    font-weight: 800;
     font-size: 12px
 }
 
@@ -484,7 +484,7 @@
     margin-top: 24px;
     color: #071052;
     font-size: 14px;
-    font-weight: 700
+    font-weight: 600
 }
 
 .table-footer label {
@@ -514,7 +514,7 @@
     background: #fff;
     color: #071052;
     border-radius: 0;
-    font-weight: 900
+    font-weight: 800
 }
 
 .pager button.active {

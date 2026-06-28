@@ -1,15 +1,193 @@
-.mini-calendar{padding-left:12px;border-left:1px solid var(--line)}.mini-cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}.mini-cal-head strong{font-size:15px;font-weight:600}.mini-cal-head button{border:0;background:#fff;color:#0c2454;font-size:15px;cursor:pointer}.mini-cal-week,.mini-cal-days{display:grid;grid-template-columns:repeat(7,1fr);text-align:center}.mini-cal-week span{font-size:10px;color:#51617e;font-weight:600;margin-bottom:10px}.mini-cal-days span{height:38px;display:grid;place-items:center;font-size:13px;color:#06163a;position:relative}.mini-cal-days .muted{color:#9aa7b9}.mini-cal-days .circle{width:28px;height:28px;border-radius:50%;display:grid;place-items:center}.mini-cal-days .active{background:#009688;color:#fff}.mini-cal-days .soft{background:#c8eee8}.mini-cal-days .orange{background:#ffe1be;color:#ef7f1a}.mini-cal-days .purple{background:#ded3ff;color:#5b42ce}.cal-legend{display:flex;justify-content:center;gap:28px;margin-top:18px;font-size:12px;color:#33415f}.month-calendar{display:grid;grid-template-columns:repeat(7,1fr);border-left:1px solid var(--line);border-top:1px solid var(--line)}.month-calendar div{min-height:84px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:8px;background:#fff}.month-calendar .day-name{min-height:auto;background:#f1f6fa;font-weight:600}.month-calendar .selected{outline:2px solid var(--primary);outline-offset:-2px}.month-calendar small{background:#e8f7fb;color:var(--primary);padding:3px 5px;margin-top:8px;display:inline-block}
+.mini-calendar {
+    padding-left: 12px;
+    border-left: 1px solid var(--line)
+}
+
+.mini-cal-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 14px
+}
+
+.mini-cal-head strong {
+    font-size: 15px;
+    font-weight: 500
+}
+
+.mini-cal-head button {
+    border: 0;
+    background: #fff;
+    color: #0c2454;
+    font-size: 15px;
+    cursor: pointer
+}
+
+.mini-cal-week,
+.mini-cal-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center
+}
+
+.mini-cal-week span {
+    font-size: 10px;
+    color: #51617e;
+    font-weight: 500;
+    margin-bottom: 10px
+}
+
+.mini-cal-days span {
+    height: 38px;
+    display: grid;
+    place-items: center;
+    font-size: 13px;
+    color: #06163a;
+    position: relative
+}
+
+.mini-cal-days .muted {
+    color: #9aa7b9
+}
+
+.mini-cal-days .circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center
+}
+
+.mini-cal-days .active {
+    background: #009688;
+    color: #fff
+}
+
+.mini-cal-days .soft {
+    background: #c8eee8
+}
+
+.mini-cal-days .orange {
+    background: #ffe1be;
+    color: #ef7f1a
+}
+
+.mini-cal-days .purple {
+    background: #ded3ff;
+    color: #5b42ce
+}
+
+.cal-legend {
+    display: flex;
+    justify-content: center;
+    gap: 28px;
+    margin-top: 18px;
+    font-size: 12px;
+    color: #33415f
+}
+
+.month-calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-left: 1px solid var(--line);
+    border-top: 1px solid var(--line)
+}
+
+.month-calendar div {
+    min-height: 84px;
+    border-right: 1px solid var(--line);
+    border-bottom: 1px solid var(--line);
+    padding: 8px;
+    background: #fff
+}
+
+.month-calendar .day-name {
+    min-height: auto;
+    background: #f1f6fa;
+    font-weight: 500
+}
+
+.month-calendar .selected {
+    outline: 2px solid var(--primary);
+    outline-offset: -2px
+}
+
+.month-calendar small {
+    background: #e8f7fb;
+    color: var(--primary);
+    padding: 3px 5px;
+    margin-top: 8px;
+    display: inline-block
+}
 
 /* === Timeline and calendar polish: merged into calendar.css === */
-.timeline-list{position:relative!important;padding-left:0!important;}
-.timeline-list:before{content:''!important;position:absolute!important;left:86px!important;top:18px!important;bottom:18px!important;width:2px!important;background:#cfe5ef!important;}
-.timeline-list p{display:grid!important;grid-template-columns:78px 18px 1fr!important;gap:8px!important;align-items:start!important;position:relative!important;margin:0!important;padding:8px 0!important;}
-.timeline-list p>b{font-size:12px!important;color:#58677f!important;font-weight:700!important;}
-.timeline-list p>i{width:12px!important;height:12px!important;border-radius:50%!important;background:var(--primary)!important;border:2px solid #fff!important;box-shadow:0 0 0 2px #cfe5ef!important;justify-self:center!important;margin-top:3px!important;z-index:1!important;display:block!important;}
-.timeline-list p span strong{font-size:13px!important;font-weight:700!important;color:var(--ink)!important;}
-@media(max-width:620px){.timeline-list:before{left:76px!important}.timeline-list p{grid-template-columns:68px 18px 1fr!important}}
+.timeline-list {
+    position: relative !important;
+    padding-left: 0 !important;
+}
+
+.timeline-list:before {
+    content: '' !important;
+    position: absolute !important;
+    left: 86px !important;
+    top: 18px !important;
+    bottom: 18px !important;
+    width: 2px !important;
+    background: #cfe5ef !important;
+}
+
+.timeline-list p {
+    display: grid !important;
+    grid-template-columns: 78px 18px 1fr !important;
+    gap: 8px !important;
+    align-items: start !important;
+    position: relative !important;
+    margin: 0 !important;
+    padding: 8px 0 !important;
+}
+
+.timeline-list p>b {
+    font-size: 12px !important;
+    color: #58677f !important;
+    font-weight: 600 !important;
+}
+
+.timeline-list p>i {
+    width: 12px !important;
+    height: 12px !important;
+    border-radius: 50% !important;
+    background: var(--primary) !important;
+    border: 2px solid #fff !important;
+    box-shadow: 0 0 0 2px #cfe5ef !important;
+    justify-self: center !important;
+    margin-top: 3px !important;
+    z-index: 1 !important;
+    display: block !important;
+}
+
+.timeline-list p span strong {
+    font-size: 13px !important;
+    font-weight: 600 !important;
+    color: var(--ink) !important;
+}
+
+@media(max-width:620px) {
+    .timeline-list:before {
+        left: 76px !important
+    }
+
+    .timeline-list p {
+        grid-template-columns: 68px 18px 1fr !important
+    }
+}
 
 
 /* Shared timeline correction */
-.timeline-list:before,.timeline-list::before{left:86px;}
-.timeline-list p>i{border-radius:50%;}
+.timeline-list:before,
+.timeline-list::before {
+    left: 86px;
+}
+
+.timeline-list p>i {
+    border-radius: 50%;
+}

@@ -19,7 +19,7 @@
 }
 
 .dashboard-stats .stat-card a {
-    color: #007c78;
+    color: #00796b;
     font-size: 12px
 }
 
@@ -91,7 +91,7 @@
 }
 
 .plot-lines .line.total {
-    stroke: #0096c7
+    stroke: #009688
 }
 
 .plot-lines .line.active {
@@ -109,7 +109,7 @@
 }
 
 .points.total circle {
-    fill: #0096c7
+    fill: #009688
 }
 
 .points.active circle {
@@ -166,7 +166,7 @@
 }
 
 .timeline-list b {
-    font-weight: 600
+    font-weight: 500
 }
 
 .timeline-list p>i {
@@ -179,7 +179,7 @@
 }
 
 .timeline-list strong {
-    font-weight: 600
+    font-weight: 500
 }
 
 .summary-list p,
@@ -195,11 +195,11 @@
 
 .summary-list b,
 .request-list b {
-    font-weight: 600
+    font-weight: 500
 }
 
 .finance-donut {
-    background: conic-gradient(#0096c7 0 176deg, #ff9f25 176deg 272deg, #20bf55 272deg 338deg, #8b5cf6 338deg 360deg)
+    background: conic-gradient(#009688 0 176deg, #ff9f25 176deg 272deg, #20bf55 272deg 338deg, #8b5cf6 338deg 360deg)
 }
 
 .finance-donut .donut-center {
@@ -229,7 +229,7 @@
     background: #fff;
     border: 1px solid var(--line);
     color: #07163d;
-    font-weight: 600;
+    font-weight: 500;
     justify-content: center;
     gap: 8px
 }
@@ -315,7 +315,7 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 13px
 }
 
@@ -387,8 +387,8 @@
 
 /* Dashboard polished component styles */
 :root {
-    --primary: #0096c7;
-    --secondary: #0077b6;
+    --primary: #009688;
+    --secondary: #00796b;
     --dash-line: #e6edf4;
     --dash-ink: #102044;
     --dash-muted: #61708a;
@@ -519,7 +519,7 @@ body.sidebar-collapsed .main-area {
 
 .calendar-pop .cal-head strong {
     font-size: 14px !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
     color: var(--dash-ink) !important;
 }
 
@@ -548,7 +548,7 @@ body.sidebar-collapsed .main-area {
 
 .calendar-pop .cal-grid b {
     font-size: 11px !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
     color: #7a879b !important;
     text-align: center !important;
     padding: 4px 0 !important;
@@ -590,7 +590,7 @@ body.sidebar-collapsed .main-area {
 .calendar-pop .cal-grid button.today:not(.active) {
     border-color: var(--primary) !important;
     color: var(--primary) !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
 }
 
 .calendar-pop .event-dots {
@@ -649,7 +649,7 @@ body.sidebar-collapsed .main-area {
     display: block;
     color: var(--dash-ink);
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 /* Dashboard stats - 6 compact cards in one row on desktop */
@@ -702,7 +702,7 @@ body.sidebar-collapsed .main-area {
     display: block !important;
     color: var(--dash-muted) !important;
     font-size: 12px !important;
-    font-weight: 600 !important;
+    font-weight: 500 !important;
     margin-bottom: 4px !important;
     white-space: nowrap;
     overflow: hidden;
@@ -713,7 +713,7 @@ body.sidebar-collapsed .main-area {
     display: block !important;
     color: var(--dash-ink) !important;
     font-size: 20px !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
     line-height: 1.15 !important;
     margin-bottom: 5px !important;
     white-space: nowrap;
@@ -743,7 +743,7 @@ body.sidebar-collapsed .main-area {
     gap: 6px !important;
     color: var(--primary) !important;
     font-size: 12px !important;
-    font-weight: 700 !important;
+    font-weight: 600 !important;
     line-height: 1 !important;
     text-decoration: none !important;
     border: 0 !important;
@@ -907,7 +907,7 @@ body.sidebar-collapsed .main-area {
     opacity: 0;
     transform: translateY(8px);
     transition: .18s ease;
-    font: 600 13px "Open Sans", sans-serif;
+    font: 500 13px "Open Sans", sans-serif;
 }
 
 .csi-toast.show {
@@ -1132,7 +1132,7 @@ body.sidebar-collapsed .main-area {
 
 /* Final dashboard/sidebar/page-actions consistency fixes */
 .side-nav>.nav-link.active {
-    background: var(--primary, #0096c7) !important;
+    background: var(--primary, #009688) !important;
     color: #fff !important;
 }
 
@@ -1173,4 +1173,10 @@ body.sidebar-collapsed .main-area {
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
+}
+
+@media (max-width: 700px) {
+    .data-table {
+        min-width: 100%;
+    }
 }
